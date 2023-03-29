@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oracle_Management_UI", "Oracle_Management_UI\Oracle_Management_UI.csproj", "{90FCAC32-1ECA-4745-B1C5-9958FE4E43C2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oracle_Management_Library", "Oracle_Management_Library\Oracle_Management_Library.csproj", "{94DFDA10-1DFB-4CF5-BD11-4332AC2A9D7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{90FCAC32-1ECA-4745-B1C5-9958FE4E43C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90FCAC32-1ECA-4745-B1C5-9958FE4E43C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90FCAC32-1ECA-4745-B1C5-9958FE4E43C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94DFDA10-1DFB-4CF5-BD11-4332AC2A9D7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94DFDA10-1DFB-4CF5-BD11-4332AC2A9D7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94DFDA10-1DFB-4CF5-BD11-4332AC2A9D7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94DFDA10-1DFB-4CF5-BD11-4332AC2A9D7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
