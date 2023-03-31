@@ -1,9 +1,10 @@
-﻿using Oracle_Management_Library.Models;
+﻿using System.Data;
 
 namespace Oracle_Management_Library.DataAccess
 {
     public interface IDataConnection
     {
-        public List<Nhanvien> GetNhanVien();
+        public DataTable GetSQLQuery(string queryString);
+
     }
 }
