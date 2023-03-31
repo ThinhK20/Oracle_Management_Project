@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Oracle_Management_Library.Models;
-using System.Configuration;
 
 namespace Oracle_Management_Library.DataAccess;
 
@@ -27,7 +26,7 @@ public partial class ModelContext : DbContext
 
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseOracle(ConfigurationManager.ConnectionStrings["OracleConnection"].ConnectionString);
+        => optionsBuilder.UseOracle("Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=XEPDB1)));User ID=MY_PROJECT_PLUG_USER;Password=hp101068;Persist Security Info=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
