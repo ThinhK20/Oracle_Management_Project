@@ -599,15 +599,8 @@ namespace Oracle_Management_UI
         private TabPage tabPage_sys;
         private TabPage tabPage_roles;
         private TabPage tabPage_users;
-        private Label label_role;
+        private Label username_label;
         private TabControl tabControl1;
-        private Label label1;
-        private DataGridView dataGridView2;
-        private DataGridView dataGridView1;
-        private CheckBox checkBox_wgo;
-        private Label label2;
-        private Button button2;
-        private Button button1;
         private Button button7;
         private Button button8;
         private CheckBox checkBox3;
@@ -632,6 +625,10 @@ namespace Oracle_Management_UI
         private DataGridView dataGridView3;
         private DataGridView dataGridView4;
         private Label label5;
+<<<<<<< HEAD
         private TabPage tabPage1;
+=======
+        private Label username_Result;
+>>>>>>> 73a4bf736181856949fb2f9b6097d6f0aedce3f0
     }
 }

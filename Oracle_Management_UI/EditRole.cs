@@ -93,5 +93,11 @@ namespace Oracle_Management_UI
            this.printLabel(dataGridView5, label6, e.RowIndex, e.ColumnIndex);
 
         }
+
+        private void tabPage_users_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

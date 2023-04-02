@@ -13,6 +13,7 @@ namespace Oracle_Management_Library.DataAccess
         public DataTable GetSQLQuery(string queryString)
         {
             string connectionString = GlobalConfig.CnnString("OracleConnection");
+           
             using (OracleConnection oracleConnection = new OracleConnection(connectionString))
             {
                 OracleCommand command = new OracleCommand(queryString);
@@ -27,6 +28,23 @@ namespace Oracle_Management_Library.DataAccess
                 return dt;
             }
         }
+
+        public void ExecuteSQLTextQuery(string queryString)
+        {
+            string connectionString = GlobalConfig.CnnString("OracleConnection");
+            using (OracleConnection oracleConnection = new OracleConnection(connectionString))
+            {
+                OracleCommand command = new OracleCommand(queryString);
+                command.Connection = oracleConnection;
+                command.CommandType = CommandType.Text;
+                oracleConnection.Open();
+                command.ExecuteNonQueryAsync();
+            }
+        }
+
+
+
+
         /// <summary>
         /// TODO: Implement Login feature.
         /// </summary>

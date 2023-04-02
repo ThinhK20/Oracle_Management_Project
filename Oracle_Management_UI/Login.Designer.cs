@@ -35,8 +35,6 @@
             label2 = new Label();
             passwordLabel = new Label();
             loginBtn = new Button();
-            databaseLabel = new Label();
-            databaseTextBox = new TextBox();
             SuspendLayout();
             // 
             // loginLabel
@@ -66,30 +64,31 @@
             usernameTextBox.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
             usernameTextBox.Location = new Point(416, 176);
             usernameTextBox.Name = "usernameTextBox";
-            usernameTextBox.Size = new Size(336, 51);
+            usernameTextBox.Size = new Size(335, 51);
             usernameTextBox.TabIndex = 2;
+            usernameTextBox.TextChanged += usernameTextBox_TextChanged;
             // 
             // passwordTextBox
             // 
             passwordTextBox.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
-            passwordTextBox.Location = new Point(416, 264);
+            passwordTextBox.Location = new Point(416, 309);
             passwordTextBox.Name = "passwordTextBox";
-            passwordTextBox.Size = new Size(336, 51);
+            passwordTextBox.Size = new Size(335, 51);
             passwordTextBox.TabIndex = 4;
-            passwordTextBox.TextChanged += textBox1_TextChanged;
+            passwordTextBox.UseSystemPasswordChar = true;
             // 
             // label2
             // 
             label2.Location = new Point(0, 0);
             label2.Name = "label2";
-            label2.Size = new Size(100, 23);
+            label2.Size = new Size(101, 23);
             label2.TabIndex = 5;
             // 
             // passwordLabel
             // 
             passwordLabel.AutoSize = true;
             passwordLabel.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
-            passwordLabel.Location = new Point(183, 264);
+            passwordLabel.Location = new Point(183, 309);
             passwordLabel.Name = "passwordLabel";
             passwordLabel.Size = new Size(160, 46);
             passwordLabel.TabIndex = 6;
@@ -105,38 +104,20 @@
             loginBtn.FlatAppearance.MouseOverBackColor = SystemColors.MenuHighlight;
             loginBtn.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             loginBtn.ForeColor = SystemColors.ButtonHighlight;
-            loginBtn.Location = new Point(369, 462);
+            loginBtn.Location = new Point(369, 461);
             loginBtn.Name = "loginBtn";
             loginBtn.Size = new Size(203, 67);
             loginBtn.TabIndex = 7;
             loginBtn.Text = "Login";
             loginBtn.UseVisualStyleBackColor = false;
-            // 
-            // databaseLabel
-            // 
-            databaseLabel.AutoSize = true;
-            databaseLabel.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
-            databaseLabel.Location = new Point(183, 359);
-            databaseLabel.Name = "databaseLabel";
-            databaseLabel.Size = new Size(159, 46);
-            databaseLabel.TabIndex = 9;
-            databaseLabel.Text = "Database";
-            // 
-            // databaseTextBox
-            // 
-            databaseTextBox.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
-            databaseTextBox.Location = new Point(416, 359);
-            databaseTextBox.Name = "databaseTextBox";
-            databaseTextBox.Size = new Size(336, 51);
-            databaseTextBox.TabIndex = 8;
+            loginBtn.Click += loginBtn_Click;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.InactiveCaption;
             ClientSize = new Size(931, 561);
-            Controls.Add(databaseLabel);
-            Controls.Add(databaseTextBox);
             Controls.Add(loginBtn);
             Controls.Add(passwordLabel);
             Controls.Add(passwordTextBox);
@@ -159,7 +140,5 @@
         private Label label2;
         private Label passwordLabel;
         private Button loginBtn;
-        private Label databaseLabel;
-        private TextBox databaseTextBox;
     }
 }

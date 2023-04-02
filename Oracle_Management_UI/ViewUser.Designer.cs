@@ -28,32 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             label1 = new Label();
             button1 = new Button();
             tabControl1 = new TabControl();
             tabPage2 = new TabPage();
             dataGridView1 = new DataGridView();
-            USERNAME = new DataGridViewTextBoxColumn();
-            USER_ID = new DataGridViewTextBoxColumn();
-            CREATED = new DataGridViewTextBoxColumn();
-            COMMON = new DataGridViewTextBoxColumn();
-            ORACLE_MAINTAINED = new DataGridViewTextBoxColumn();
-            INHERITED = new DataGridViewTextBoxColumn();
-            DEFAULT_COLLATION = new DataGridViewTextBoxColumn();
-            IMPLICIT = new DataGridViewTextBoxColumn();
-            ALL_SHARD = new DataGridViewTextBoxColumn();
             tabPage1 = new TabPage();
             tabControl2 = new TabControl();
             tabPage3 = new TabPage();
             dataGridView2 = new DataGridView();
-            USERNAME_SYSTEMPRIS = new DataGridViewTextBoxColumn();
             button5 = new Button();
             button4 = new Button();
             button3 = new Button();
             button2 = new Button();
             tabPage4 = new TabPage();
             dataGridView3 = new DataGridView();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             button8 = new Button();
             button7 = new Button();
             button6 = new Button();
@@ -122,61 +116,39 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = SystemColors.MenuBar;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold , GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { USERNAME, USER_ID, CREATED, COMMON, ORACLE_MAINTAINED, INHERITED, DEFAULT_COLLATION, IMPLICIT, ALL_SHARD });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold , GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridView1.GridColor = Color.Black;
             dataGridView1.Location = new Point(-4, 0);
             dataGridView1.Name = "dataGridView1";
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.GrayText;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(1026, 494);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // USERNAME
-            // 
-            USERNAME.HeaderText = "USERNAME";
-            USERNAME.Name = "USERNAME";
-            // 
-            // USER_ID
-            // 
-            USER_ID.HeaderText = "USER_ID";
-            USER_ID.Name = "USER_ID";
-            // 
-            // CREATED
-            // 
-            CREATED.HeaderText = "CREATED";
-            CREATED.Name = "CREATED";
-            // 
-            // COMMON
-            // 
-            COMMON.HeaderText = "COMMON";
-            COMMON.Name = "COMMON";
-            // 
-            // ORACLE_MAINTAINED
-            // 
-            ORACLE_MAINTAINED.HeaderText = "ORACLE_MAINTAINED";
-            ORACLE_MAINTAINED.Name = "ORACLE_MAINTAINED";
-            ORACLE_MAINTAINED.Width = 150;
-            // 
-            // INHERITED
-            // 
-            INHERITED.HeaderText = "INHERITED";
-            INHERITED.Name = "INHERITED";
-            // 
-            // DEFAULT_COLLATION
-            // 
-            DEFAULT_COLLATION.HeaderText = "DEFAULT_COLLATION";
-            DEFAULT_COLLATION.Name = "DEFAULT_COLLATION";
-            DEFAULT_COLLATION.Width = 150;
-            // 
-            // IMPLICIT
-            // 
-            IMPLICIT.HeaderText = "IMPLICIT";
-            IMPLICIT.Name = "IMPLICIT";
-            // 
-            // ALL_SHARD
-            // 
-            ALL_SHARD.HeaderText = "ALL_SHARD";
-            ALL_SHARD.Name = "ALL_SHARD";
             // 
             // tabPage1
             // 
@@ -216,18 +188,14 @@
             // 
             // dataGridView2
             // 
+            dataGridView2.BackgroundColor = SystemColors.Menu;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { USERNAME_SYSTEMPRIS });
             dataGridView2.Location = new Point(0, 86);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowTemplate.Height = 25;
             dataGridView2.Size = new Size(1011, 381);
             dataGridView2.TabIndex = 7;
-            // 
-            // USERNAME_SYSTEMPRIS
-            // 
-            USERNAME_SYSTEMPRIS.HeaderText = "USERNAME";
-            USERNAME_SYSTEMPRIS.Name = "USERNAME_SYSTEMPRIS";
+            dataGridView2.CellContentClick += dataGridView2_CellContentClick_1;
             // 
             // button5
             // 
@@ -244,6 +212,7 @@
             button5.Text = "Column Privileges";
             button5.TextImageRelation = TextImageRelation.TextBeforeImage;
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // button4
             // 
@@ -260,6 +229,7 @@
             button4.Text = "Table          Privileges";
             button4.TextImageRelation = TextImageRelation.TextBeforeImage;
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -311,18 +281,29 @@
             // 
             // dataGridView3
             // 
+            dataGridView3.BackgroundColor = SystemColors.MenuBar;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1 });
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = SystemColors.Window;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            dataGridView3.DefaultCellStyle = dataGridViewCellStyle5;
             dataGridView3.Location = new Point(0, 82);
             dataGridView3.Name = "dataGridView3";
             dataGridView3.RowTemplate.Height = 25;
             dataGridView3.Size = new Size(1011, 381);
             dataGridView3.TabIndex = 8;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewTextBoxColumn1.HeaderText = "USERNAME";
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // button8
             // 
@@ -339,6 +320,7 @@
             button8.Text = "Table          Privileges";
             button8.TextImageRelation = TextImageRelation.TextBeforeImage;
             button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
             // 
             // button7
             // 
@@ -355,6 +337,7 @@
             button7.Text = "Role Privileges";
             button7.TextImageRelation = TextImageRelation.TextBeforeImage;
             button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
             // 
             // button6
             // 
@@ -371,6 +354,7 @@
             button6.Text = "System Privileges";
             button6.TextImageRelation = TextImageRelation.TextBeforeImage;
             button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // ViewUser
             // 
@@ -405,15 +389,6 @@
         private TabPage tabPage2;
         private DataGridView dataGridView1;
         private TabPage tabPage1;
-        private DataGridViewTextBoxColumn USERNAME;
-        private DataGridViewTextBoxColumn USER_ID;
-        private DataGridViewTextBoxColumn CREATED;
-        private DataGridViewTextBoxColumn COMMON;
-        private DataGridViewTextBoxColumn ORACLE_MAINTAINED;
-        private DataGridViewTextBoxColumn INHERITED;
-        private DataGridViewTextBoxColumn DEFAULT_COLLATION;
-        private DataGridViewTextBoxColumn IMPLICIT;
-        private DataGridViewTextBoxColumn ALL_SHARD;
         private TabControl tabControl2;
         private TabPage tabPage3;
         private TabPage tabPage4;
@@ -422,7 +397,6 @@
         private Button button3;
         private Button button2;
         private DataGridView dataGridView2;
-        private DataGridViewTextBoxColumn USERNAME_SYSTEMPRIS;
         private DataGridView dataGridView3;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private Button button8;
