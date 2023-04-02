@@ -14,10 +14,19 @@ namespace Oracle_Management_UI
     public partial class EditRole : Form
     {
 
-        string roleNow = "ADMIN_DBA";
+        string roleNow = "QLTTIEP";
+        private string _roleName { get; set; }
+        private string _userName { get; set; }
         public EditRole()
         {
             InitializeComponent();
+        }
+
+        public EditRole(string userName, string roleName)
+        {
+            InitializeComponent();
+            this._roleName = roleName;
+            this._userName = userName;
         }
 
         private void EditRole_Load(object sender, EventArgs e)
@@ -91,7 +100,6 @@ namespace Oracle_Management_UI
         private void dataGridView5_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
         {
            this.printLabel(dataGridView5, label6, e.RowIndex, e.ColumnIndex);
-
         }
 
         private void tabPage_users_Click(object sender, EventArgs e)
@@ -99,5 +107,19 @@ namespace Oracle_Management_UI
 
         }
 
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -85,6 +85,7 @@ namespace Oracle_Management_UI
             this.label_role = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabPage_sec.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
@@ -102,6 +103,7 @@ namespace Oracle_Management_UI
             // 
             // tabPage_sec
             // 
+            this.tabPage_sec.Controls.Add(this.comboBox1);
             this.tabPage_sec.Controls.Add(this.button7);
             this.tabPage_sec.Controls.Add(this.button8);
             this.tabPage_sec.Controls.Add(this.checkBox3);
@@ -143,7 +145,7 @@ namespace Oracle_Management_UI
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(32, 453);
+            this.checkBox3.Location = new System.Drawing.Point(214, 455);
             this.checkBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(117, 24);
@@ -199,9 +201,10 @@ namespace Oracle_Management_UI
             this.label11.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label11.Location = new System.Drawing.Point(3, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(68, 35);
+            this.label11.Size = new System.Drawing.Size(72, 35);
             this.label11.TabIndex = 8;
-            this.label11.Text = "Role:";
+            this.label11.Text = "Table";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // tabPage_sys
             // 
@@ -562,6 +565,21 @@ namespace Oracle_Management_UI
             this.tabPage1.Text = "Role";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.AccessibleDescription = "";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Select",
+            "Insert",
+            "Update",
+            "Delete"});
+            this.comboBox1.Location = new System.Drawing.Point(32, 451);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(151, 28);
+            this.comboBox1.TabIndex = 16;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // EditRole
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -600,6 +618,14 @@ namespace Oracle_Management_UI
         private TabPage tabPage_roles;
         private TabPage tabPage_users;
         private Label username_label;
+        private Label label1;
+        private Label label2;
+        private Label label_role;
+
+        private Button button1;
+        private Button button2;
+        private CheckBox checkBox_wgo;
+
         private TabControl tabControl1;
         private Button button7;
         private Button button8;
@@ -608,6 +634,8 @@ namespace Oracle_Management_UI
         private Label label10;
         private DataGridView dataGridView7;
         private DataGridView dataGridView8;
+        private DataGridView dataGridView1;
+        private DataGridView dataGridView2;
         private Label label11;
         private Button button5;
         private Button button6;
@@ -625,10 +653,7 @@ namespace Oracle_Management_UI
         private DataGridView dataGridView3;
         private DataGridView dataGridView4;
         private Label label5;
-<<<<<<< HEAD
         private TabPage tabPage1;
-=======
-        private Label username_Result;
->>>>>>> 73a4bf736181856949fb2f9b6097d6f0aedce3f0
+        private ComboBox comboBox1;
     }
 }
