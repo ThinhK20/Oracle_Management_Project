@@ -16,5 +16,10 @@ namespace Oracle_Management_UI
         {
             InitializeComponent();
         }
+
+        private void Window_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
