@@ -109,6 +109,7 @@
             button4.TabIndex = 14;
             button4.Text = "Grant";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // checkBox1
             // 
@@ -119,6 +120,7 @@
             checkBox1.TabIndex = 13;
             checkBox1.Text = "Grant Option";
             checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // label3
             // 
@@ -139,6 +141,7 @@
             label4.Size = new Size(65, 21);
             label4.TabIndex = 11;
             label4.Text = "User: ...";
+            label4.Click += label4_Click;
             // 
             // button6
             // 
@@ -294,6 +297,8 @@
             dataGridView4.RowTemplate.Height = 25;
             dataGridView4.Size = new Size(270, 239);
             dataGridView4.TabIndex = 9;
+            dataGridView4.CellClick += dataGridView4_CellContentClick;
+            dataGridView4.CellContentClick += dataGridView4_CellContentClick;
             // 
             // dataGridView8
             // 
@@ -483,6 +488,7 @@
             Controls.Add(tabControl1);
             Name = "EditUser";
             Text = "EditUser";
+            Load += EditUser_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView5).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView7).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView6).EndInit();
