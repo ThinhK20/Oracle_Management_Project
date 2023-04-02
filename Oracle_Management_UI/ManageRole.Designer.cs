@@ -70,6 +70,7 @@
             createRoleBtn.TabIndex = 5;
             createRoleBtn.Text = "Tạo role";
             createRoleBtn.UseVisualStyleBackColor = true;
+            createRoleBtn.Click += createRoleBtn_Click;
             // 
             // editRoleBtn
             // 
@@ -79,6 +80,7 @@
             editRoleBtn.TabIndex = 6;
             editRoleBtn.Text = "Chỉnh sửa role";
             editRoleBtn.UseVisualStyleBackColor = true;
+            editRoleBtn.Click += editRoleBtn_Click;
             // 
             // deleteRoleBtn
             // 
@@ -88,6 +90,7 @@
             deleteRoleBtn.TabIndex = 7;
             deleteRoleBtn.Text = "Xóa role";
             deleteRoleBtn.UseVisualStyleBackColor = true;
+            deleteRoleBtn.Click += deleteRoleBtn_Click;
             // 
             // refreshRoleBtn
             // 
@@ -97,6 +100,7 @@
             refreshRoleBtn.TabIndex = 8;
             refreshRoleBtn.Text = "Refresh";
             refreshRoleBtn.UseVisualStyleBackColor = true;
+            refreshRoleBtn.Click += refreshRoleBtn_Click;
             // 
             // manageRoleTab
             // 
@@ -133,6 +137,7 @@
             refreshUserBtn.TabIndex = 8;
             refreshUserBtn.Text = "Refresh";
             refreshUserBtn.UseVisualStyleBackColor = true;
+            refreshUserBtn.Click += refreshUserBtn_Click;
             // 
             // manageUsersLabel
             // 
@@ -151,9 +156,10 @@
             DataGridViewUsers.Name = "DataGridViewUsers";
             DataGridViewUsers.RowHeadersWidth = 51;
             DataGridViewUsers.RowTemplate.Height = 29;
+            DataGridViewUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             DataGridViewUsers.Size = new Size(324, 527);
             DataGridViewUsers.TabIndex = 3;
-            DataGridViewUsers.CellContentClick += DataGridViewUsers_CellContentClick;
+            DataGridViewUsers.CellClick += DataGridViewUsers_CellClick;
             // 
             // editUserBtn
             // 
@@ -182,6 +188,7 @@
             createUserBtn.TabIndex = 5;
             createUserBtn.Text = "Tạo user";
             createUserBtn.UseVisualStyleBackColor = true;
+            createUserBtn.Click += createUserBtn_Click;
             // 
             // rolesGroupBox
             // 
@@ -214,8 +221,10 @@
             DataGridViewRoles.Name = "DataGridViewRoles";
             DataGridViewRoles.RowHeadersWidth = 51;
             DataGridViewRoles.RowTemplate.Height = 29;
+            DataGridViewRoles.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             DataGridViewRoles.Size = new Size(348, 527);
             DataGridViewRoles.TabIndex = 3;
+            DataGridViewRoles.CellClick += DataGridViewRoles_CellClick;
             // 
             // tabManageRole
             // 
