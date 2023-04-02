@@ -1,8 +1,6 @@
-﻿using Oracle_Management_Library;
+﻿using Oracle.ManagedDataAccess.Client;
+using Oracle_Management_Library;
 using System.Configuration;
-using Oracle.ManagedDataAccess.Client;
-using System.Data;
-using System.Xml.Linq;
 
 namespace Oracle_Management_UI
 {
@@ -15,9 +13,7 @@ namespace Oracle_Management_UI
 
 
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-        }
+
 
         private void passwordLabel_Click(object sender, EventArgs e)
         {
@@ -42,11 +38,18 @@ namespace Oracle_Management_UI
                 try
                 {
                     connection.Open();
-                    MessageBox.Show("Da dang nhap");
+
+                    Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                    config.ConnectionStrings.ConnectionStrings.Remove("OracleConnection");
+                    config.ConnectionStrings.ConnectionStrings.Add(new ConnectionStringSettings("OracleConnection", newCnnStr));
+                    config.Save(ConfigurationSaveMode.Modified);
+                    ConfigurationManager.RefreshSection("connectionStrings");
+
+                    MessageBox.Show("Đăng nhập thành công");
                 }
                 catch (OracleException ex)
                 {
-                    MessageBox.Show("Mat khau sai");
+                    MessageBox.Show("Sai tài khoản đăng nhập hoặc tài khoản đăng nhập không tồn tại.");
                 }
             }
 

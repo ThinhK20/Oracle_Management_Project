@@ -36,7 +36,9 @@ namespace Oracle_Management_UI
                 promptValue.ShowDialog("Nhập username", "Tạo user", "Nhập mật khẩu");
                 if (promptValue.Value1 == "" || promptValue.Value2 == "") return;
                 string queryString = "Create user " + promptValue.Value1 + " identified by " + promptValue.Value2;
+                string grantQueryString = "Grant create session to " + promptValue.Value1;
                 Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(queryString);
+                Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(grantQueryString);
                 MessageBox.Show("Tạo user thành công.");
             }
             catch (Exception ex)
@@ -146,7 +148,8 @@ namespace Oracle_Management_UI
 
         private void editRoleBtn_Click(object sender, EventArgs e)
         {
-
+            EditRole editRoleForm = new EditRole(_userName, _roleName);
+            editRoleForm.ShowDialog();
         }
 
         private void refreshRoleBtn_Click(object sender, EventArgs e)
@@ -159,6 +162,14 @@ namespace Oracle_Management_UI
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void editUserBtn_Click(object sender, EventArgs e)
+        {
+            if (_userName == "" || _userName is null) return;
+            EditUser editUserForm = new EditUser(_userName);
+            editUserForm.ShowDialog();
+
         }
     }
 }
