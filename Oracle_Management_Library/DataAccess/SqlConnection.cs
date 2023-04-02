@@ -13,6 +13,7 @@ namespace Oracle_Management_Library.DataAccess
         public DataTable GetSQLQuery(string queryString)
         {
             string connectionString = GlobalConfig.CnnString("OracleConnection");
+           
             using (OracleConnection oracleConnection = new OracleConnection(connectionString))
             {
                 OracleCommand command = new OracleCommand(queryString);
