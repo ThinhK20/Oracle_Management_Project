@@ -35,8 +35,6 @@
             label2 = new Label();
             passwordLabel = new Label();
             loginBtn = new Button();
-            databaseLabel = new Label();
-            databaseTextBox = new TextBox();
             SuspendLayout();
             // 
             // loginLabel
@@ -44,9 +42,9 @@
             loginLabel.AutoSize = true;
             loginLabel.Font = new Font("Segoe UI", 28.2F, FontStyle.Regular, GraphicsUnit.Point);
             loginLabel.ForeColor = SystemColors.MenuHighlight;
-            loginLabel.Location = new Point(416, 33);
+            loginLabel.Location = new Point(364, 25);
             loginLabel.Name = "loginLabel";
-            loginLabel.Size = new Size(143, 62);
+            loginLabel.Size = new Size(115, 51);
             loginLabel.TabIndex = 0;
             loginLabel.Text = "Login";
             loginLabel.TextAlign = ContentAlignment.MiddleCenter;
@@ -55,26 +53,29 @@
             // 
             usernameLabel.AutoSize = true;
             usernameLabel.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
-            usernameLabel.Location = new Point(183, 176);
+            usernameLabel.Location = new Point(160, 132);
             usernameLabel.Name = "usernameLabel";
-            usernameLabel.Size = new Size(170, 46);
+            usernameLabel.Size = new Size(136, 37);
             usernameLabel.TabIndex = 1;
             usernameLabel.Text = "Username";
             // 
             // usernameTextBox
             // 
             usernameTextBox.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
-            usernameTextBox.Location = new Point(416, 176);
+            usernameTextBox.Location = new Point(364, 132);
+            usernameTextBox.Margin = new Padding(3, 2, 3, 2);
             usernameTextBox.Name = "usernameTextBox";
-            usernameTextBox.Size = new Size(336, 51);
+            usernameTextBox.Size = new Size(294, 43);
             usernameTextBox.TabIndex = 2;
+            usernameTextBox.TextChanged += usernameTextBox_TextChanged;
             // 
             // passwordTextBox
             // 
             passwordTextBox.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
-            passwordTextBox.Location = new Point(416, 264);
+            passwordTextBox.Location = new Point(364, 232);
+            passwordTextBox.Margin = new Padding(3, 2, 3, 2);
             passwordTextBox.Name = "passwordTextBox";
-            passwordTextBox.Size = new Size(336, 51);
+            passwordTextBox.Size = new Size(294, 43);
             passwordTextBox.TabIndex = 4;
             passwordTextBox.TextChanged += textBox1_TextChanged;
             // 
@@ -82,16 +83,16 @@
             // 
             label2.Location = new Point(0, 0);
             label2.Name = "label2";
-            label2.Size = new Size(100, 23);
+            label2.Size = new Size(88, 17);
             label2.TabIndex = 5;
             // 
             // passwordLabel
             // 
             passwordLabel.AutoSize = true;
             passwordLabel.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
-            passwordLabel.Location = new Point(183, 264);
+            passwordLabel.Location = new Point(160, 232);
             passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new Size(160, 46);
+            passwordLabel.Size = new Size(128, 37);
             passwordLabel.TabIndex = 6;
             passwordLabel.Text = "Password";
             passwordLabel.Click += passwordLabel_Click;
@@ -105,38 +106,21 @@
             loginBtn.FlatAppearance.MouseOverBackColor = SystemColors.MenuHighlight;
             loginBtn.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             loginBtn.ForeColor = SystemColors.ButtonHighlight;
-            loginBtn.Location = new Point(369, 462);
+            loginBtn.Location = new Point(323, 346);
+            loginBtn.Margin = new Padding(3, 2, 3, 2);
             loginBtn.Name = "loginBtn";
-            loginBtn.Size = new Size(203, 67);
+            loginBtn.Size = new Size(178, 50);
             loginBtn.TabIndex = 7;
             loginBtn.Text = "Login";
             loginBtn.UseVisualStyleBackColor = false;
-            // 
-            // databaseLabel
-            // 
-            databaseLabel.AutoSize = true;
-            databaseLabel.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
-            databaseLabel.Location = new Point(183, 359);
-            databaseLabel.Name = "databaseLabel";
-            databaseLabel.Size = new Size(159, 46);
-            databaseLabel.TabIndex = 9;
-            databaseLabel.Text = "Database";
-            // 
-            // databaseTextBox
-            // 
-            databaseTextBox.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
-            databaseTextBox.Location = new Point(416, 359);
-            databaseTextBox.Name = "databaseTextBox";
-            databaseTextBox.Size = new Size(336, 51);
-            databaseTextBox.TabIndex = 8;
+            loginBtn.Click += loginBtn_Click;
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(931, 561);
-            Controls.Add(databaseLabel);
-            Controls.Add(databaseTextBox);
+            BackColor = SystemColors.InactiveCaption;
+            ClientSize = new Size(815, 421);
             Controls.Add(loginBtn);
             Controls.Add(passwordLabel);
             Controls.Add(passwordTextBox);
@@ -144,6 +128,7 @@
             Controls.Add(usernameTextBox);
             Controls.Add(usernameLabel);
             Controls.Add(loginLabel);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Login";
             Text = "Login";
             ResumeLayout(false);
@@ -159,7 +144,5 @@
         private Label label2;
         private Label passwordLabel;
         private Button loginBtn;
-        private Label databaseLabel;
-        private TextBox databaseTextBox;
     }
 }

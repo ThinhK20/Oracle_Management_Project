@@ -59,5 +59,15 @@ namespace Oracle_Management_UI.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hinh_nen_dep_cho_may_tinh_full_hd_2 {
+            get {
+                object obj = ResourceManager.GetObject("hinh-nen-dep-cho-may-tinh-full-hd-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
