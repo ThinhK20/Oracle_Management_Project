@@ -56,62 +56,61 @@
             // RoleLabel
             // 
             RoleLabel.AutoSize = true;
-            RoleLabel.Location = new Point(10, -22);
+            RoleLabel.Location = new Point(11, -29);
             RoleLabel.Name = "RoleLabel";
-            RoleLabel.Size = new Size(168, 15);
+            RoleLabel.Size = new Size(210, 20);
             RoleLabel.TabIndex = 2;
             RoleLabel.Text = "Danh sách role trong hệ thống";
             // 
             // createRoleBtn
             // 
-            createRoleBtn.Location = new Point(335, 69);
-            createRoleBtn.Margin = new Padding(3, 2, 3, 2);
+            createRoleBtn.Location = new Point(383, 92);
             createRoleBtn.Name = "createRoleBtn";
-            createRoleBtn.Size = new Size(136, 39);
+            createRoleBtn.Size = new Size(155, 52);
             createRoleBtn.TabIndex = 5;
             createRoleBtn.Text = "Tạo role";
             createRoleBtn.UseVisualStyleBackColor = true;
+            createRoleBtn.Click += createRoleBtn_Click;
             // 
             // editRoleBtn
             // 
-            editRoleBtn.Location = new Point(335, 202);
-            editRoleBtn.Margin = new Padding(3, 2, 3, 2);
+            editRoleBtn.Location = new Point(383, 269);
             editRoleBtn.Name = "editRoleBtn";
-            editRoleBtn.Size = new Size(136, 39);
+            editRoleBtn.Size = new Size(155, 52);
             editRoleBtn.TabIndex = 6;
             editRoleBtn.Text = "Chỉnh sửa role";
             editRoleBtn.UseVisualStyleBackColor = true;
+            editRoleBtn.Click += editRoleBtn_Click;
             // 
             // deleteRoleBtn
             // 
-            deleteRoleBtn.Location = new Point(335, 130);
-            deleteRoleBtn.Margin = new Padding(3, 2, 3, 2);
+            deleteRoleBtn.Location = new Point(383, 173);
             deleteRoleBtn.Name = "deleteRoleBtn";
-            deleteRoleBtn.Size = new Size(136, 39);
+            deleteRoleBtn.Size = new Size(155, 52);
             deleteRoleBtn.TabIndex = 7;
             deleteRoleBtn.Text = "Xóa role";
             deleteRoleBtn.UseVisualStyleBackColor = true;
+            deleteRoleBtn.Click += deleteRoleBtn_Click;
             // 
             // refreshRoleBtn
             // 
-            refreshRoleBtn.Location = new Point(335, 274);
-            refreshRoleBtn.Margin = new Padding(3, 2, 3, 2);
+            refreshRoleBtn.Location = new Point(383, 365);
             refreshRoleBtn.Name = "refreshRoleBtn";
-            refreshRoleBtn.Size = new Size(136, 39);
+            refreshRoleBtn.Size = new Size(155, 52);
             refreshRoleBtn.TabIndex = 8;
             refreshRoleBtn.Text = "Refresh";
             refreshRoleBtn.UseVisualStyleBackColor = true;
+            refreshRoleBtn.Click += refreshRoleBtn_Click;
             // 
             // manageRoleTab
             // 
             manageRoleTab.Controls.Add(userGroupBox);
             manageRoleTab.Controls.Add(rolesGroupBox);
             manageRoleTab.ForeColor = SystemColors.ControlText;
-            manageRoleTab.Location = new Point(4, 24);
-            manageRoleTab.Margin = new Padding(3, 2, 3, 2);
+            manageRoleTab.Location = new Point(4, 29);
             manageRoleTab.Name = "manageRoleTab";
-            manageRoleTab.Padding = new Padding(3, 2, 3, 2);
-            manageRoleTab.Size = new Size(1005, 473);
+            manageRoleTab.Padding = new Padding(3);
+            manageRoleTab.Size = new Size(1150, 635);
             manageRoleTab.TabIndex = 0;
             manageRoleTab.Text = "Quản lý roles";
             manageRoleTab.UseVisualStyleBackColor = true;
@@ -124,30 +123,28 @@
             userGroupBox.Controls.Add(editUserBtn);
             userGroupBox.Controls.Add(deleteUserBtn);
             userGroupBox.Controls.Add(createUserBtn);
-            userGroupBox.Location = new Point(21, 4);
-            userGroupBox.Margin = new Padding(3, 2, 3, 2);
+            userGroupBox.Location = new Point(24, 5);
             userGroupBox.Name = "userGroupBox";
-            userGroupBox.Padding = new Padding(3, 2, 3, 2);
-            userGroupBox.Size = new Size(476, 460);
+            userGroupBox.Size = new Size(544, 613);
             userGroupBox.TabIndex = 10;
             userGroupBox.TabStop = false;
             // 
             // refreshUserBtn
             // 
-            refreshUserBtn.Location = new Point(322, 274);
-            refreshUserBtn.Margin = new Padding(3, 2, 3, 2);
+            refreshUserBtn.Location = new Point(368, 365);
             refreshUserBtn.Name = "refreshUserBtn";
-            refreshUserBtn.Size = new Size(136, 39);
+            refreshUserBtn.Size = new Size(155, 52);
             refreshUserBtn.TabIndex = 8;
             refreshUserBtn.Text = "Refresh";
             refreshUserBtn.UseVisualStyleBackColor = true;
+            refreshUserBtn.Click += refreshUserBtn_Click;
             // 
             // manageUsersLabel
             // 
             manageUsersLabel.AutoSize = true;
-            manageUsersLabel.Location = new Point(17, 20);
+            manageUsersLabel.Location = new Point(19, 27);
             manageUsersLabel.Name = "manageUsersLabel";
-            manageUsersLabel.Size = new Size(196, 15);
+            manageUsersLabel.Size = new Size(243, 20);
             manageUsersLabel.TabIndex = 4;
             manageUsersLabel.Text = "Danh sách các users trong hệ thống";
             // 
@@ -155,31 +152,30 @@
             // 
             DataGridViewUsers.AllowUserToOrderColumns = true;
             DataGridViewUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataGridViewUsers.Location = new Point(17, 52);
-            DataGridViewUsers.Margin = new Padding(3, 2, 3, 2);
+            DataGridViewUsers.Location = new Point(19, 69);
             DataGridViewUsers.Name = "DataGridViewUsers";
             DataGridViewUsers.RowHeadersWidth = 51;
             DataGridViewUsers.RowTemplate.Height = 29;
-            DataGridViewUsers.Size = new Size(284, 395);
+            DataGridViewUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            DataGridViewUsers.Size = new Size(343, 538);
             DataGridViewUsers.TabIndex = 3;
-            DataGridViewUsers.CellContentClick += DataGridViewUsers_CellContentClick;
+            DataGridViewUsers.CellClick += DataGridViewUsers_CellClick;
             // 
             // editUserBtn
             // 
-            editUserBtn.Location = new Point(322, 202);
-            editUserBtn.Margin = new Padding(3, 2, 3, 2);
+            editUserBtn.Location = new Point(368, 269);
             editUserBtn.Name = "editUserBtn";
-            editUserBtn.Size = new Size(136, 39);
+            editUserBtn.Size = new Size(155, 52);
             editUserBtn.TabIndex = 6;
             editUserBtn.Text = "Chỉnh sửa user";
             editUserBtn.UseVisualStyleBackColor = true;
+            editUserBtn.Click += editUserBtn_Click;
             // 
             // deleteUserBtn
             // 
-            deleteUserBtn.Location = new Point(322, 130);
-            deleteUserBtn.Margin = new Padding(3, 2, 3, 2);
+            deleteUserBtn.Location = new Point(368, 173);
             deleteUserBtn.Name = "deleteUserBtn";
-            deleteUserBtn.Size = new Size(136, 39);
+            deleteUserBtn.Size = new Size(155, 52);
             deleteUserBtn.TabIndex = 7;
             deleteUserBtn.Text = "Xóa user";
             deleteUserBtn.UseVisualStyleBackColor = true;
@@ -187,10 +183,9 @@
             // 
             // createUserBtn
             // 
-            createUserBtn.Location = new Point(322, 69);
-            createUserBtn.Margin = new Padding(3, 2, 3, 2);
+            createUserBtn.Location = new Point(368, 92);
             createUserBtn.Name = "createUserBtn";
-            createUserBtn.Size = new Size(136, 39);
+            createUserBtn.Size = new Size(155, 52);
             createUserBtn.TabIndex = 5;
             createUserBtn.Text = "Tạo user";
             createUserBtn.UseVisualStyleBackColor = true;
@@ -204,20 +199,18 @@
             rolesGroupBox.Controls.Add(editRoleBtn);
             rolesGroupBox.Controls.Add(deleteRoleBtn);
             rolesGroupBox.Controls.Add(createRoleBtn);
-            rolesGroupBox.Location = new Point(518, 4);
-            rolesGroupBox.Margin = new Padding(3, 2, 3, 2);
+            rolesGroupBox.Location = new Point(592, 5);
             rolesGroupBox.Name = "rolesGroupBox";
-            rolesGroupBox.Padding = new Padding(3, 2, 3, 2);
-            rolesGroupBox.Size = new Size(476, 460);
+            rolesGroupBox.Size = new Size(544, 613);
             rolesGroupBox.TabIndex = 9;
             rolesGroupBox.TabStop = false;
             // 
             // manageRolesLabel
             // 
             manageRolesLabel.AutoSize = true;
-            manageRolesLabel.Location = new Point(15, 28);
+            manageRolesLabel.Location = new Point(17, 37);
             manageRolesLabel.Name = "manageRolesLabel";
-            manageRolesLabel.Size = new Size(189, 15);
+            manageRolesLabel.Size = new Size(236, 20);
             manageRolesLabel.TabIndex = 4;
             manageRolesLabel.Text = "Danh sách các role trong hệ thống";
             // 
@@ -225,32 +218,31 @@
             // 
             DataGridViewRoles.AllowUserToOrderColumns = true;
             DataGridViewRoles.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataGridViewRoles.Location = new Point(15, 52);
-            DataGridViewRoles.Margin = new Padding(3, 2, 3, 2);
+            DataGridViewRoles.Location = new Point(17, 69);
             DataGridViewRoles.Name = "DataGridViewRoles";
             DataGridViewRoles.RowHeadersWidth = 51;
             DataGridViewRoles.RowTemplate.Height = 29;
-            DataGridViewRoles.Size = new Size(304, 395);
+            DataGridViewRoles.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            DataGridViewRoles.Size = new Size(360, 538);
             DataGridViewRoles.TabIndex = 3;
+            DataGridViewRoles.CellClick += DataGridViewRoles_CellClick;
             // 
             // tabManageRole
             // 
             tabManageRole.Controls.Add(manageRoleTab);
-            tabManageRole.Location = new Point(10, 9);
-            tabManageRole.Margin = new Padding(3, 2, 3, 2);
+            tabManageRole.Location = new Point(11, 12);
             tabManageRole.Name = "tabManageRole";
             tabManageRole.SelectedIndex = 0;
-            tabManageRole.Size = new Size(1013, 501);
+            tabManageRole.Size = new Size(1158, 668);
             tabManageRole.TabIndex = 9;
             // 
             // ManageRole
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1034, 519);
+            ClientSize = new Size(1182, 692);
             Controls.Add(tabManageRole);
             Controls.Add(RoleLabel);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "ManageRole";
             Text = "Manage Role";
             Load += ManageRole_Load;

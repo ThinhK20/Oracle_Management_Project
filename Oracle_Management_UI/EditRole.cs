@@ -1,20 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Oracle_Management_UI
+﻿namespace Oracle_Management_UI
 {
     public partial class EditRole : Form
     {
+        public string _roleName { get; set; }
+        public string _userName { get; set; }
         public EditRole()
         {
             InitializeComponent();
+        }
+
+        public EditRole(string userName, string roleName)
+        {
+            InitializeComponent();
+            this._roleName = roleName;
+            this._userName = userName;
+        }
+
+
+        private void EditRole_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -51,5 +56,11 @@ namespace Oracle_Management_UI
         {
 
         }
+
+        private void tabPage_users_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
