@@ -1,4 +1,5 @@
 ﻿using Oracle_Management_UI.Components;
+using System.Configuration;
 
 namespace Oracle_Management_UI
 {
@@ -19,8 +20,8 @@ namespace Oracle_Management_UI
         {
             try
             {
-                this.DataGridViewUsers.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT USERNAME from all_users");
-                this.DataGridViewRoles.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select ROLE from DBA_ROLES");
+                this.DataGridViewUsers.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * from all_users");
+                this.DataGridViewRoles.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from DBA_ROLES");
             }
             catch (Exception ex)
             {
@@ -51,6 +52,8 @@ namespace Oracle_Management_UI
         {
             try
             {
+                if (_userName == "" || _userName is null) return;
+
                 DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa user " + _userName + " ?", "Xóa user", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.No) return;
                 string queryString = "Drop user " + _userName;
@@ -134,6 +137,7 @@ namespace Oracle_Management_UI
         {
             try
             {
+                if (_roleName == "" || _roleName is null) return;
                 DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa role " + _roleName + " ?", "Xóa role", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.No) return;
                 string queryString = "Drop role " + _roleName;
@@ -148,6 +152,8 @@ namespace Oracle_Management_UI
 
         private void editRoleBtn_Click(object sender, EventArgs e)
         {
+            if (_roleName == "" || _roleName is null) return;
+
             EditRole editRoleForm = new EditRole(_userName, _roleName);
             editRoleForm.ShowDialog();
         }
@@ -170,6 +176,21 @@ namespace Oracle_Management_UI
             EditUser editUserForm = new EditUser(_userName);
             editUserForm.ShowDialog();
 
+        }
+
+        private void disconnect_btn_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát tài khoản này không ?", "Thoát kết nối", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                string newCnnStr = "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=XEPDB1)));User ID=<username>;Password=<password>;Persist Security Info=True";
+                Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                config.ConnectionStrings.ConnectionStrings.Remove("OracleConnection");
+                config.ConnectionStrings.ConnectionStrings.Add(new ConnectionStringSettings("OracleConnection", newCnnStr));
+                config.Save(ConfigurationSaveMode.Modified);
+                ConfigurationManager.RefreshSection("connectionStrings");
+                MessageBox.Show("Thoát tài khoản thành công");
+            }
         }
     }
 }

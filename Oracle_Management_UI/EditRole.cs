@@ -19,7 +19,7 @@
 
         private void EditRole_Load(object sender, EventArgs e)
         {
-
+            username_Result.Text = _userName;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

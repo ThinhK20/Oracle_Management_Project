@@ -1,4 +1,4 @@
-namespace Oracle_Management_UI
+﻿namespace Oracle_Management_UI
 {
     public partial class ViewUser : Form
     {
