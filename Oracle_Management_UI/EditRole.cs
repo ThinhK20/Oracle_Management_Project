@@ -52,10 +52,7 @@
         {
             int rowM = dataGridView.Rows.Count;
             int colM = dataGridView.Columns.Count;
-            Debug.WriteLine(rowM);
-            Debug.WriteLine(colM);
-            Debug.WriteLine(row);
-            Debug.WriteLine(col);
+
 
             if (row < rowM && col < colM && row >= 0 && col >= 0)
                 label.Text = "User: " + dataGridView.Rows[row].Cells[col].Value.ToString();
@@ -64,8 +61,6 @@
         private void dataGridView1_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
         {
 
-            Debug.WriteLine(e.RowIndex);
-            Debug.WriteLine(e.ColumnIndex);
             this.printLabel(dataGridView1, label1, e.RowIndex, e.ColumnIndex);
         }
 

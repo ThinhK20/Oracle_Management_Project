@@ -192,5 +192,15 @@ namespace Oracle_Management_UI
                 MessageBox.Show("Thoát tài khoản thành công");
             }
         }
+
+        private void rolesGroupBox_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void manageRolesLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

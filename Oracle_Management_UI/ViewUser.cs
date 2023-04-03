@@ -209,5 +209,21 @@
         {
 
         }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            string search_new_role = textBox5.Text;
+            dataGridView12.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from DBA_ROLE_PRIVS where GRANTED_ROLE Like '%" + search_new_role.ToUpper() + "%'");
+        }
+
+        private void dataGridView12_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
