@@ -33,25 +33,7 @@ namespace Oracle_Management_UI
             var b = oldCnnStr.Split(new string[] { ";User" }, StringSplitOptions.None);
             String seperate = ";User ID=" + username + ";Password=" + password + ";Persist Security Info=True;";
             String newCnnStr = b[0] + seperate;
-            using (OracleConnection connection = new OracleConnection(newCnnStr))
-            {
-                try
-                {
-                    connection.Open();
-
-                    Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-                    config.ConnectionStrings.ConnectionStrings.Remove("OracleConnection");
-                    config.ConnectionStrings.ConnectionStrings.Add(new ConnectionStringSettings("OracleConnection", newCnnStr));
-                    config.Save(ConfigurationSaveMode.Modified);
-                    ConfigurationManager.RefreshSection("connectionStrings");
-
-                    MessageBox.Show("Đăng nhập thành công");
-                }
-                catch (OracleException ex)
-                {
-                    MessageBox.Show("Sai tài khoản đăng nhập hoặc tài khoản đăng nhập không tồn tại.");
-                }
-            }
+          
 
         }
     }

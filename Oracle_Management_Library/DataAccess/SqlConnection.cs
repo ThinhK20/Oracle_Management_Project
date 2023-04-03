@@ -16,16 +16,26 @@ namespace Oracle_Management_Library.DataAccess
            
             using (OracleConnection oracleConnection = new OracleConnection(connectionString))
             {
-                OracleCommand command = new OracleCommand(queryString);
-                OracleDataAdapter adapter = new OracleDataAdapter();
-                command.Connection = oracleConnection;
-                command.CommandType = CommandType.Text;
-                oracleConnection.Open();
+                try
+                {
+                    OracleCommand command = new OracleCommand(queryString);
+                    OracleDataAdapter adapter = new OracleDataAdapter();
+                    command.Connection = oracleConnection;
+                    command.CommandType = CommandType.Text;
+                    oracleConnection.Open();
 
-                adapter.SelectCommand = command;
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                return dt;
+                    adapter.SelectCommand = command;
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    return dt;
+                }
+                catch 
+                {
+                    DataTable dt = new DataTable();
+
+                    return dt;
+                }
+               
             }
         }
 
