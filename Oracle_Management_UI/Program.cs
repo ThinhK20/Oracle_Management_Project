@@ -12,7 +12,7 @@ namespace Oracle_Management_UI
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Oracle_Management_Library.GlobalConfig.InitializeConnections();
-            Application.Run(new EditUser());
+            Application.Run(new ManageRole());
         }
     }
 }
