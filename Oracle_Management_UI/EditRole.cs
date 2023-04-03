@@ -6,10 +6,7 @@
         string roleNow = "QLTTIEP";
         private string _roleName { get; set; }
         private string _userName { get; set; }
-        public EditRole()
-        {
-            InitializeComponent();
-        }
+   
 
         public EditRole(string userName, string roleName)
         {
@@ -52,7 +49,6 @@
         {
             int rowM = dataGridView.Rows.Count;
             int colM = dataGridView.Columns.Count;
-
 
             if (row < rowM && col < colM && row >= 0 && col >= 0)
                 label.Text = "User: " + dataGridView.Rows[row].Cells[col].Value.ToString();
