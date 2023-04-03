@@ -109,7 +109,7 @@
             manageRoleTab.ForeColor = SystemColors.ControlText;
             manageRoleTab.Location = new Point(4, 29);
             manageRoleTab.Name = "manageRoleTab";
-            manageRoleTab.Padding = new Padding(3, 3, 3, 3);
+            manageRoleTab.Padding = new Padding(3);
             manageRoleTab.Size = new Size(1150, 635);
             manageRoleTab.TabIndex = 0;
             manageRoleTab.Text = "Quản lý roles";
@@ -169,6 +169,7 @@
             editUserBtn.TabIndex = 6;
             editUserBtn.Text = "Chỉnh sửa user";
             editUserBtn.UseVisualStyleBackColor = true;
+            editUserBtn.Click += editUserBtn_Click;
             // 
             // deleteUserBtn
             // 
