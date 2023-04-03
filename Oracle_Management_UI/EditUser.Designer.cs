@@ -1,4 +1,8 @@
-﻿namespace Oracle_Management_UI
+﻿using Oracle.ManagedDataAccess.Client;
+using System.Configuration;
+using System.Drawing;
+
+namespace Oracle_Management_UI
 {
     partial class EditUser
     {
@@ -6,6 +10,7 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+        OracleConnection con = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -19,6 +24,8 @@
             }
             base.Dispose(disposing);
         }
+
+        
 
         #region Windows Form Designer generated code
 

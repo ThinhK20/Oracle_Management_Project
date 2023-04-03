@@ -1,4 +1,9 @@
-﻿namespace Oracle_Management_UI
+﻿using Oracle.ManagedDataAccess.Client;
+using System.Configuration;
+using System.Data;
+using System.Drawing;
+
+namespace Oracle_Management_UI
 {
     partial class EditRole
     {
@@ -6,6 +11,7 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+        OracleConnection con = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -20,6 +26,19 @@
             base.Dispose(disposing);
         }
 
+
+       
+
+
+        
+
+
+        //private void Window_Loaded(object sender, EventArgs e)
+        //{
+        //    this.updateDataGrid();
+        //}
+
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -28,435 +47,568 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tabPage_sec = new TabPage();
-            button7 = new Button();
-            button8 = new Button();
-            checkBox3 = new CheckBox();
-            label9 = new Label();
-            label10 = new Label();
-            dataGridView7 = new DataGridView();
-            dataGridView8 = new DataGridView();
-            label11 = new Label();
-            tabPage_sys = new TabPage();
-            button5 = new Button();
-            button6 = new Button();
-            checkBox2 = new CheckBox();
-            label6 = new Label();
-            label7 = new Label();
-            dataGridView5 = new DataGridView();
-            dataGridView6 = new DataGridView();
-            label8 = new Label();
-            tabPage_roles = new TabPage();
-            button3 = new Button();
-            button4 = new Button();
-            checkBox1 = new CheckBox();
-            label3 = new Label();
-            label4 = new Label();
-            dataGridView3 = new DataGridView();
-            dataGridView4 = new DataGridView();
-            label5 = new Label();
-            tabPage_users = new TabPage();
-            username_Result = new Label();
-            username_label = new Label();
-            tabControl1 = new TabControl();
-            tabPage_sec.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView8).BeginInit();
-            tabPage_sys.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView6).BeginInit();
-            tabPage_roles.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView4).BeginInit();
-            tabPage_users.SuspendLayout();
-            tabControl1.SuspendLayout();
-            SuspendLayout();
+            this.tabPage_sec = new System.Windows.Forms.TabPage();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dataGridView7 = new System.Windows.Forms.DataGridView();
+            this.dataGridView8 = new System.Windows.Forms.DataGridView();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tabPage_sys = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tabPage_roles = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tabPage_users = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.checkBox_wgo = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label_role = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tabPage_sec.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
+            this.tabPage_sys.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            this.tabPage_roles.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            this.tabPage_users.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // tabPage_sec
             // 
-            tabPage_sec.Controls.Add(button7);
-            tabPage_sec.Controls.Add(button8);
-            tabPage_sec.Controls.Add(checkBox3);
-            tabPage_sec.Controls.Add(label9);
-            tabPage_sec.Controls.Add(label10);
-            tabPage_sec.Controls.Add(dataGridView7);
-            tabPage_sec.Controls.Add(dataGridView8);
-            tabPage_sec.Controls.Add(label11);
-            tabPage_sec.Location = new Point(4, 29);
-            tabPage_sec.Margin = new Padding(3, 4, 3, 4);
-            tabPage_sec.Name = "tabPage_sec";
-            tabPage_sec.Size = new Size(838, 650);
-            tabPage_sec.TabIndex = 4;
-            tabPage_sec.Text = "Securable";
-            tabPage_sec.UseVisualStyleBackColor = true;
+            this.tabPage_sec.Controls.Add(this.comboBox1);
+            this.tabPage_sec.Controls.Add(this.button7);
+            this.tabPage_sec.Controls.Add(this.button8);
+            this.tabPage_sec.Controls.Add(this.checkBox3);
+            this.tabPage_sec.Controls.Add(this.label9);
+            this.tabPage_sec.Controls.Add(this.label10);
+            this.tabPage_sec.Controls.Add(this.dataGridView7);
+            this.tabPage_sec.Controls.Add(this.dataGridView8);
+            this.tabPage_sec.Controls.Add(this.label11);
+            this.tabPage_sec.Location = new System.Drawing.Point(4, 29);
+            this.tabPage_sec.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage_sec.Name = "tabPage_sec";
+            this.tabPage_sec.Size = new System.Drawing.Size(838, 650);
+            this.tabPage_sec.TabIndex = 4;
+            this.tabPage_sec.Text = "Securable";
+            this.tabPage_sec.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
-            button7.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            button7.Location = new Point(503, 487);
-            button7.Margin = new Padding(3, 4, 3, 4);
-            button7.Name = "button7";
-            button7.Size = new Size(309, 81);
-            button7.TabIndex = 15;
-            button7.Text = "Revoke";
-            button7.UseVisualStyleBackColor = true;
+            this.button7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button7.Location = new System.Drawing.Point(503, 487);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(309, 81);
+            this.button7.TabIndex = 15;
+            this.button7.Text = "Revoke";
+            this.button7.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
-            button8.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            button8.Location = new Point(32, 487);
-            button8.Margin = new Padding(3, 4, 3, 4);
-            button8.Name = "button8";
-            button8.Size = new Size(309, 81);
-            button8.TabIndex = 14;
-            button8.Text = "Grant";
-            button8.UseVisualStyleBackColor = true;
+            this.button8.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button8.Location = new System.Drawing.Point(32, 487);
+            this.button8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(309, 81);
+            this.button8.TabIndex = 14;
+            this.button8.Text = "Grant";
+            this.button8.UseVisualStyleBackColor = true;
             // 
             // checkBox3
             // 
-            checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(32, 453);
-            checkBox3.Margin = new Padding(3, 4, 3, 4);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(117, 24);
-            checkBox3.TabIndex = 13;
-            checkBox3.Text = "Grant Option";
-            checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(214, 455);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(117, 24);
+            this.checkBox3.TabIndex = 13;
+            this.checkBox3.Text = "Grant Option";
+            this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(503, 395);
-            label9.Name = "label9";
-            label9.Size = new Size(81, 28);
-            label9.TabIndex = 12;
-            label9.Text = "User: ...";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(503, 395);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(81, 28);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "User: ...";
             // 
             // label10
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.Location = new Point(32, 395);
-            label10.Name = "label10";
-            label10.Size = new Size(88, 28);
-            label10.TabIndex = 11;
-            label10.Text = "Table: ...";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(32, 395);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(88, 28);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Table: ...";
             // 
             // dataGridView7
             // 
-            dataGridView7.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView7.Location = new Point(503, 57);
-            dataGridView7.Margin = new Padding(3, 4, 3, 4);
-            dataGridView7.Name = "dataGridView7";
-            dataGridView7.RowHeadersWidth = 51;
-            dataGridView7.RowTemplate.Height = 25;
-            dataGridView7.Size = new Size(309, 319);
-            dataGridView7.TabIndex = 10;
+            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView7.Location = new System.Drawing.Point(503, 57);
+            this.dataGridView7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView7.Name = "dataGridView7";
+            this.dataGridView7.RowHeadersWidth = 51;
+            this.dataGridView7.RowTemplate.Height = 25;
+            this.dataGridView7.Size = new System.Drawing.Size(309, 319);
+            this.dataGridView7.TabIndex = 10;
             // 
             // dataGridView8
             // 
-            dataGridView8.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView8.Location = new Point(32, 57);
-            dataGridView8.Margin = new Padding(3, 4, 3, 4);
-            dataGridView8.Name = "dataGridView8";
-            dataGridView8.RowHeadersWidth = 51;
-            dataGridView8.RowTemplate.Height = 25;
-            dataGridView8.Size = new Size(309, 319);
-            dataGridView8.TabIndex = 9;
+            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView8.Location = new System.Drawing.Point(32, 57);
+            this.dataGridView8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView8.Name = "dataGridView8";
+            this.dataGridView8.RowHeadersWidth = 51;
+            this.dataGridView8.RowTemplate.Height = 25;
+            this.dataGridView8.Size = new System.Drawing.Size(309, 319);
+            this.dataGridView8.TabIndex = 9;
             // 
             // label11
             // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(3, 0);
-            label11.Name = "label11";
-            label11.Size = new Size(68, 35);
-            label11.TabIndex = 8;
-            label11.Text = "Role:";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label11.Location = new System.Drawing.Point(3, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(72, 35);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "Table";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // tabPage_sys
             // 
-            tabPage_sys.Controls.Add(button5);
-            tabPage_sys.Controls.Add(button6);
-            tabPage_sys.Controls.Add(checkBox2);
-            tabPage_sys.Controls.Add(label6);
-            tabPage_sys.Controls.Add(label7);
-            tabPage_sys.Controls.Add(dataGridView5);
-            tabPage_sys.Controls.Add(dataGridView6);
-            tabPage_sys.Controls.Add(label8);
-            tabPage_sys.Location = new Point(4, 29);
-            tabPage_sys.Margin = new Padding(3, 4, 3, 4);
-            tabPage_sys.Name = "tabPage_sys";
-            tabPage_sys.Padding = new Padding(3, 4, 3, 4);
-            tabPage_sys.Size = new Size(838, 650);
-            tabPage_sys.TabIndex = 3;
-            tabPage_sys.Text = "System Privileges";
-            tabPage_sys.UseVisualStyleBackColor = true;
+            this.tabPage_sys.Controls.Add(this.button5);
+            this.tabPage_sys.Controls.Add(this.button6);
+            this.tabPage_sys.Controls.Add(this.checkBox2);
+            this.tabPage_sys.Controls.Add(this.label6);
+            this.tabPage_sys.Controls.Add(this.label7);
+            this.tabPage_sys.Controls.Add(this.dataGridView5);
+            this.tabPage_sys.Controls.Add(this.dataGridView6);
+            this.tabPage_sys.Controls.Add(this.label8);
+            this.tabPage_sys.Location = new System.Drawing.Point(4, 29);
+            this.tabPage_sys.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage_sys.Name = "tabPage_sys";
+            this.tabPage_sys.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage_sys.Size = new System.Drawing.Size(838, 650);
+            this.tabPage_sys.TabIndex = 3;
+            this.tabPage_sys.Text = "System Privileges";
+            this.tabPage_sys.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            button5.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.Location = new Point(506, 491);
-            button5.Margin = new Padding(3, 4, 3, 4);
-            button5.Name = "button5";
-            button5.Size = new Size(309, 81);
-            button5.TabIndex = 15;
-            button5.Text = "Revoke";
-            button5.UseVisualStyleBackColor = true;
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button5.Location = new System.Drawing.Point(506, 491);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(309, 81);
+            this.button5.TabIndex = 15;
+            this.button5.Text = "Revoke";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
-            button6.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            button6.Location = new Point(35, 491);
-            button6.Margin = new Padding(3, 4, 3, 4);
-            button6.Name = "button6";
-            button6.Size = new Size(309, 81);
-            button6.TabIndex = 14;
-            button6.Text = "Grant";
-            button6.UseVisualStyleBackColor = true;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button6.Location = new System.Drawing.Point(35, 491);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(309, 81);
+            this.button6.TabIndex = 14;
+            this.button6.Text = "Grant";
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // checkBox2
             // 
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(35, 457);
-            checkBox2.Margin = new Padding(3, 4, 3, 4);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(117, 24);
-            checkBox2.TabIndex = 13;
-            checkBox2.Text = "Grant Option";
-            checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(35, 457);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(117, 24);
+            this.checkBox2.TabIndex = 13;
+            this.checkBox2.Text = "Grant Option";
+            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(506, 399);
-            label6.Name = "label6";
-            label6.Size = new Size(81, 28);
-            label6.TabIndex = 12;
-            label6.Text = "User: ...";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(506, 399);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 28);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "User: ...";
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(35, 399);
-            label7.Name = "label7";
-            label7.Size = new Size(81, 28);
-            label7.TabIndex = 11;
-            label7.Text = "User: ...";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(35, 399);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(81, 28);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "User: ...";
             // 
             // dataGridView5
             // 
-            dataGridView5.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView5.Location = new Point(506, 61);
-            dataGridView5.Margin = new Padding(3, 4, 3, 4);
-            dataGridView5.Name = "dataGridView5";
-            dataGridView5.RowHeadersWidth = 51;
-            dataGridView5.RowTemplate.Height = 25;
-            dataGridView5.Size = new Size(309, 319);
-            dataGridView5.TabIndex = 10;
+            this.dataGridView5.AllowUserToAddRows = false;
+            this.dataGridView5.AllowUserToDeleteRows = false;
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Location = new System.Drawing.Point(506, 61);
+            this.dataGridView5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.ReadOnly = true;
+            this.dataGridView5.RowHeadersWidth = 51;
+            this.dataGridView5.RowTemplate.Height = 25;
+            this.dataGridView5.Size = new System.Drawing.Size(309, 319);
+            this.dataGridView5.TabIndex = 10;
+            this.dataGridView5.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView5_CellMouseUp);
             // 
             // dataGridView6
             // 
-            dataGridView6.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView6.Location = new Point(35, 61);
-            dataGridView6.Margin = new Padding(3, 4, 3, 4);
-            dataGridView6.Name = "dataGridView6";
-            dataGridView6.RowHeadersWidth = 51;
-            dataGridView6.RowTemplate.Height = 25;
-            dataGridView6.Size = new Size(309, 319);
-            dataGridView6.TabIndex = 9;
+            this.dataGridView6.AllowUserToAddRows = false;
+            this.dataGridView6.AllowUserToDeleteRows = false;
+            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView6.Location = new System.Drawing.Point(35, 61);
+            this.dataGridView6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView6.Name = "dataGridView6";
+            this.dataGridView6.ReadOnly = true;
+            this.dataGridView6.RowHeadersWidth = 51;
+            this.dataGridView6.RowTemplate.Height = 25;
+            this.dataGridView6.Size = new System.Drawing.Size(309, 319);
+            this.dataGridView6.TabIndex = 9;
+            this.dataGridView6.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView6_CellMouseUp);
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(7, 4);
-            label8.Name = "label8";
-            label8.Size = new Size(68, 35);
-            label8.TabIndex = 8;
-            label8.Text = "Role:";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(7, 4);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(68, 35);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Role:";
             // 
             // tabPage_roles
             // 
-            tabPage_roles.Controls.Add(button3);
-            tabPage_roles.Controls.Add(button4);
-            tabPage_roles.Controls.Add(checkBox1);
-            tabPage_roles.Controls.Add(label3);
-            tabPage_roles.Controls.Add(label4);
-            tabPage_roles.Controls.Add(dataGridView3);
-            tabPage_roles.Controls.Add(dataGridView4);
-            tabPage_roles.Controls.Add(label5);
-            tabPage_roles.Location = new Point(4, 29);
-            tabPage_roles.Margin = new Padding(3, 4, 3, 4);
-            tabPage_roles.Name = "tabPage_roles";
-            tabPage_roles.Padding = new Padding(3, 4, 3, 4);
-            tabPage_roles.Size = new Size(838, 650);
-            tabPage_roles.TabIndex = 2;
-            tabPage_roles.Text = "Roles";
-            tabPage_roles.UseVisualStyleBackColor = true;
+            this.tabPage_roles.Controls.Add(this.button3);
+            this.tabPage_roles.Controls.Add(this.button4);
+            this.tabPage_roles.Controls.Add(this.checkBox1);
+            this.tabPage_roles.Controls.Add(this.label3);
+            this.tabPage_roles.Controls.Add(this.label4);
+            this.tabPage_roles.Controls.Add(this.dataGridView3);
+            this.tabPage_roles.Controls.Add(this.dataGridView4);
+            this.tabPage_roles.Controls.Add(this.label5);
+            this.tabPage_roles.Location = new System.Drawing.Point(4, 29);
+            this.tabPage_roles.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage_roles.Name = "tabPage_roles";
+            this.tabPage_roles.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage_roles.Size = new System.Drawing.Size(838, 650);
+            this.tabPage_roles.TabIndex = 2;
+            this.tabPage_roles.Text = "Roles";
+            this.tabPage_roles.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            button3.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Location = new Point(506, 491);
-            button3.Margin = new Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(309, 81);
-            button3.TabIndex = 15;
-            button3.Text = "Revoke";
-            button3.UseVisualStyleBackColor = true;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.Location = new System.Drawing.Point(506, 491);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(309, 81);
+            this.button3.TabIndex = 15;
+            this.button3.Text = "Revoke";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            button4.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.Location = new Point(35, 491);
-            button4.Margin = new Padding(3, 4, 3, 4);
-            button4.Name = "button4";
-            button4.Size = new Size(309, 81);
-            button4.TabIndex = 14;
-            button4.Text = "Grant";
-            button4.UseVisualStyleBackColor = true;
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button4.Location = new System.Drawing.Point(35, 491);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(309, 81);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "Grant";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // checkBox1
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(35, 457);
-            checkBox1.Margin = new Padding(3, 4, 3, 4);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(117, 24);
-            checkBox1.TabIndex = 13;
-            checkBox1.Text = "Grant Option";
-            checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(35, 457);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(117, 24);
+            this.checkBox1.TabIndex = 13;
+            this.checkBox1.Text = "Grant Option";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(506, 399);
-            label3.Name = "label3";
-            label3.Size = new Size(81, 28);
-            label3.TabIndex = 12;
-            label3.Text = "User: ...";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(506, 399);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 28);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "User: ...";
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(35, 399);
-            label4.Name = "label4";
-            label4.Size = new Size(81, 28);
-            label4.TabIndex = 11;
-            label4.Text = "User: ...";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(35, 399);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(81, 28);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "User: ...";
             // 
             // dataGridView3
             // 
-            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Location = new Point(506, 61);
-            dataGridView3.Margin = new Padding(3, 4, 3, 4);
-            dataGridView3.Name = "dataGridView3";
-            dataGridView3.RowHeadersWidth = 51;
-            dataGridView3.RowTemplate.Height = 25;
-            dataGridView3.Size = new Size(309, 319);
-            dataGridView3.TabIndex = 10;
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(506, 61);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.ReadOnly = true;
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.RowTemplate.Height = 25;
+            this.dataGridView3.Size = new System.Drawing.Size(309, 319);
+            this.dataGridView3.TabIndex = 10;
             // 
             // dataGridView4
             // 
-            dataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView4.Location = new Point(35, 61);
-            dataGridView4.Margin = new Padding(3, 4, 3, 4);
-            dataGridView4.Name = "dataGridView4";
-            dataGridView4.RowHeadersWidth = 51;
-            dataGridView4.RowTemplate.Height = 25;
-            dataGridView4.Size = new Size(309, 319);
-            dataGridView4.TabIndex = 9;
+            this.dataGridView4.AllowUserToAddRows = false;
+            this.dataGridView4.AllowUserToDeleteRows = false;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(35, 61);
+            this.dataGridView4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.ReadOnly = true;
+            this.dataGridView4.RowHeadersWidth = 51;
+            this.dataGridView4.RowTemplate.Height = 25;
+            this.dataGridView4.Size = new System.Drawing.Size(309, 319);
+            this.dataGridView4.TabIndex = 9;
+            this.dataGridView4.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView4_CellMouseUp);
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(7, 4);
-            label5.Name = "label5";
-            label5.Size = new Size(68, 35);
-            label5.TabIndex = 8;
-            label5.Text = "Role:";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(7, 4);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 35);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Role:";
             // 
             // tabPage_users
             // 
-            tabPage_users.Controls.Add(username_Result);
-            tabPage_users.Controls.Add(username_label);
-            tabPage_users.Location = new Point(4, 29);
-            tabPage_users.Margin = new Padding(3, 4, 3, 4);
-            tabPage_users.Name = "tabPage_users";
-            tabPage_users.Padding = new Padding(3, 4, 3, 4);
-            tabPage_users.Size = new Size(838, 650);
-            tabPage_users.TabIndex = 1;
-            tabPage_users.Text = "Users";
-            tabPage_users.UseVisualStyleBackColor = true;
-            tabPage_users.Click += tabPage_users_Click;
+            this.tabPage_users.Controls.Add(this.button2);
+            this.tabPage_users.Controls.Add(this.button1);
+            this.tabPage_users.Controls.Add(this.checkBox_wgo);
+            this.tabPage_users.Controls.Add(this.label2);
+            this.tabPage_users.Controls.Add(this.label1);
+            this.tabPage_users.Controls.Add(this.dataGridView2);
+            this.tabPage_users.Controls.Add(this.dataGridView1);
+            this.tabPage_users.Controls.Add(this.label_role);
+            this.tabPage_users.Location = new System.Drawing.Point(4, 29);
+            this.tabPage_users.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage_users.Name = "tabPage_users";
+            this.tabPage_users.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage_users.Size = new System.Drawing.Size(838, 650);
+            this.tabPage_users.TabIndex = 1;
+            this.tabPage_users.Text = "Users";
+            this.tabPage_users.UseVisualStyleBackColor = true;
             // 
-            // username_Result
+            // button2
             // 
-            username_Result.AutoSize = true;
-            username_Result.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            username_Result.Location = new Point(262, 36);
-            username_Result.Name = "username_Result";
-            username_Result.Size = new Size(74, 35);
-            username_Result.TabIndex = 3;
-            username_Result.Text = "Syros";
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.Location = new System.Drawing.Point(506, 491);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(309, 81);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Revoke";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // username_label
+            // button1
             // 
-            username_label.AutoSize = true;
-            username_label.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            username_label.Location = new Point(26, 36);
-            username_label.Name = "username_label";
-            username_label.Size = new Size(132, 35);
-            username_label.TabIndex = 0;
-            username_label.Text = "Username:";
-            username_label.Click += label1_Click_1;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(35, 491);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(309, 81);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Grant";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_wgo
+            // 
+            this.checkBox_wgo.AutoSize = true;
+            this.checkBox_wgo.Location = new System.Drawing.Point(35, 457);
+            this.checkBox_wgo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox_wgo.Name = "checkBox_wgo";
+            this.checkBox_wgo.Size = new System.Drawing.Size(117, 24);
+            this.checkBox_wgo.TabIndex = 5;
+            this.checkBox_wgo.Text = "Grant Option";
+            this.checkBox_wgo.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(506, 399);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 28);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "User: ...";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(35, 399);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 28);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "User: ...";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(506, 61);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 25;
+            this.dataGridView2.Size = new System.Drawing.Size(309, 319);
+            this.dataGridView2.TabIndex = 2;
+            this.dataGridView2.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView2_CellMouseUp);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(35, 61);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(309, 319);
+            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseUp);
+            // 
+            // label_role
+            // 
+            this.label_role.AutoSize = true;
+            this.label_role.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_role.Location = new System.Drawing.Point(7, 4);
+            this.label_role.Name = "label_role";
+            this.label_role.Size = new System.Drawing.Size(68, 35);
+            this.label_role.TabIndex = 0;
+            this.label_role.Text = "Role:";
             // 
             // tabControl1
             // 
-            tabControl1.Controls.Add(tabPage_users);
-            tabControl1.Controls.Add(tabPage_roles);
-            tabControl1.Controls.Add(tabPage_sys);
-            tabControl1.Controls.Add(tabPage_sec);
-            tabControl1.Location = new Point(14, 28);
-            tabControl1.Margin = new Padding(3, 4, 3, 4);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(846, 683);
-            tabControl1.TabIndex = 0;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage_users);
+            this.tabControl1.Controls.Add(this.tabPage_roles);
+            this.tabControl1.Controls.Add(this.tabPage_sys);
+            this.tabControl1.Controls.Add(this.tabPage_sec);
+            this.tabControl1.Location = new System.Drawing.Point(15, 13);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(846, 683);
+            this.tabControl1.TabIndex = 0;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(838, 650);
+            this.tabPage1.TabIndex = 5;
+            this.tabPage1.Text = "Role";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.AccessibleDescription = "";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Select",
+            "Insert",
+            "Update",
+            "Delete"});
+            this.comboBox1.Location = new System.Drawing.Point(32, 451);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(151, 28);
+            this.comboBox1.TabIndex = 16;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // EditRole
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(873, 727);
-            Controls.Add(tabControl1);
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "EditRole";
-            Text = "EditRole";
-            Load += EditRole_Load;
-            tabPage_sec.ResumeLayout(false);
-            tabPage_sec.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView8).EndInit();
-            tabPage_sys.ResumeLayout(false);
-            tabPage_sys.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView6).EndInit();
-            tabPage_roles.ResumeLayout(false);
-            tabPage_roles.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView4).EndInit();
-            tabPage_users.ResumeLayout(false);
-            tabPage_users.PerformLayout();
-            tabControl1.ResumeLayout(false);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(873, 727);
+            this.Controls.Add(this.tabControl1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "EditRole";
+            this.Text = "EditRole";
+            this.Load += new System.EventHandler(this.EditRole_Load);
+            this.tabPage_sec.ResumeLayout(false);
+            this.tabPage_sec.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
+            this.tabPage_sys.ResumeLayout(false);
+            this.tabPage_sys.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            this.tabPage_roles.ResumeLayout(false);
+            this.tabPage_roles.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            this.tabPage_users.ResumeLayout(false);
+            this.tabPage_users.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -466,6 +618,14 @@
         private TabPage tabPage_roles;
         private TabPage tabPage_users;
         private Label username_label;
+        private Label label1;
+        private Label label2;
+        private Label label_role;
+
+        private Button button1;
+        private Button button2;
+        private CheckBox checkBox_wgo;
+
         private TabControl tabControl1;
         private Button button7;
         private Button button8;
@@ -474,6 +634,8 @@
         private Label label10;
         private DataGridView dataGridView7;
         private DataGridView dataGridView8;
+        private DataGridView dataGridView1;
+        private DataGridView dataGridView2;
         private Label label11;
         private Button button5;
         private Button button6;
@@ -491,6 +653,7 @@
         private DataGridView dataGridView3;
         private DataGridView dataGridView4;
         private Label label5;
-        private Label username_Result;
+        private TabPage tabPage1;
+        private ComboBox comboBox1;
     }
 }
