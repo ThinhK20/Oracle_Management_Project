@@ -1,7 +1,6 @@
 ﻿using Oracle.ManagedDataAccess.Client;
 using System.Configuration;
 using System.Drawing;
-
 namespace Oracle_Management_UI
 {
     partial class EditUser

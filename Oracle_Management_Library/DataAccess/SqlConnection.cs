@@ -18,25 +18,25 @@ namespace Oracle_Management_Library.DataAccess
             {
                 try
                 {
-                OracleCommand command = new OracleCommand(queryString);
-                OracleDataAdapter adapter = new OracleDataAdapter();
-                command.Connection = oracleConnection;
-                command.CommandType = CommandType.Text;
-                oracleConnection.Open();
+                    OracleCommand command = new OracleCommand(queryString);
+                    OracleDataAdapter adapter = new OracleDataAdapter();
+                    command.Connection = oracleConnection;
+                    command.CommandType = CommandType.Text;
+                    oracleConnection.Open();
 
-                adapter.SelectCommand = command;
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                return dt;
+                    adapter.SelectCommand = command;
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    return dt;
                 }
                 catch 
                 {
                     DataTable dt = new DataTable();
 
                     return dt;
-            }
+                }
                
-        }
+            }
         }
 
         public void ExecuteSQLTextQuery(string queryString)
