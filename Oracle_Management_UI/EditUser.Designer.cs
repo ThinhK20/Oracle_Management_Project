@@ -24,7 +24,7 @@ namespace Oracle_Management_UI
             base.Dispose(disposing);
         }
 
-        
+
 
         #region Windows Form Designer generated code
 
@@ -199,7 +199,7 @@ namespace Oracle_Management_UI
             dataGridView5.Name = "dataGridView5";
             dataGridView5.RowHeadersWidth = 51;
             dataGridView5.RowTemplate.Height = 25;
-            dataGridView5.Size = new Size(270, 239);
+            dataGridView5.Size = new Size(319, 239);
             dataGridView5.TabIndex = 10;
             dataGridView5.CellClick += dataGridView5_CellContentClick;
             // 
@@ -274,7 +274,7 @@ namespace Oracle_Management_UI
             dataGridView7.Name = "dataGridView7";
             dataGridView7.RowHeadersWidth = 51;
             dataGridView7.RowTemplate.Height = 25;
-            dataGridView7.Size = new Size(270, 239);
+            dataGridView7.Size = new Size(325, 239);
             dataGridView7.TabIndex = 10;
             dataGridView7.CellClick += dataGridView7_CellContentClick;
             // 
@@ -285,7 +285,7 @@ namespace Oracle_Management_UI
             dataGridView6.Name = "dataGridView6";
             dataGridView6.RowHeadersWidth = 51;
             dataGridView6.RowTemplate.Height = 25;
-            dataGridView6.Size = new Size(270, 239);
+            dataGridView6.Size = new Size(361, 239);
             dataGridView6.TabIndex = 9;
             dataGridView6.CellClick += dataGridView6_CellContentClick;
             // 
@@ -306,7 +306,7 @@ namespace Oracle_Management_UI
             dataGridView3.Name = "dataGridView3";
             dataGridView3.RowHeadersWidth = 51;
             dataGridView3.RowTemplate.Height = 25;
-            dataGridView3.Size = new Size(270, 239);
+            dataGridView3.Size = new Size(319, 239);
             dataGridView3.TabIndex = 10;
             dataGridView3.CellClick += dataGridView3_CellContentClick;
             // 
@@ -317,7 +317,7 @@ namespace Oracle_Management_UI
             dataGridView4.Name = "dataGridView4";
             dataGridView4.RowHeadersWidth = 51;
             dataGridView4.RowTemplate.Height = 25;
-            dataGridView4.Size = new Size(270, 239);
+            dataGridView4.Size = new Size(366, 239);
             dataGridView4.TabIndex = 9;
             dataGridView4.CellClick += dataGridView4_CellContentClick;
             // 
@@ -328,7 +328,7 @@ namespace Oracle_Management_UI
             dataGridView8.Name = "dataGridView8";
             dataGridView8.RowHeadersWidth = 51;
             dataGridView8.RowTemplate.Height = 25;
-            dataGridView8.Size = new Size(270, 239);
+            dataGridView8.Size = new Size(372, 239);
             dataGridView8.TabIndex = 9;
             dataGridView8.CellClick += dataGridView8_CellContentClick;
             // 

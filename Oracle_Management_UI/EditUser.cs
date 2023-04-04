@@ -164,7 +164,8 @@
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            ColumnPermission Column = new ColumnPermission(Data_Grid, _username);
+            Column.ShowDialog();
         }
 
         private void dataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -210,7 +211,7 @@
 
         private void button7_Click(object sender, EventArgs e)
         {
-            string sqlRe = "REVOKE " + Data_Grid+" on "+ Temp + " FROM " + _username;
+            string sqlRe = "REVOKE " + Data_Grid + " on " + Temp + " FROM " + _username;
             MessageBox.Show(sqlRe);
             Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(sqlRe);
             EditUser_Load(sender, e);
