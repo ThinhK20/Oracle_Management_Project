@@ -13,7 +13,11 @@ namespace Oracle_Management_UI
             InitializeComponent();
         }
 
-
+        public ManageRole(string userName)
+        {
+            InitializeComponent();
+            this._userName = userName;
+        }
 
 
         private void ManageRole_Load(object sender, EventArgs e)
@@ -103,6 +107,7 @@ namespace Oracle_Management_UI
                 string selectedRole = this.DataGridViewRoles.Rows[e.RowIndex].Cells["Role"].Value.ToString();
                 if (selectedRole == "" || selectedRole == null) return;
                 _roleName = selectedRole;
+                EditRole nav = new EditRole(_userName, _roleName);
             }
             catch (Exception ex)
             {
@@ -183,7 +188,7 @@ namespace Oracle_Management_UI
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát tài khoản này không ?", "Thoát kết nối", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                string newCnnStr = "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=XEPDB1)));User ID=<username>;Password=<password>;Persist Security Info=True";
+                string newCnnStr = "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=XEPDB2)));User ID=<username>;Password=<password>;Persist Security Info=True";
                 Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
                 config.ConnectionStrings.ConnectionStrings.Remove("OracleConnection");
                 config.ConnectionStrings.ConnectionStrings.Add(new ConnectionStringSettings("OracleConnection", newCnnStr));
