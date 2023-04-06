@@ -46,7 +46,7 @@ namespace Oracle_Management_UI
             MessageBox.Show(_tableName);
             MessageBox.Show(_userName);
             this.dataGridTableInfoSelect.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"SELECT column_name FROM user_tab_cols WHERE table_name = '{_tableName}'");
-            this.dataGridTableViewsSelect.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"SELECT * FROM all_tab_privs WHERE privilege = 'SELECT' AND type = 'VIEW' AND GRANTEE='{_userName}'");
+            this.dataGridTableViewsSelect.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"SELECT TABLE_NAME,GRANTABLE  FROM all_tab_privs WHERE privilege = 'SELECT' AND type = 'VIEW' AND GRANTEE='{_userName}'");
             this.dataGridViewUpdateInfo.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"SELECT column_name FROM USER_TAB_COLUMNS WHERE table_name = '{_tableName}'");
             this.dataGridViewUpdatePrivs.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"select * from DBA_COL_PRIVS WHERE GRANTEE = '{_userName}' AND TABLE_NAME = '{_tableName}'");
         }
@@ -84,10 +84,16 @@ namespace Oracle_Management_UI
             }
             sqlColumn = sqlColumn.Remove(sqlColumn.Length - 1);
             string sqlRe = "CREATE OR REPLACE VIEW " + viewNameSelectTextBox.Text + " AS " + " SELECT " + sqlColumn + " FROM " + _tableName;
-            MessageBox.Show(sqlRe);
             Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(sqlRe);
-            string grantUser = "Grant SELECT ON " + viewNameSelectTextBox.Text + " TO " + _userName;
-            MessageBox.Show(grantUser);
+            string grantUser;
+            if (withOptionSelectCheckbox.Checked == false) {
+                 grantUser = "Grant SELECT ON " + viewNameSelectTextBox.Text + " TO " + _userName;
+            }
+            else
+            {
+                grantUser = "Grant SELECT ON " + viewNameSelectTextBox.Text + " TO " + _userName+" with grant option ";
+            }
+          
             Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(grantUser);
             this.dataGridTableViewsSelect.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"SELECT TABLE_NAME,GRANTABLE FROM all_tab_privs WHERE privilege = 'SELECT' AND type = 'VIEW' AND GRANTEE='{_userName}'");
 
@@ -136,11 +142,12 @@ namespace Oracle_Management_UI
 
         private void grantUpdateBtn_Click(object sender, EventArgs e)
         {
+
             int row = dataGridViewUpdateInfo.CurrentCell.RowIndex;
             int col = dataGridViewUpdateInfo.CurrentCell.ColumnIndex;
 
             string value = dataGridViewUpdateInfo.Rows[row].Cells[col].Value.ToString();
-            MessageBox.Show(value);
+           
             Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery($"GRANT UPDATE({value}) ON {_tableName} TO {_userName}");
             this.dataGridViewUpdatePrivs.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"select * from DBA_COL_PRIVS WHERE GRANTEE = '{_userName}' AND TABLE_NAME = '{_tableName}'");
 

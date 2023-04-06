@@ -13,8 +13,6 @@ namespace Oracle_Management_UI
 
 
 
-
-
         private void passwordLabel_Click(object sender, EventArgs e)
         {
 
@@ -33,7 +31,7 @@ namespace Oracle_Management_UI
             var b = oldCnnStr.Split(new string[] { ";User" }, StringSplitOptions.None);
             String seperate = ";User ID=" + username + ";Password=" + password + ";Persist Security Info=True;";
             String newCnnStr = b[0] + seperate;
-            ManageRole nav = new ManageRole(username);
+            ViewUser nav = new ViewUser();
             nav.ShowDialog();
 
         }
