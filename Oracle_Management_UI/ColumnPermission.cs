@@ -43,8 +43,8 @@ namespace Oracle_Management_UI
         {
             dataGridView1.Columns.Add("Column", "Column");
             label1.Text = "Table: " + _tableName;
-            MessageBox.Show(_tableName);
-            MessageBox.Show(_userName);
+            //MessageBox.Show(_tableName);
+            //MessageBox.Show(_userName);
             this.dataGridTableInfoSelect.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"SELECT column_name FROM user_tab_cols WHERE table_name = '{_tableName}'");
             this.dataGridTableViewsSelect.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"SELECT TABLE_NAME,GRANTABLE  FROM all_tab_privs WHERE privilege = 'SELECT' AND type = 'VIEW' AND GRANTEE='{_userName}'");
             this.dataGridViewUpdateInfo.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"SELECT column_name FROM USER_TAB_COLUMNS WHERE table_name = '{_tableName}'");
@@ -54,7 +54,6 @@ namespace Oracle_Management_UI
         private void dataGridTableInfoSelect_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataC = dataGridTableInfoSelect.Rows[e.RowIndex].Cells["column_name"].Value.ToString();
-
             Column.Add(DataC);
             dataGridView1.Rows.Clear();
             foreach (string col in Column)
@@ -170,5 +169,7 @@ namespace Oracle_Management_UI
             Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery($"REVOKE UPDATE ON {_tableName} FROM {_userName}");
             this.dataGridViewUpdatePrivs.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"select * from DBA_COL_PRIVS WHERE GRANTEE = '{_userName}' AND TABLE_NAME = '{_tableName}'");
         }
+
+        
     }
 }

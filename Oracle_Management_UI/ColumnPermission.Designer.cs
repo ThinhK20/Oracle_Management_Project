@@ -28,372 +28,359 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            selectControlTab = new TabControl();
-            selectTabPage = new TabPage();
-            button1 = new Button();
-            dataGridView1 = new DataGridView();
-            Colunb = new DataGridViewTextBoxColumn();
-            revokeSelectBtn = new Button();
-            viewSelectResult = new Label();
-            viewSelectLabel = new Label();
-            dataGridTableViewSelectUsers = new DataGridView();
-            dataGridTableViewsSelect = new DataGridView();
-            withOptionSelectCheckbox = new CheckBox();
-            grantSelectBtn = new Button();
-            viewNameSelectTextBox = new TextBox();
-            viewNameSelectLabel = new Label();
-            dataGridTableInfoSelect = new DataGridView();
-            updateTabPage = new TabPage();
-            attributeUpdateLabel2 = new Label();
-            columnUpdateLabel2 = new Label();
-            withOptionUpdateCheckbox = new CheckBox();
-            grantUpdateBtn = new Button();
-            revokeUpdateBtn = new Button();
-            attributeUpdateLabel = new Label();
-            columnUpdateLabel = new Label();
-            dataGridViewUpdatePrivs = new DataGridView();
-            dataGridViewUpdateInfo = new DataGridView();
-            label1 = new Label();
-            contextMenuStrip1 = new ContextMenuStrip(components);
-            selectControlTab.SuspendLayout();
-            selectTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridTableViewSelectUsers).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridTableViewsSelect).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridTableInfoSelect).BeginInit();
-            updateTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewUpdatePrivs).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewUpdateInfo).BeginInit();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this.selectControlTab = new System.Windows.Forms.TabControl();
+            this.selectTabPage = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Colunb = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.revokeSelectBtn = new System.Windows.Forms.Button();
+            this.viewSelectResult = new System.Windows.Forms.Label();
+            this.viewSelectLabel = new System.Windows.Forms.Label();
+            this.dataGridTableViewSelectUsers = new System.Windows.Forms.DataGridView();
+            this.dataGridTableViewsSelect = new System.Windows.Forms.DataGridView();
+            this.withOptionSelectCheckbox = new System.Windows.Forms.CheckBox();
+            this.grantSelectBtn = new System.Windows.Forms.Button();
+            this.viewNameSelectTextBox = new System.Windows.Forms.TextBox();
+            this.viewNameSelectLabel = new System.Windows.Forms.Label();
+            this.dataGridTableInfoSelect = new System.Windows.Forms.DataGridView();
+            this.updateTabPage = new System.Windows.Forms.TabPage();
+            this.attributeUpdateLabel2 = new System.Windows.Forms.Label();
+            this.columnUpdateLabel2 = new System.Windows.Forms.Label();
+            this.withOptionUpdateCheckbox = new System.Windows.Forms.CheckBox();
+            this.grantUpdateBtn = new System.Windows.Forms.Button();
+            this.revokeUpdateBtn = new System.Windows.Forms.Button();
+            this.attributeUpdateLabel = new System.Windows.Forms.Label();
+            this.columnUpdateLabel = new System.Windows.Forms.Label();
+            this.dataGridViewUpdatePrivs = new System.Windows.Forms.DataGridView();
+            this.dataGridViewUpdateInfo = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.selectControlTab.SuspendLayout();
+            this.selectTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTableViewSelectUsers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTableViewsSelect)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTableInfoSelect)).BeginInit();
+            this.updateTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUpdatePrivs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUpdateInfo)).BeginInit();
+            this.SuspendLayout();
             // 
             // selectControlTab
             // 
-            selectControlTab.Controls.Add(selectTabPage);
-            selectControlTab.Controls.Add(updateTabPage);
-            selectControlTab.Location = new Point(12, 58);
-            selectControlTab.Margin = new Padding(3, 2, 3, 2);
-            selectControlTab.Name = "selectControlTab";
-            selectControlTab.SelectedIndex = 0;
-            selectControlTab.Size = new Size(696, 445);
-            selectControlTab.TabIndex = 0;
+            this.selectControlTab.Controls.Add(this.selectTabPage);
+            this.selectControlTab.Controls.Add(this.updateTabPage);
+            this.selectControlTab.Location = new System.Drawing.Point(14, 77);
+            this.selectControlTab.Name = "selectControlTab";
+            this.selectControlTab.SelectedIndex = 0;
+            this.selectControlTab.Size = new System.Drawing.Size(795, 593);
+            this.selectControlTab.TabIndex = 0;
             // 
             // selectTabPage
             // 
-            selectTabPage.Controls.Add(button1);
-            selectTabPage.Controls.Add(dataGridView1);
-            selectTabPage.Controls.Add(revokeSelectBtn);
-            selectTabPage.Controls.Add(viewSelectResult);
-            selectTabPage.Controls.Add(viewSelectLabel);
-            selectTabPage.Controls.Add(dataGridTableViewSelectUsers);
-            selectTabPage.Controls.Add(dataGridTableViewsSelect);
-            selectTabPage.Controls.Add(withOptionSelectCheckbox);
-            selectTabPage.Controls.Add(grantSelectBtn);
-            selectTabPage.Controls.Add(viewNameSelectTextBox);
-            selectTabPage.Controls.Add(viewNameSelectLabel);
-            selectTabPage.Controls.Add(dataGridTableInfoSelect);
-            selectTabPage.Location = new Point(4, 24);
-            selectTabPage.Margin = new Padding(3, 2, 3, 2);
-            selectTabPage.Name = "selectTabPage";
-            selectTabPage.Padding = new Padding(3, 2, 3, 2);
-            selectTabPage.Size = new Size(688, 417);
-            selectTabPage.TabIndex = 0;
-            selectTabPage.Text = "Select";
-            selectTabPage.UseVisualStyleBackColor = true;
+            this.selectTabPage.Controls.Add(this.button1);
+            this.selectTabPage.Controls.Add(this.dataGridView1);
+            this.selectTabPage.Controls.Add(this.revokeSelectBtn);
+            this.selectTabPage.Controls.Add(this.viewSelectResult);
+            this.selectTabPage.Controls.Add(this.viewSelectLabel);
+            this.selectTabPage.Controls.Add(this.dataGridTableViewSelectUsers);
+            this.selectTabPage.Controls.Add(this.dataGridTableViewsSelect);
+            this.selectTabPage.Controls.Add(this.withOptionSelectCheckbox);
+            this.selectTabPage.Controls.Add(this.grantSelectBtn);
+            this.selectTabPage.Controls.Add(this.viewNameSelectTextBox);
+            this.selectTabPage.Controls.Add(this.viewNameSelectLabel);
+            this.selectTabPage.Controls.Add(this.dataGridTableInfoSelect);
+            this.selectTabPage.Location = new System.Drawing.Point(4, 29);
+            this.selectTabPage.Name = "selectTabPage";
+            this.selectTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.selectTabPage.Size = new System.Drawing.Size(787, 560);
+            this.selectTabPage.TabIndex = 0;
+            this.selectTabPage.Text = "Select";
+            this.selectTabPage.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            button1.BackColor = Color.AntiqueWhite;
-            button1.Location = new Point(626, 132);
-            button1.Name = "button1";
-            button1.Size = new Size(56, 23);
-            button1.TabIndex = 20;
-            button1.Text = "Reset";
-            button1.UseVisualStyleBackColor = false;
+            this.button1.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.button1.Location = new System.Drawing.Point(715, 176);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(64, 31);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "Reset";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Colunb });
-            dataGridView1.Location = new Point(393, 24);
-            dataGridView1.Margin = new Padding(3, 2, 3, 2);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(289, 131);
-            dataGridView1.TabIndex = 19;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Colunb});
+            this.dataGridView1.Location = new System.Drawing.Point(449, 32);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.Size = new System.Drawing.Size(330, 175);
+            this.dataGridView1.TabIndex = 19;
             // 
             // Colunb
             // 
-            Colunb.HeaderText = "Column";
-            Colunb.MinimumWidth = 6;
-            Colunb.Name = "Colunb";
-            Colunb.ReadOnly = true;
-            Colunb.Visible = false;
-            Colunb.Width = 125;
+            this.Colunb.HeaderText = "Column";
+            this.Colunb.MinimumWidth = 6;
+            this.Colunb.Name = "Colunb";
+            this.Colunb.ReadOnly = true;
+            this.Colunb.Visible = false;
+            this.Colunb.Width = 125;
             // 
             // revokeSelectBtn
             // 
-            revokeSelectBtn.Location = new Point(582, 368);
-            revokeSelectBtn.Margin = new Padding(3, 2, 3, 2);
-            revokeSelectBtn.Name = "revokeSelectBtn";
-            revokeSelectBtn.Size = new Size(94, 29);
-            revokeSelectBtn.TabIndex = 18;
-            revokeSelectBtn.Text = "Revoke";
-            revokeSelectBtn.UseVisualStyleBackColor = true;
-            revokeSelectBtn.Click += revokeSelectBtn_Click;
+            this.revokeSelectBtn.Location = new System.Drawing.Point(665, 491);
+            this.revokeSelectBtn.Name = "revokeSelectBtn";
+            this.revokeSelectBtn.Size = new System.Drawing.Size(107, 39);
+            this.revokeSelectBtn.TabIndex = 18;
+            this.revokeSelectBtn.Text = "Revoke";
+            this.revokeSelectBtn.UseVisualStyleBackColor = true;
+            this.revokeSelectBtn.Click += new System.EventHandler(this.revokeSelectBtn_Click);
             // 
             // viewSelectResult
             // 
-            viewSelectResult.AutoSize = true;
-            viewSelectResult.Location = new Point(440, 368);
-            viewSelectResult.Name = "viewSelectResult";
-            viewSelectResult.Size = new Size(16, 15);
-            viewSelectResult.TabIndex = 17;
-            viewSelectResult.Text = "...";
+            this.viewSelectResult.AutoSize = true;
+            this.viewSelectResult.Location = new System.Drawing.Point(503, 491);
+            this.viewSelectResult.Name = "viewSelectResult";
+            this.viewSelectResult.Size = new System.Drawing.Size(18, 20);
+            this.viewSelectResult.TabIndex = 17;
+            this.viewSelectResult.Text = "...";
             // 
             // viewSelectLabel
             // 
-            viewSelectLabel.AutoSize = true;
-            viewSelectLabel.Location = new Point(383, 368);
-            viewSelectLabel.Name = "viewSelectLabel";
-            viewSelectLabel.Size = new Size(35, 15);
-            viewSelectLabel.TabIndex = 16;
-            viewSelectLabel.Text = "View:";
+            this.viewSelectLabel.AutoSize = true;
+            this.viewSelectLabel.Location = new System.Drawing.Point(438, 491);
+            this.viewSelectLabel.Name = "viewSelectLabel";
+            this.viewSelectLabel.Size = new System.Drawing.Size(44, 20);
+            this.viewSelectLabel.TabIndex = 16;
+            this.viewSelectLabel.Text = "View:";
             // 
             // dataGridTableViewSelectUsers
             // 
-            dataGridTableViewSelectUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridTableViewSelectUsers.Location = new Point(383, 224);
-            dataGridTableViewSelectUsers.Margin = new Padding(3, 2, 3, 2);
-            dataGridTableViewSelectUsers.Name = "dataGridTableViewSelectUsers";
-            dataGridTableViewSelectUsers.RowHeadersWidth = 51;
-            dataGridTableViewSelectUsers.RowTemplate.Height = 29;
-            dataGridTableViewSelectUsers.Size = new Size(292, 133);
-            dataGridTableViewSelectUsers.TabIndex = 15;
+            this.dataGridTableViewSelectUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridTableViewSelectUsers.Location = new System.Drawing.Point(445, 299);
+            this.dataGridTableViewSelectUsers.Name = "dataGridTableViewSelectUsers";
+            this.dataGridTableViewSelectUsers.RowHeadersWidth = 51;
+            this.dataGridTableViewSelectUsers.RowTemplate.Height = 29;
+            this.dataGridTableViewSelectUsers.Size = new System.Drawing.Size(334, 177);
+            this.dataGridTableViewSelectUsers.TabIndex = 15;
             // 
             // dataGridTableViewsSelect
             // 
-            dataGridTableViewsSelect.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridTableViewsSelect.Location = new Point(15, 224);
-            dataGridTableViewsSelect.Margin = new Padding(3, 2, 3, 2);
-            dataGridTableViewsSelect.Name = "dataGridTableViewsSelect";
-            dataGridTableViewsSelect.RowHeadersWidth = 51;
-            dataGridTableViewsSelect.RowTemplate.Height = 29;
-            dataGridTableViewsSelect.Size = new Size(351, 173);
-            dataGridTableViewsSelect.TabIndex = 14;
-            dataGridTableViewsSelect.CellClick += dataGridTableViewsSelect_CellContentClick;
+            this.dataGridTableViewsSelect.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridTableViewsSelect.Location = new System.Drawing.Point(17, 299);
+            this.dataGridTableViewsSelect.Name = "dataGridTableViewsSelect";
+            this.dataGridTableViewsSelect.RowHeadersWidth = 51;
+            this.dataGridTableViewsSelect.RowTemplate.Height = 29;
+            this.dataGridTableViewsSelect.Size = new System.Drawing.Size(401, 231);
+            this.dataGridTableViewsSelect.TabIndex = 14;
+            this.dataGridTableViewsSelect.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridTableViewsSelect_CellContentClick);
             // 
             // withOptionSelectCheckbox
             // 
-            withOptionSelectCheckbox.AutoSize = true;
-            withOptionSelectCheckbox.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            withOptionSelectCheckbox.Location = new Point(499, 193);
-            withOptionSelectCheckbox.Margin = new Padding(3, 2, 3, 2);
-            withOptionSelectCheckbox.Name = "withOptionSelectCheckbox";
-            withOptionSelectCheckbox.Size = new Size(101, 23);
-            withOptionSelectCheckbox.TabIndex = 13;
-            withOptionSelectCheckbox.Text = "With option";
-            withOptionSelectCheckbox.UseVisualStyleBackColor = true;
-            withOptionSelectCheckbox.CheckedChanged += withOptionSelectCheckbox_CheckedChanged;
+            this.withOptionSelectCheckbox.AutoSize = true;
+            this.withOptionSelectCheckbox.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.withOptionSelectCheckbox.Location = new System.Drawing.Point(570, 257);
+            this.withOptionSelectCheckbox.Name = "withOptionSelectCheckbox";
+            this.withOptionSelectCheckbox.Size = new System.Drawing.Size(123, 27);
+            this.withOptionSelectCheckbox.TabIndex = 13;
+            this.withOptionSelectCheckbox.Text = "With option";
+            this.withOptionSelectCheckbox.UseVisualStyleBackColor = true;
+            this.withOptionSelectCheckbox.Click += new System.EventHandler(this.withOptionSelectCheckbox_CheckedChanged);
             // 
             // grantSelectBtn
             // 
-            grantSelectBtn.Location = new Point(383, 189);
-            grantSelectBtn.Margin = new Padding(3, 2, 3, 2);
-            grantSelectBtn.Name = "grantSelectBtn";
-            grantSelectBtn.Size = new Size(101, 31);
-            grantSelectBtn.TabIndex = 12;
-            grantSelectBtn.Text = "Grant";
-            grantSelectBtn.UseVisualStyleBackColor = true;
-            grantSelectBtn.Click += grantSelectBtn_Click;
+            this.grantSelectBtn.Location = new System.Drawing.Point(438, 252);
+            this.grantSelectBtn.Name = "grantSelectBtn";
+            this.grantSelectBtn.Size = new System.Drawing.Size(115, 41);
+            this.grantSelectBtn.TabIndex = 12;
+            this.grantSelectBtn.Text = "Grant";
+            this.grantSelectBtn.UseVisualStyleBackColor = true;
+            this.grantSelectBtn.Click += new System.EventHandler(this.grantSelectBtn_Click);
             // 
             // viewNameSelectTextBox
             // 
-            viewNameSelectTextBox.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            viewNameSelectTextBox.Location = new Point(481, 159);
-            viewNameSelectTextBox.Margin = new Padding(3, 2, 3, 2);
-            viewNameSelectTextBox.Name = "viewNameSelectTextBox";
-            viewNameSelectTextBox.Size = new Size(195, 26);
-            viewNameSelectTextBox.TabIndex = 11;
+            this.viewNameSelectTextBox.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.viewNameSelectTextBox.Location = new System.Drawing.Point(550, 212);
+            this.viewNameSelectTextBox.Name = "viewNameSelectTextBox";
+            this.viewNameSelectTextBox.Size = new System.Drawing.Size(222, 30);
+            this.viewNameSelectTextBox.TabIndex = 11;
             // 
             // viewNameSelectLabel
             // 
-            viewNameSelectLabel.AutoSize = true;
-            viewNameSelectLabel.Location = new Point(383, 172);
-            viewNameSelectLabel.Name = "viewNameSelectLabel";
-            viewNameSelectLabel.Size = new Size(68, 15);
-            viewNameSelectLabel.TabIndex = 10;
-            viewNameSelectLabel.Text = "View name:";
+            this.viewNameSelectLabel.AutoSize = true;
+            this.viewNameSelectLabel.Location = new System.Drawing.Point(438, 229);
+            this.viewNameSelectLabel.Name = "viewNameSelectLabel";
+            this.viewNameSelectLabel.Size = new System.Drawing.Size(85, 20);
+            this.viewNameSelectLabel.TabIndex = 10;
+            this.viewNameSelectLabel.Text = "View name:";
             // 
             // dataGridTableInfoSelect
             // 
-            dataGridTableInfoSelect.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridTableInfoSelect.Location = new Point(15, 24);
-            dataGridTableInfoSelect.Margin = new Padding(3, 2, 3, 2);
-            dataGridTableInfoSelect.Name = "dataGridTableInfoSelect";
-            dataGridTableInfoSelect.RowHeadersWidth = 51;
-            dataGridTableInfoSelect.RowTemplate.Height = 29;
-            dataGridTableInfoSelect.Size = new Size(351, 173);
-            dataGridTableInfoSelect.TabIndex = 8;
-            dataGridTableInfoSelect.CellClick += dataGridTableInfoSelect_CellContentClick;
+            this.dataGridTableInfoSelect.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridTableInfoSelect.Location = new System.Drawing.Point(17, 32);
+            this.dataGridTableInfoSelect.Name = "dataGridTableInfoSelect";
+            this.dataGridTableInfoSelect.RowHeadersWidth = 51;
+            this.dataGridTableInfoSelect.RowTemplate.Height = 29;
+            this.dataGridTableInfoSelect.Size = new System.Drawing.Size(401, 231);
+            this.dataGridTableInfoSelect.TabIndex = 8;
+            this.dataGridTableInfoSelect.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridTableInfoSelect_CellContentClick);
             // 
             // updateTabPage
             // 
-            updateTabPage.Controls.Add(attributeUpdateLabel2);
-            updateTabPage.Controls.Add(columnUpdateLabel2);
-            updateTabPage.Controls.Add(withOptionUpdateCheckbox);
-            updateTabPage.Controls.Add(grantUpdateBtn);
-            updateTabPage.Controls.Add(revokeUpdateBtn);
-            updateTabPage.Controls.Add(attributeUpdateLabel);
-            updateTabPage.Controls.Add(columnUpdateLabel);
-            updateTabPage.Controls.Add(dataGridViewUpdatePrivs);
-            updateTabPage.Controls.Add(dataGridViewUpdateInfo);
-            updateTabPage.Location = new Point(4, 24);
-            updateTabPage.Margin = new Padding(3, 2, 3, 2);
-            updateTabPage.Name = "updateTabPage";
-            updateTabPage.Padding = new Padding(3, 2, 3, 2);
-            updateTabPage.Size = new Size(688, 417);
-            updateTabPage.TabIndex = 1;
-            updateTabPage.Text = "Update";
-            updateTabPage.UseVisualStyleBackColor = true;
+            this.updateTabPage.Controls.Add(this.attributeUpdateLabel2);
+            this.updateTabPage.Controls.Add(this.columnUpdateLabel2);
+            this.updateTabPage.Controls.Add(this.withOptionUpdateCheckbox);
+            this.updateTabPage.Controls.Add(this.grantUpdateBtn);
+            this.updateTabPage.Controls.Add(this.revokeUpdateBtn);
+            this.updateTabPage.Controls.Add(this.attributeUpdateLabel);
+            this.updateTabPage.Controls.Add(this.columnUpdateLabel);
+            this.updateTabPage.Controls.Add(this.dataGridViewUpdatePrivs);
+            this.updateTabPage.Controls.Add(this.dataGridViewUpdateInfo);
+            this.updateTabPage.Location = new System.Drawing.Point(4, 29);
+            this.updateTabPage.Name = "updateTabPage";
+            this.updateTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.updateTabPage.Size = new System.Drawing.Size(787, 560);
+            this.updateTabPage.TabIndex = 1;
+            this.updateTabPage.Text = "Update";
+            this.updateTabPage.UseVisualStyleBackColor = true;
             // 
             // attributeUpdateLabel2
             // 
-            attributeUpdateLabel2.AutoSize = true;
-            attributeUpdateLabel2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            attributeUpdateLabel2.Location = new Point(470, 222);
-            attributeUpdateLabel2.Name = "attributeUpdateLabel2";
-            attributeUpdateLabel2.Size = new Size(18, 19);
-            attributeUpdateLabel2.TabIndex = 27;
-            attributeUpdateLabel2.Text = "...";
+            this.attributeUpdateLabel2.AutoSize = true;
+            this.attributeUpdateLabel2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.attributeUpdateLabel2.Location = new System.Drawing.Point(537, 296);
+            this.attributeUpdateLabel2.Name = "attributeUpdateLabel2";
+            this.attributeUpdateLabel2.Size = new System.Drawing.Size(22, 23);
+            this.attributeUpdateLabel2.TabIndex = 27;
+            this.attributeUpdateLabel2.Text = "...";
             // 
             // columnUpdateLabel2
             // 
-            columnUpdateLabel2.AutoSize = true;
-            columnUpdateLabel2.Location = new Point(391, 224);
-            columnUpdateLabel2.Name = "columnUpdateLabel2";
-            columnUpdateLabel2.Size = new Size(53, 15);
-            columnUpdateLabel2.TabIndex = 26;
-            columnUpdateLabel2.Text = "Column:";
+            this.columnUpdateLabel2.AutoSize = true;
+            this.columnUpdateLabel2.Location = new System.Drawing.Point(447, 299);
+            this.columnUpdateLabel2.Name = "columnUpdateLabel2";
+            this.columnUpdateLabel2.Size = new System.Drawing.Size(63, 20);
+            this.columnUpdateLabel2.TabIndex = 26;
+            this.columnUpdateLabel2.Text = "Column:";
             // 
             // withOptionUpdateCheckbox
             // 
-            withOptionUpdateCheckbox.AutoSize = true;
-            withOptionUpdateCheckbox.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            withOptionUpdateCheckbox.Location = new Point(525, 64);
-            withOptionUpdateCheckbox.Margin = new Padding(3, 2, 3, 2);
-            withOptionUpdateCheckbox.Name = "withOptionUpdateCheckbox";
-            withOptionUpdateCheckbox.Size = new Size(107, 24);
-            withOptionUpdateCheckbox.TabIndex = 25;
-            withOptionUpdateCheckbox.Text = "With option";
-            withOptionUpdateCheckbox.UseVisualStyleBackColor = true;
-            withOptionUpdateCheckbox.CheckedChanged += withOptionUpdateCheckbox_CheckedChanged;
+            this.withOptionUpdateCheckbox.AutoSize = true;
+            this.withOptionUpdateCheckbox.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.withOptionUpdateCheckbox.Location = new System.Drawing.Point(600, 85);
+            this.withOptionUpdateCheckbox.Name = "withOptionUpdateCheckbox";
+            this.withOptionUpdateCheckbox.Size = new System.Drawing.Size(129, 29);
+            this.withOptionUpdateCheckbox.TabIndex = 25;
+            this.withOptionUpdateCheckbox.Text = "With option";
+            this.withOptionUpdateCheckbox.UseVisualStyleBackColor = true;
+            this.withOptionUpdateCheckbox.Click += new System.EventHandler(this.withOptionUpdateCheckbox_CheckedChanged);
             // 
             // grantUpdateBtn
             // 
-            grantUpdateBtn.Location = new Point(391, 59);
-            grantUpdateBtn.Margin = new Padding(3, 2, 3, 2);
-            grantUpdateBtn.Name = "grantUpdateBtn";
-            grantUpdateBtn.Size = new Size(98, 27);
-            grantUpdateBtn.TabIndex = 24;
-            grantUpdateBtn.Text = "Grant";
-            grantUpdateBtn.UseVisualStyleBackColor = true;
-            grantUpdateBtn.Click += grantUpdateBtn_Click;
+            this.grantUpdateBtn.Location = new System.Drawing.Point(447, 79);
+            this.grantUpdateBtn.Name = "grantUpdateBtn";
+            this.grantUpdateBtn.Size = new System.Drawing.Size(112, 36);
+            this.grantUpdateBtn.TabIndex = 24;
+            this.grantUpdateBtn.Text = "Grant";
+            this.grantUpdateBtn.UseVisualStyleBackColor = true;
+            this.grantUpdateBtn.Click += new System.EventHandler(this.grantUpdateBtn_Click);
             // 
             // revokeUpdateBtn
             // 
-            revokeUpdateBtn.Location = new Point(396, 259);
-            revokeUpdateBtn.Margin = new Padding(3, 2, 3, 2);
-            revokeUpdateBtn.Name = "revokeUpdateBtn";
-            revokeUpdateBtn.Size = new Size(94, 29);
-            revokeUpdateBtn.TabIndex = 23;
-            revokeUpdateBtn.Text = "Revoke";
-            revokeUpdateBtn.UseVisualStyleBackColor = true;
-            revokeUpdateBtn.Click += revokeUpdateBtn_Click;
+            this.revokeUpdateBtn.Location = new System.Drawing.Point(453, 345);
+            this.revokeUpdateBtn.Name = "revokeUpdateBtn";
+            this.revokeUpdateBtn.Size = new System.Drawing.Size(107, 39);
+            this.revokeUpdateBtn.TabIndex = 23;
+            this.revokeUpdateBtn.Text = "Revoke";
+            this.revokeUpdateBtn.UseVisualStyleBackColor = true;
+            this.revokeUpdateBtn.Click += new System.EventHandler(this.revokeUpdateBtn_Click);
             // 
             // attributeUpdateLabel
             // 
-            attributeUpdateLabel.AutoSize = true;
-            attributeUpdateLabel.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            attributeUpdateLabel.Location = new Point(470, 22);
-            attributeUpdateLabel.Name = "attributeUpdateLabel";
-            attributeUpdateLabel.Size = new Size(18, 19);
-            attributeUpdateLabel.TabIndex = 22;
-            attributeUpdateLabel.Text = "...";
+            this.attributeUpdateLabel.AutoSize = true;
+            this.attributeUpdateLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.attributeUpdateLabel.Location = new System.Drawing.Point(537, 29);
+            this.attributeUpdateLabel.Name = "attributeUpdateLabel";
+            this.attributeUpdateLabel.Size = new System.Drawing.Size(22, 23);
+            this.attributeUpdateLabel.TabIndex = 22;
+            this.attributeUpdateLabel.Text = "...";
             // 
             // columnUpdateLabel
             // 
-            columnUpdateLabel.AutoSize = true;
-            columnUpdateLabel.Location = new Point(391, 24);
-            columnUpdateLabel.Name = "columnUpdateLabel";
-            columnUpdateLabel.Size = new Size(53, 15);
-            columnUpdateLabel.TabIndex = 21;
-            columnUpdateLabel.Text = "Column:";
+            this.columnUpdateLabel.AutoSize = true;
+            this.columnUpdateLabel.Location = new System.Drawing.Point(447, 32);
+            this.columnUpdateLabel.Name = "columnUpdateLabel";
+            this.columnUpdateLabel.Size = new System.Drawing.Size(63, 20);
+            this.columnUpdateLabel.TabIndex = 21;
+            this.columnUpdateLabel.Text = "Column:";
             // 
             // dataGridViewUpdatePrivs
             // 
-            dataGridViewUpdatePrivs.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewUpdatePrivs.Location = new Point(15, 224);
-            dataGridViewUpdatePrivs.Margin = new Padding(3, 2, 3, 2);
-            dataGridViewUpdatePrivs.Name = "dataGridViewUpdatePrivs";
-            dataGridViewUpdatePrivs.RowHeadersWidth = 51;
-            dataGridViewUpdatePrivs.RowTemplate.Height = 29;
-            dataGridViewUpdatePrivs.Size = new Size(351, 173);
-            dataGridViewUpdatePrivs.TabIndex = 20;
-            dataGridViewUpdatePrivs.CellMouseUp += dataGridViewUpdatePrivs_CellMouseUp;
+            this.dataGridViewUpdatePrivs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewUpdatePrivs.Location = new System.Drawing.Point(17, 299);
+            this.dataGridViewUpdatePrivs.Name = "dataGridViewUpdatePrivs";
+            this.dataGridViewUpdatePrivs.RowHeadersWidth = 51;
+            this.dataGridViewUpdatePrivs.RowTemplate.Height = 29;
+            this.dataGridViewUpdatePrivs.Size = new System.Drawing.Size(401, 231);
+            this.dataGridViewUpdatePrivs.TabIndex = 20;
+            this.dataGridViewUpdatePrivs.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewUpdatePrivs_CellMouseUp);
             // 
             // dataGridViewUpdateInfo
             // 
-            dataGridViewUpdateInfo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewUpdateInfo.Location = new Point(15, 24);
-            dataGridViewUpdateInfo.Margin = new Padding(3, 2, 3, 2);
-            dataGridViewUpdateInfo.Name = "dataGridViewUpdateInfo";
-            dataGridViewUpdateInfo.RowHeadersWidth = 51;
-            dataGridViewUpdateInfo.RowTemplate.Height = 29;
-            dataGridViewUpdateInfo.Size = new Size(351, 173);
-            dataGridViewUpdateInfo.TabIndex = 19;
-            dataGridViewUpdateInfo.CellMouseUp += dataGridViewUpdateInfo_CellMouseUp;
+            this.dataGridViewUpdateInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewUpdateInfo.Location = new System.Drawing.Point(17, 32);
+            this.dataGridViewUpdateInfo.Name = "dataGridViewUpdateInfo";
+            this.dataGridViewUpdateInfo.RowHeadersWidth = 51;
+            this.dataGridViewUpdateInfo.RowTemplate.Height = 29;
+            this.dataGridViewUpdateInfo.Size = new System.Drawing.Size(401, 231);
+            this.dataGridViewUpdateInfo.TabIndex = 19;
+            this.dataGridViewUpdateInfo.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewUpdateInfo_CellMouseUp);
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(16, 26);
-            label1.Name = "label1";
-            label1.Size = new Size(46, 15);
-            label1.TabIndex = 1;
-            label1.Text = "Table:...";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(18, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Table:...";
             // 
             // contextMenuStrip1
             // 
-            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
-            contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(61, 4);
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // ColumnPermission
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(750, 527);
-            Controls.Add(label1);
-            Controls.Add(selectControlTab);
-            Margin = new Padding(3, 2, 3, 2);
-            Name = "ColumnPermission";
-            Text = "ColumnPermission";
-            Load += ColumnPermission_Load;
-            selectControlTab.ResumeLayout(false);
-            selectTabPage.ResumeLayout(false);
-            selectTabPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridTableViewSelectUsers).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridTableViewsSelect).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridTableInfoSelect).EndInit();
-            updateTabPage.ResumeLayout(false);
-            updateTabPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewUpdatePrivs).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewUpdateInfo).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(857, 703);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.selectControlTab);
+            this.Name = "ColumnPermission";
+            this.Text = "ColumnPermission";
+            this.Load += new System.EventHandler(this.ColumnPermission_Load);
+            this.selectControlTab.ResumeLayout(false);
+            this.selectTabPage.ResumeLayout(false);
+            this.selectTabPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTableViewSelectUsers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTableViewsSelect)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTableInfoSelect)).EndInit();
+            this.updateTabPage.ResumeLayout(false);
+            this.updateTabPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUpdatePrivs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUpdateInfo)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
