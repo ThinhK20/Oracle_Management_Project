@@ -46,15 +46,13 @@
         {
             if (checkBox1.Checked)
             {
-                string sqlRe = "Grant " + Data_Grid + " to " + _username + " with grant option";
-                MessageBox.Show(sqlRe);
+                string sqlRe = "Grant " + Data_Grid + " to " + _username + " with admin option";
                 Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(sqlRe);
             }
             else
             {
 
                 string sqlRe = "Grant " + Data_Grid + " to " + _username;
-                MessageBox.Show(sqlRe);
                 Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(sqlRe);
             }
             EditUser_Load(sender, e);
@@ -116,15 +114,13 @@
         {
             if (checkBox2.Checked)
             {
-                string sqlRe = "Grant " + Data_Grid + " to " + _username + " with grant option";
-                MessageBox.Show(sqlRe);
+                string sqlRe = "Grant " + Data_Grid + " to " + _username + " with admin option";
                 Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(sqlRe);
             }
             else
             {
 
                 string sqlRe = "Grant " + Data_Grid + " to " + _username;
-                MessageBox.Show(sqlRe);
                 Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(sqlRe);
             }
             EditUser_Load(sender, e);
@@ -145,14 +141,12 @@
         {
             if (checkBox3.Checked)
             {
-                string sqlRe = "Grant " + comboBox1.SelectedItem + " on " + Data_Grid + " to " + _username + " with grant option";
-                MessageBox.Show(sqlRe);
+                string sqlRe = "Grant " + comboBox1.SelectedItem + " on " + Data_Grid + " to " + _username + " with admin option";
                 Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(sqlRe);
             }
             else
             {
                 string sqlRe = "Grant " + comboBox1.SelectedItem + " on " + Data_Grid + " to " + _username;
-                MessageBox.Show(sqlRe);
                 Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(sqlRe);
             }
             EditUser_Load(sender, e);
@@ -164,7 +158,7 @@
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ColumnPermission Column = new ColumnPermission(Data_Grid, _username,true);
+            ColumnPermission Column = new ColumnPermission(Data_Grid, _username, true);
             Column.ShowDialog();
         }
 

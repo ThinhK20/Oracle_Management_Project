@@ -125,9 +125,9 @@ namespace Oracle_Management_UI
             checkBox1.AutoSize = true;
             checkBox1.Location = new Point(34, 346);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(95, 19);
+            checkBox1.Size = new Size(102, 19);
             checkBox1.TabIndex = 13;
-            checkBox1.Text = "Grant Option";
+            checkBox1.Text = "Admin Option";
             checkBox1.UseVisualStyleBackColor = true;
             // 
             // label3
@@ -166,9 +166,9 @@ namespace Oracle_Management_UI
             checkBox2.AutoSize = true;
             checkBox2.Location = new Point(34, 346);
             checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(95, 19);
+            checkBox2.Size = new Size(102, 19);
             checkBox2.TabIndex = 13;
-            checkBox2.Text = "Grant Option";
+            checkBox2.Text = "Admin Option";
             checkBox2.UseVisualStyleBackColor = true;
             // 
             // label6
@@ -240,9 +240,9 @@ namespace Oracle_Management_UI
             checkBox3.AutoSize = true;
             checkBox3.Location = new Point(28, 297);
             checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(95, 19);
+            checkBox3.Size = new Size(102, 19);
             checkBox3.TabIndex = 13;
-            checkBox3.Text = "Grant Option";
+            checkBox3.Text = "Admin Option";
             checkBox3.UseVisualStyleBackColor = true;
             checkBox3.CheckedChanged += checkBox3_CheckedChanged;
             // 
