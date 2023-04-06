@@ -190,6 +190,9 @@ namespace Oracle_Management_UI
                 config.Save(ConfigurationSaveMode.Modified);
                 ConfigurationManager.RefreshSection("connectionStrings");
                 MessageBox.Show("Thoát tài khoản thành công");
+                Login login = new Login();
+                login.ShowDialog();
+                Hide();
             }
         }
 
