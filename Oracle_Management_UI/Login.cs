@@ -42,7 +42,9 @@ namespace Oracle_Management_UI
                     config.ConnectionStrings.ConnectionStrings.Add(new ConnectionStringSettings("OracleConnection", newCnnStr));
                     config.Save(ConfigurationSaveMode.Modified);
                     ConfigurationManager.RefreshSection("connectionStrings");
-
+                    ViewUser nav = new ViewUser();
+                    nav.ShowDialog();
+                    Hide();
                     MessageBox.Show("Đăng nhập thành công");
                 }
                 catch (OracleException ex)
@@ -51,9 +53,7 @@ namespace Oracle_Management_UI
                 }
             }
 
-            ViewUser nav = new ViewUser();
-            nav.ShowDialog();
-            Hide();
+          
         }
     }
 }
