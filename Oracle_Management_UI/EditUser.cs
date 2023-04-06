@@ -164,7 +164,7 @@
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ColumnPermission Column = new ColumnPermission(Data_Grid, _username);
+            ColumnPermission Column = new ColumnPermission(Data_Grid, _username,true);
             Column.ShowDialog();
         }
 

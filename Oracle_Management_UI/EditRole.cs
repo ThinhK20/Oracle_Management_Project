@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Oracle_Management_UI
@@ -53,20 +54,16 @@ namespace Oracle_Management_UI
                 dataGridView8.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"SELECT table_name as \"Bảng\" FROM all_tables WHERE OWNER = 'MY_PROJECT_PLUG_USER'");
                 DataGridViewColumn column6 = dataGridView8.Columns[0];
                 column6.Width = 230;
-                dataGridView7.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"SELECT GRANTEE AS \"VAI TRÒ\" , TABLE_NAME AS \"BẢNG\",privilege as \"Quyền\" FROM USER_TAB_PRIVS where grantee = 'MY_PROJECT_PLUG_USER' AND TYPE = 'TABLE'");
+                dataGridView7.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"SELECT TABLE_NAME AS \"BẢNG\",privilege as \"Quyền\" FROM USER_TAB_PRIVS where grantee = '{_roleName}' AND (TYPE = 'TABLE' OR TYPE = 'VIEW')");
                 //DataGridViewColumn column7 = dataGridView7.Columns[0];
                 //column7.Width = 230;
+                label14.Text = _roleName;
             }
             catch (Exception ex)
             {
 
             }
         }
-
-        private int rowL { get; set; }
-        private int colL { get; set; }
-        private int rowR { get; set; }
-        private int colR { get; set; }
 
 
         private void printLabel(DataGridView dataGridView, Label label, int row, int col,string text)
@@ -251,6 +248,55 @@ namespace Oracle_Management_UI
             string priv = dataGridView5.CurrentCell.Value.ToString();
             Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"REVOKE {priv} FROM {_roleName}");
             dataGridView5.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"SELECT privilege as \"Quyền\",ADMIN_OPTION FROM ROLE_SYS_PRIVS WHERE ROLE = '{_roleName}' ORDER BY privilege");
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            int row = dataGridView8.CurrentCell.RowIndex;
+            string table = dataGridView8.Rows[row].Cells[0].Value.ToString();
+            MessageBox.Show(table);
+            ColumnPermission navColumn = new ColumnPermission(table, _roleName,false);
+            navColumn.ShowDialog();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            string table = dataGridView8.CurrentCell.Value.ToString();
+            string per = "text" + comboBox1.SelectedItem;
+            if (comboBox1.SelectedItem == null)
+            {
+                MessageBox.Show("Vui lòng lựa chọn quyền trên bảng");
+            }
+            else
+            {
+                Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"GRANT {comboBox1.SelectedItem} ON {table} TO {_roleName}");
+                dataGridView7.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"SELECT TABLE_NAME AS \"BẢNG\",privilege as \"Quyền\" FROM USER_TAB_PRIVS where grantee = '{_roleName}' AND (TYPE = 'TABLE' OR TYPE = 'VIEW')");
+            }
+
+        }
+
+        private void dataGridView7_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int row = e.RowIndex;
+            this.printLabel(dataGridView7, label9, row, 0, "Table: ");
+            this.printLabel(dataGridView7, label12, row, 1, "Permission: ");
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            int row = dataGridView7.CurrentCell.RowIndex;
+            string table = dataGridView7.Rows[row].Cells[0].Value.ToString();
+            string per = dataGridView7.Rows[row].Cells[1].Value.ToString();
+            Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"REVOKE {per} ON {table} FROM {_roleName}");
+            dataGridView7.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"SELECT TABLE_NAME AS \"BẢNG\",privilege as \"Quyền\" FROM USER_TAB_PRIVS where grantee = '{_roleName}' AND (TYPE = 'TABLE' OR TYPE = 'VIEW')");
+
+            //string table = 
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
 
         }
     }
