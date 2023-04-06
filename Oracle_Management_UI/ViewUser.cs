@@ -1,4 +1,6 @@
-﻿namespace Oracle_Management_UI
+﻿using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+
+namespace Oracle_Management_UI
 {
     public partial class ViewUser : Form
     {
@@ -12,8 +14,6 @@
         private void loadUserInsys()
         {
             dataGridView1.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("select * from dba_users");
-
-
 
         }
         private void loadSystemPriOfUser()
@@ -59,6 +59,9 @@
         private void ViewUser_Load(object sender, EventArgs e)
         {
             loadUserInsys();
+            dataGridView16.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM all_views");
+            dataGridView15.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM all_tables");
+            dataGridView14.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM DBA_ROLES");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -224,6 +227,16 @@
         private void dataGridView12_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dataGridView14_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void button14_Click_1(object sender, EventArgs e)
+        {
+            ManageRole nav = new ManageRole();
+            nav.ShowDialog();
         }
     }
 }

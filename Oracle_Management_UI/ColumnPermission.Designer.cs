@@ -110,7 +110,6 @@
             button1.TabIndex = 20;
             button1.Text = "Reset";
             button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
             // 
             // dataGridView1
             // 
@@ -123,14 +122,15 @@
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.Size = new Size(289, 131);
             dataGridView1.TabIndex = 19;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Colunb
             // 
             Colunb.HeaderText = "Column";
+            Colunb.MinimumWidth = 6;
             Colunb.Name = "Colunb";
             Colunb.ReadOnly = true;
             Colunb.Visible = false;
+            Colunb.Width = 125;
             // 
             // revokeSelectBtn
             // 
@@ -195,6 +195,7 @@
             withOptionSelectCheckbox.TabIndex = 13;
             withOptionSelectCheckbox.Text = "With option";
             withOptionSelectCheckbox.UseVisualStyleBackColor = true;
+            withOptionSelectCheckbox.CheckedChanged += withOptionSelectCheckbox_CheckedChanged;
             // 
             // grantSelectBtn
             // 
@@ -287,6 +288,7 @@
             withOptionUpdateCheckbox.TabIndex = 25;
             withOptionUpdateCheckbox.Text = "With option";
             withOptionUpdateCheckbox.UseVisualStyleBackColor = true;
+            withOptionUpdateCheckbox.CheckedChanged += withOptionUpdateCheckbox_CheckedChanged;
             // 
             // grantUpdateBtn
             // 
@@ -297,6 +299,7 @@
             grantUpdateBtn.TabIndex = 24;
             grantUpdateBtn.Text = "Grant";
             grantUpdateBtn.UseVisualStyleBackColor = true;
+            grantUpdateBtn.Click += grantUpdateBtn_Click;
             // 
             // revokeUpdateBtn
             // 
@@ -307,6 +310,7 @@
             revokeUpdateBtn.TabIndex = 23;
             revokeUpdateBtn.Text = "Revoke";
             revokeUpdateBtn.UseVisualStyleBackColor = true;
+            revokeUpdateBtn.Click += revokeUpdateBtn_Click;
             // 
             // attributeUpdateLabel
             // 
@@ -337,6 +341,7 @@
             dataGridViewUpdatePrivs.RowTemplate.Height = 29;
             dataGridViewUpdatePrivs.Size = new Size(351, 173);
             dataGridViewUpdatePrivs.TabIndex = 20;
+            dataGridViewUpdatePrivs.CellMouseUp += dataGridViewUpdatePrivs_CellMouseUp;
             // 
             // dataGridViewUpdateInfo
             // 
@@ -348,6 +353,7 @@
             dataGridViewUpdateInfo.RowTemplate.Height = 29;
             dataGridViewUpdateInfo.Size = new Size(351, 173);
             dataGridViewUpdateInfo.TabIndex = 19;
+            dataGridViewUpdateInfo.CellMouseUp += dataGridViewUpdateInfo_CellMouseUp;
             // 
             // label1
             // 
@@ -357,10 +363,10 @@
             label1.Size = new Size(46, 15);
             label1.TabIndex = 1;
             label1.Text = "Table:...";
-            label1.Click += label1_Click;
             // 
             // contextMenuStrip1
             // 
+            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
             // 
