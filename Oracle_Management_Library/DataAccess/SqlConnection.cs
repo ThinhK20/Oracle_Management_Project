@@ -1,7 +1,4 @@
-﻿using Oracle.ManagedDataAccess.Client;
-using System.Data;
-
-namespace Oracle_Management_Library.DataAccess
+﻿namespace Oracle_Management_Library.DataAccess
 {
 	internal class SqlConnection : IDataConnection
 	{
@@ -56,6 +53,7 @@ namespace Oracle_Management_Library.DataAccess
 				{
 
 				}
+
 			}
 		}
 
