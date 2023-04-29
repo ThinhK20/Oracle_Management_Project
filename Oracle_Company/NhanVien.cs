@@ -137,12 +137,12 @@ namespace Oracle_Company
             {
                 query = "UPDATE ADMIN_DBMS.NHANVIEN SET " + column + " = " + " N'" + content + "' WHERE trim(MANV) = trim(sys_context('userenv', 'session_user'))";
             }
-            textBox5.Text = query;
-            Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(query);
-            string query2 = "commit work";
-            Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(query2);
+             textBox5.Text = query;
+             Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(query);
+             
+             Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery("COMMIT WORK");
 
-            dataGridView5.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM ADMIN_DBMS.VIEW_FOR_UPDATE");
+             dataGridView5.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM ADMIN_DBMS.VIEW_FOR_UPDATE");
 
         }
 
