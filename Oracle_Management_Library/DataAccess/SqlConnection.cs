@@ -44,11 +44,19 @@ namespace Oracle_Management_Library.DataAccess
             string connectionString = GlobalConfig.CnnString("OracleConnection");
             using (OracleConnection oracleConnection = new OracleConnection(connectionString))
             {
-                OracleCommand command = new OracleCommand(queryString);
-                command.Connection = oracleConnection;
-                command.CommandType = CommandType.Text;
-                oracleConnection.Open();
-                command.ExecuteNonQueryAsync();
+                try
+                {
+                    OracleCommand command = new OracleCommand(queryString);
+                    command.Connection = oracleConnection;
+                    command.CommandType = CommandType.Text;
+                    oracleConnection.Open();
+                    command.ExecuteNonQueryAsync();
+                }
+                catch
+                {
+
+                }
+               
             }
         }
 

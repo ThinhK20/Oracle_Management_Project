@@ -20,7 +20,7 @@ namespace Oracle_Management_UI
         //string roleNow = "QLTTIEP";
         private string _roleName { get; set; }
         private string _userName { get; set; }
-   
+
 
         public EditRole(string userName, string roleName)
         {
@@ -33,7 +33,7 @@ namespace Oracle_Management_UI
         {
 
             try
-            { 
+            {
                 dataGridView1.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT USERNAME as \"Tên tài khoản\" FROM all_users");
                 DataGridViewColumn column = dataGridView1.Columns[0];
                 column.Width = 230;
@@ -50,7 +50,7 @@ namespace Oracle_Management_UI
                 dataGridView5.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"SELECT privilege as \"Quyền\",ADMIN_OPTION FROM ROLE_SYS_PRIVS WHERE ROLE = '{_roleName}' ORDER BY privilege");
                 DataGridViewColumn column5 = dataGridView5.Columns[0];
                 column5.Width = 230;
- 
+
                 dataGridView8.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"SELECT table_name as \"Bảng\" FROM all_tables WHERE OWNER = 'MY_PROJECT_PLUG_USER'");
                 DataGridViewColumn column6 = dataGridView8.Columns[0];
                 column6.Width = 230;
@@ -66,7 +66,7 @@ namespace Oracle_Management_UI
         }
 
 
-        private void printLabel(DataGridView dataGridView, Label label, int row, int col,string text)
+        private void printLabel(DataGridView dataGridView, Label label, int row, int col, string text)
         {
             int rowM = dataGridView.Rows.Count;
             int colM = dataGridView.Columns.Count;
@@ -79,13 +79,13 @@ namespace Oracle_Management_UI
 
         private void dataGridView1_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
         {
-            
+
             Debug.WriteLine(e.RowIndex);
             Debug.WriteLine(e.ColumnIndex);
 
 
 
-            this.printLabel(dataGridView1, label1, e.RowIndex, e.ColumnIndex,"User: ");
+            this.printLabel(dataGridView1, label1, e.RowIndex, e.ColumnIndex, "User: ");
         }
 
         private void dataGridView4_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
@@ -102,12 +102,12 @@ namespace Oracle_Management_UI
         private void dataGridView2_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
         {
             this.printLabel(dataGridView2, label2, e.RowIndex, e.ColumnIndex, "User: ");
-            
+
         }
 
         private void dataGridView5_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
         {
-           this.printLabel(dataGridView5, label6, e.RowIndex, e.ColumnIndex, "Permission: ");
+            this.printLabel(dataGridView5, label6, e.RowIndex, e.ColumnIndex, "Permission: ");
         }
 
         private void tabPage_users_Click(object sender, EventArgs e)
@@ -146,20 +146,20 @@ namespace Oracle_Management_UI
         {
             //MessageBox.Show(checkBox_user.Checked.ToString());
 
-            
+
             //MessageBox.Show(dataGridView1.CurrentCell.Value.ToString());
             string userName = dataGridView1.CurrentCell.Value.ToString();
             string check = checkBox_user.Checked.ToString();
             if (check == "True")
             {
                 //MessageBox.Show(check);
-                Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"GRANT {_roleName } TO {userName} WITH ADMIN OPTION");
+                Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"GRANT {_roleName} TO {userName} WITH ADMIN OPTION");
                 dataGridView2.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"SELECT grantee as \"Tên tài khoản\",ADMIN_OPTION FROM DBA_ROLE_PRIVS WHERE granted_role = '{_roleName}'");
             }
             else
             {
                 //MessageBox.Show("1111");
-                Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"GRANT {_roleName } TO {userName}");
+                Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"GRANT {_roleName} TO {userName}");
                 dataGridView2.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery($"SELECT grantee as \"Tên tài khoản\",ADMIN_OPTION FROM DBA_ROLE_PRIVS WHERE granted_role = '{_roleName}'");
 
             }
@@ -256,7 +256,7 @@ namespace Oracle_Management_UI
             int row = dataGridView8.CurrentCell.RowIndex;
             string table = dataGridView8.Rows[row].Cells[0].Value.ToString();
             MessageBox.Show(table);
-            ColumnPermission navColumn = new ColumnPermission(table, _roleName,false);
+            ColumnPermission navColumn = new ColumnPermission(table, _roleName, false);
             navColumn.ShowDialog();
         }
 
@@ -296,6 +296,11 @@ namespace Oracle_Management_UI
         }
 
         private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click_1(object sender, EventArgs e)
         {
 
         }
