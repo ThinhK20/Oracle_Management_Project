@@ -130,13 +130,12 @@ namespace Oracle_Company
             if (textBox3.Text.Trim() == "NGAYSINH")
             {
                 query = "UPDATE ADMIN_DBMS.NHANVIEN SET " + column + " = " + " TO_DATE('" + content + "','DD/MM/YYYY" + "')" +
-                    " WHERE trim(MANV) = trim(sys_context(" + "'userenv" + "', " + "'session_user" + "'))";
+                    " WHERE trim(MANV) = trim(sys_context('userenv', 'session_user'))";
 
             }
             else
             {
-                query = "UPDATE ADMIN_DBMS.NHANVIEN SET " + column + " = " + " N'" + content + "' WHERE trim(MANV) = trim(sys_context(" +
-                    "'userenv" + "', " + "'session_user" + "'))";
+                query = "UPDATE ADMIN_DBMS.NHANVIEN SET " + column + " = " + " N'" + content + "' WHERE trim(MANV) = trim(sys_context('userenv', 'session_user'))";
             }
             textBox5.Text = query;
             Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(query);
