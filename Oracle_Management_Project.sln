@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oracle_Management_UI", "Ora
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oracle_Management_Library", "Oracle_Management_Library\Oracle_Management_Library.csproj", "{94DFDA10-1DFB-4CF5-BD11-4332AC2A9D7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oracle_Company", "Oracle_Company\Oracle_Company.csproj", "{419E3064-B1B9-4F57-A6B0-D5A067C55B5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oracle_Company", "Oracle_Company\Oracle_Company.csproj", "{419E3064-B1B9-4F57-A6B0-D5A067C55B5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
