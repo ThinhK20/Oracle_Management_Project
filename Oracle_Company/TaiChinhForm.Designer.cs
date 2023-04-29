@@ -30,6 +30,8 @@
 		{
 			TaiChinhTab = new TabControl();
 			NhanVienTabPage = new TabPage();
+			ThayDoiPhuCapBtn = new Button();
+			ThayDoiLuongBtn = new Button();
 			NhanVienSearchBtn = new Button();
 			NhanVienSearch = new TextBox();
 			NhanVienTable = new DataGridView();
@@ -37,8 +39,6 @@
 			PhanCongSearchBtn = new Button();
 			PhanCongSearch = new TextBox();
 			PhanCongTable = new DataGridView();
-			ThayDoiLuongBtn = new Button();
-			ThayDoiPhuCapBtn = new Button();
 			TaiChinhTab.SuspendLayout();
 			NhanVienTabPage.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)NhanVienTable).BeginInit();
@@ -70,6 +70,26 @@
 			NhanVienTabPage.TabIndex = 0;
 			NhanVienTabPage.Text = "NhanVien";
 			NhanVienTabPage.UseVisualStyleBackColor = true;
+			// 
+			// ThayDoiPhuCapBtn
+			// 
+			ThayDoiPhuCapBtn.Location = new Point(564, 80);
+			ThayDoiPhuCapBtn.Name = "ThayDoiPhuCapBtn";
+			ThayDoiPhuCapBtn.Size = new Size(145, 52);
+			ThayDoiPhuCapBtn.TabIndex = 4;
+			ThayDoiPhuCapBtn.Text = "Thay đổi phụ cấp";
+			ThayDoiPhuCapBtn.UseVisualStyleBackColor = true;
+			ThayDoiPhuCapBtn.Click += ThayDoiPhuCapBtn_Click;
+			// 
+			// ThayDoiLuongBtn
+			// 
+			ThayDoiLuongBtn.Location = new Point(393, 80);
+			ThayDoiLuongBtn.Name = "ThayDoiLuongBtn";
+			ThayDoiLuongBtn.Size = new Size(129, 52);
+			ThayDoiLuongBtn.TabIndex = 3;
+			ThayDoiLuongBtn.Text = "Thay đổi lương";
+			ThayDoiLuongBtn.UseVisualStyleBackColor = true;
+			ThayDoiLuongBtn.Click += ThayDoiLuongBtn_Click;
 			// 
 			// NhanVienSearchBtn
 			// 
@@ -146,24 +166,6 @@
 			PhanCongTable.RowTemplate.Height = 29;
 			PhanCongTable.Size = new Size(1314, 386);
 			PhanCongTable.TabIndex = 3;
-			// 
-			// ThayDoiLuongBtn
-			// 
-			ThayDoiLuongBtn.Location = new Point(393, 80);
-			ThayDoiLuongBtn.Name = "ThayDoiLuongBtn";
-			ThayDoiLuongBtn.Size = new Size(129, 52);
-			ThayDoiLuongBtn.TabIndex = 3;
-			ThayDoiLuongBtn.Text = "Thay đổi lương";
-			ThayDoiLuongBtn.UseVisualStyleBackColor = true;
-			// 
-			// ThayDoiPhuCapBtn
-			// 
-			ThayDoiPhuCapBtn.Location = new Point(564, 80);
-			ThayDoiPhuCapBtn.Name = "ThayDoiPhuCapBtn";
-			ThayDoiPhuCapBtn.Size = new Size(145, 52);
-			ThayDoiPhuCapBtn.TabIndex = 4;
-			ThayDoiPhuCapBtn.Text = "Thay đổi phụ cấp";
-			ThayDoiPhuCapBtn.UseVisualStyleBackColor = true;
 			// 
 			// TaiChinhForm
 			// 
