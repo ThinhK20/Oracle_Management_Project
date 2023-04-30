@@ -59,7 +59,6 @@ namespace Oracle_Company
 			Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(queryString);
 			Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery("COMMIT WORK");
 			NhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM MY_PROJECT_PLUG_USER.NHANVIEN");
-
 		}
 
 		private void ThayDoiPhuCapBtn_Click(object sender, EventArgs e)
