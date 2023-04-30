@@ -196,7 +196,6 @@
             // 
             tabPage2.BackColor = Color.RosyBrown;
             tabPage2.Controls.Add(textBox6);
-            tabPage2.Controls.Add(textBox5);
             tabPage2.Controls.Add(textBox4);
             tabPage2.Controls.Add(textBox3);
             tabPage2.Controls.Add(label2);
@@ -228,20 +227,6 @@
             textBox6.TextAlign = HorizontalAlignment.Center;
             textBox6.TextChanged += textBox6_TextChanged;
             // 
-            // textBox5
-            // 
-            textBox5.BackColor = SystemColors.Info;
-            textBox5.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox5.ForeColor = SystemColors.InfoText;
-            textBox5.Location = new Point(79, 364);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(431, 55);
-            textBox5.TabIndex = 12;
-            textBox5.Text = "gfdgfd";
-            textBox5.TextAlign = HorizontalAlignment.Center;
-            textBox5.TextChanged += textBox5_TextChanged;
-            // 
             // textBox4
             // 
             textBox4.BackColor = SystemColors.Info;
@@ -252,7 +237,6 @@
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(431, 55);
             textBox4.TabIndex = 11;
-            textBox4.Text = "gfdgfd";
             textBox4.TextAlign = HorizontalAlignment.Center;
             textBox4.TextChanged += textBox4_TextChanged;
             // 
@@ -266,7 +250,6 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(176, 38);
             textBox3.TabIndex = 10;
-            textBox3.Text = "gfdgfd";
             textBox3.TextAlign = HorizontalAlignment.Center;
             textBox3.TextChanged += textBox3_TextChanged;
             // 
@@ -297,6 +280,7 @@
             button2.Text = "Reset";
             button2.TextImageRelation = TextImageRelation.TextBeforeImage;
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click_1;
             // 
             // textBox2
             // 
@@ -425,7 +409,6 @@
         private TextBox textBox2;
         private TextBox textBox3;
         private TextBox textBox4;
-        private TextBox textBox5;
         private TextBox textBox6;
     }
 }
