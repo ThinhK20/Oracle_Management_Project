@@ -12,7 +12,13 @@ namespace Oracle_Company
 			// see https://aka.ms/applicationconfiguration.
 			ApplicationConfiguration.Initialize();
 			Oracle_Management_Library.GlobalConfig.InitializeConnections();
+<<<<<<< HEAD
             Application.Run(new TruongDeAn());
+=======
+			Application.Run(new TruongPhongcs());
+			Application.Run(new NhanVien());
+
+>>>>>>> 303208ced7b62b44b15680e5be8f6f149767e2aa
 		}
 	}
 }
