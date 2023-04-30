@@ -94,6 +94,7 @@ namespace Oracle_Company
                     textBox6.Text = "";
                 }
                 textBox4.Text = dataGridView5.Rows[e.RowIndex].Cells[e.ColumnIndex].FormattedValue.ToString();
+                textBox1.Text = "";
             }
         }
 

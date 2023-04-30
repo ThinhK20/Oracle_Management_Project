@@ -41,7 +41,6 @@
             dataGridView4 = new DataGridView();
             tabPage2 = new TabPage();
             textBox6 = new TextBox();
-            textBox5 = new TextBox();
             textBox4 = new TextBox();
             textBox3 = new TextBox();
             label2 = new Label();
