@@ -210,5 +210,10 @@
             Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(sqlRe);
             EditUser_Load(sender, e);
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -13,8 +13,6 @@ namespace Oracle_Company
 			ApplicationConfiguration.Initialize();
 			Oracle_Management_Library.GlobalConfig.InitializeConnections();
 			Application.Run(new TruongPhongcs());
-			Application.Run(new NhanVien());
-
 		}
 	}
 }
