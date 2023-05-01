@@ -34,6 +34,8 @@
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             tabPage3 = new TabPage();
+            label8 = new Label();
+            button2 = new Button();
             label3 = new Label();
             label2 = new Label();
             dataGridView3 = new DataGridView();
@@ -64,6 +66,7 @@
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.Size = new Size(848, 444);
             dataGridView1.TabIndex = 0;
+            // 
             // phong
             // 
             phong.AutoSize = true;
@@ -114,6 +117,8 @@
             // 
             // tabPage3
             // 
+            tabPage3.Controls.Add(label8);
+            tabPage3.Controls.Add(button2);
             tabPage3.Controls.Add(label3);
             tabPage3.Controls.Add(label2);
             tabPage3.Controls.Add(dataGridView3);
@@ -123,6 +128,27 @@
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Xem Phân Công";
             tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.Location = new Point(586, 245);
+            label8.Name = "label8";
+            label8.Size = new Size(294, 37);
+            label8.TabIndex = 5;
+            label8.Text = "Nhân Viên ..... Đề Án .....";
+            // 
+            // button2
+            // 
+            button2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.Location = new Point(642, 319);
+            button2.Name = "button2";
+            button2.Size = new Size(238, 78);
+            button2.TabIndex = 4;
+            button2.Text = "XÓA PHÂN CÔNG";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // label3
             // 
@@ -148,12 +174,13 @@
             // dataGridView3
             // 
             dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Location = new Point(35, 67);
+            dataGridView3.Location = new Point(35, 92);
             dataGridView3.Name = "dataGridView3";
             dataGridView3.RowHeadersWidth = 51;
             dataGridView3.RowTemplate.Height = 29;
-            dataGridView3.Size = new Size(905, 455);
+            dataGridView3.Size = new Size(525, 415);
             dataGridView3.TabIndex = 0;
+            dataGridView3.CellClick += gridview3_click;
             dataGridView3.CellEndEdit += updateData;
             // 
             // tabPage2
@@ -288,5 +315,7 @@
         private Button button1;
         private Label label6;
         private Label label7;
+        private Label label8;
+        private Button button2;
     }
 }

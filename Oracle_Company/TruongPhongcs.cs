@@ -21,11 +21,13 @@ namespace Oracle_Company
         private Dictionary<int, Tuple<string, string>> originalValues = new Dictionary<int, Tuple<string, string>>();
         private string dean { get; set; }
         private string nhanvien { get; set; }
+        private string da { get; set; }
+        private string nv { get; set; }
         private void TruongPhongcs_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("select * from admin_dbms.truongphong_view");
             phong.Text = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("select PHG from admin_dbms.truongphong_view  WHERE ROWNUM <= 1").Rows[0]["PHG"].ToString();
-          
+
             label2.Text = phong.Text;
             label5.Text = "Nhân viên" + phong.Text;
             dataGridView2.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * from admin_dbms.dean");
@@ -75,7 +77,7 @@ namespace Oracle_Company
             string query = $"INSERT INTO ADMIN_DBMS.PHANCONG VALUES ('{nhanvien}','{dean}',TO_DATE('{date}', 'DD/MM/YYYY'))";
             Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(query);
             Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery("COMMIT WORK");
-            MessageBox.Show("Bạn đã thêm phân công thành công "+query);
+            MessageBox.Show("Bạn đã thêm phân công thành công " + query);
             dataGridView3.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * from admin_dbms.TRUONGPHONG_PHANCONG_VIEW");
 
         }
@@ -100,7 +102,23 @@ namespace Oracle_Company
             Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(query);
             Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery("COMMIT WORK");
             MessageBox.Show(query);
-            
+
+        }
+
+        private void gridview3_click(object sender, DataGridViewCellEventArgs e)
+        {
+            nv = dataGridView3.Rows[e.RowIndex].Cells[0].Value.ToString();
+            // Lấy giá trị của cột MADA trong DataGridView
+            da = dataGridView3.Rows[e.RowIndex].Cells[1].Value.ToString();
+            label8.Text = "Nhân Viên " + nv + " Đề Án " + da;
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string query = $"DELETE FROM ADMIN_DBMS.phancong WHERE MADA='{da}' AND MANV='{nv}'";
+            Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(query);
+            Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery("COMMIT WORK");
         }
     }
 }
