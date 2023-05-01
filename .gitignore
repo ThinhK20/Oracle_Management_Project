@@ -5,6 +5,7 @@
 
 # Custom .gitignore
 Oracle_Management_UI/App.config
+Oracle_Company/App.config
 
 # User-specific files
 *.rsuser
