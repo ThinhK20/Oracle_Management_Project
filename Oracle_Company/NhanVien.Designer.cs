@@ -225,7 +225,6 @@
             textBox6.Size = new Size(501, 37);
             textBox6.TabIndex = 13;
             textBox6.TextAlign = HorizontalAlignment.Center;
-            textBox6.TextChanged += textBox6_TextChanged;
             // 
             // textBox4
             // 
