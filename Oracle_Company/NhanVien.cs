@@ -1,71 +1,71 @@
 ﻿namespace Oracle_Company
 {
-	public partial class NhanVien : Form
-	{
-		public NhanVien()
-		{
-			InitializeComponent();
-		}
+    public partial class NhanVien : Form
+    {
+        public NhanVien()
+        {
+            InitializeComponent();
+        }
 
-		private void label1_Click(object sender, EventArgs e)
-		{
+        private void label1_Click(object sender, EventArgs e)
+        {
 
-		}
+        }
 
-		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-		}
+        }
 
-		private void NhanVien_Load(object sender, EventArgs e)
-		{
+        private void NhanVien_Load(object sender, EventArgs e)
+        {
             dataGridView3.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  ADMIN_DBMS.PHONGBAN");
             dataGridView4.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  ADMIN_DBMS.DEAN");
             dataGridView1.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  ADMIN_DBMS.NHANVIEN");
             dataGridView2.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  ADMIN_DBMS.PHANCONG");
             dataGridView5.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  ADMIN_DBMS.VIEW_FOR_UPDATE");
 
-		}
+        }
 
-		private void button2_Click(object sender, EventArgs e)
-		{
+        private void button2_Click(object sender, EventArgs e)
+        {
 
-		}
+        }
 
-		private void label1_Click_1(object sender, EventArgs e)
-		{
+        private void label1_Click_1(object sender, EventArgs e)
+        {
 
-		}
+        }
 
-		private void tabPage2_Click(object sender, EventArgs e)
-		{
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
 
-		}
+        }
 
-		private void label2_Click(object sender, EventArgs e)
-		{
+        private void label2_Click(object sender, EventArgs e)
+        {
 
-		}
+        }
 
-		private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-		}
+        }
 
-		private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
+        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-		}
+        }
 
-		private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-		{
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
 
-		}
+        }
 
-		private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-		}
+        }
 
         private void dataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -88,40 +88,40 @@
             }
         }
 
-		private void label3_Click(object sender, EventArgs e)
-		{
+        private void label3_Click(object sender, EventArgs e)
+        {
 
-		}
+        }
 
-		private void textBox2_TextChanged(object sender, EventArgs e)
-		{
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
 
-		}
+        }
 
-		private void label4_Click(object sender, EventArgs e)
-		{
+        private void label4_Click(object sender, EventArgs e)
+        {
 
-		}
+        }
 
-		private void textBox3_TextChanged(object sender, EventArgs e)
-		{
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
 
-		}
+        }
 
-		private void textBox4_TextChanged(object sender, EventArgs e)
-		{
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
 
-		}
+        }
 
-		private void button3_Click(object sender, EventArgs e)
-		{
-			string content = textBox1.Text;
-			string column = textBox3.Text;
-			string query;
-			if (textBox3.Text.Trim() == "NGAYSINH")
-			{
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string content = textBox1.Text;
+            string column = textBox3.Text;
+            string query;
+            if (textBox3.Text.Trim() == "NGAYSINH")
+            {
                 query = "UPDATE ADMIN_DBMS.NHANVIEN SET " + column + " = " + " TO_DATE('" + content + "','DD/MM/YYYY" + "')" +
-					" WHERE trim(MANV) = trim(sys_context('userenv', 'session_user'))";
+                    " WHERE trim(MANV) = trim(sys_context('userenv', 'session_user'))";
 
             }
             else
@@ -134,17 +134,17 @@
             dataGridView5.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM ADMIN_DBMS.VIEW_FOR_UPDATE");
 
 
-		}
+        }
 
-		private void textBox1_TextChanged(object sender, EventArgs e)
-		{
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
-		}
+        }
 
-		private void textBox5_TextChanged(object sender, EventArgs e)
-		{
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
 
-		}
+        }
         private void button2_Click_1(object sender, EventArgs e)
         {
             textBox4.Text = "";
