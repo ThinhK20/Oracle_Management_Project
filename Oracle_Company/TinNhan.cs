@@ -27,7 +27,7 @@ namespace Oracle_Company
             string selectedItems = string.Empty;
             for (int i = 0; i < checkedListBox1.CheckedItems.Count; i++)
             {
-                if(checkedListBox1.CheckedItems[i].ToString().Equals("NHÂN VIÊN")) role +="NV,";
+                if (checkedListBox1.CheckedItems[i].ToString().Equals("NHÂN VIÊN")) role += "NV,";
                 else if (checkedListBox1.CheckedItems[i].ToString().Equals("TRƯỞNG PHÒNG")) role += "TP,";
                 else if (checkedListBox1.CheckedItems[i].ToString().Equals("GIÁM ĐỐC")) role += "GD";
                 else
@@ -35,8 +35,9 @@ namespace Oracle_Company
                     MessageBox.Show("Please Select receiver");
                     return;
                 }
-                role = role.Substring(0, role.Length - 1);
-        }
+               
+            }
+            role = role.Substring(0, role.Length - 1);
             for (int i = 0; i < checkedListBox2.CheckedItems.Count; i++)
             {
                 if (checkedListBox2.CheckedItems[i].ToString().Equals("MUA BÁN")) loai += "MB,";
@@ -47,8 +48,9 @@ namespace Oracle_Company
                     MessageBox.Show("Please Select ...");
                     return;
                 }
-                loai = loai.Substring(0, loai.Length - 1);
+      
             }
+            loai = loai.Substring(0, loai.Length - 1);
             for (int i = 0; i < checkedListBox3.CheckedItems.Count; i++)
             {
                 if (checkedListBox3.CheckedItems[i].ToString().Equals("ĐỊA ĐIỂM Ở MIỀN BẮC")) diadiem += "BAC,";
@@ -59,19 +61,30 @@ namespace Oracle_Company
                     MessageBox.Show("Please Select ...");
                     return;
                 }
-                diadiem = diadiem.Substring(0, diadiem.Length - 1);
+               
             }
-            string TONG = role + ":"+loai+ ":"+diadiem;
+            diadiem = diadiem.Substring(0, diadiem.Length - 1);
+            string TONG = role + ":" + loai + ":" + diadiem;
             MessageBox.Show(TONG);
             string con_text = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("select sys_context('userenv' ,'session_user') from dual").ToString();
             Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery($"SA_USER_ADMIN.SET_USER_LABELS('region_policy', '{con_text}', '{TONG}'");
             Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery("COMMIT WORK");
-           
+
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void TinNhan_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("select * from admin_dbms.THONGBAO");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("select * from admin_dbms.THONGBAO");
         }
     }
 }
