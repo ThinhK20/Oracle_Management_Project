@@ -91,6 +91,12 @@
 			dataGridView15 = new DataGridView();
 			tabView = new TabPage();
 			dataGridView16 = new DataGridView();
+			tabPage8 = new TabPage();
+			button19 = new Button();
+			button18 = new Button();
+			button17 = new Button();
+			button16 = new Button();
+			dataGridView17 = new DataGridView();
 			button1 = new Button();
 			button14 = new Button();
 			button15 = new Button();
@@ -124,6 +130,8 @@
 			((System.ComponentModel.ISupportInitialize)dataGridView15).BeginInit();
 			tabView.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)dataGridView16).BeginInit();
+			tabPage8.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)dataGridView17).BeginInit();
 			SuspendLayout();
 			// 
 			// label1
@@ -145,6 +153,7 @@
 			tabControl1.Controls.Add(TabRole);
 			tabControl1.Controls.Add(tabTable);
 			tabControl1.Controls.Add(tabView);
+			tabControl1.Controls.Add(tabPage8);
 			tabControl1.Cursor = Cursors.SizeAll;
 			tabControl1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
 			tabControl1.Location = new Point(93, 91);
@@ -965,6 +974,104 @@
 			dataGridView16.Size = new Size(1152, 645);
 			dataGridView16.TabIndex = 0;
 			// 
+			// tabPage8
+			// 
+			tabPage8.Controls.Add(button19);
+			tabPage8.Controls.Add(button18);
+			tabPage8.Controls.Add(button17);
+			tabPage8.Controls.Add(button16);
+			tabPage8.Controls.Add(dataGridView17);
+			tabPage8.Location = new Point(4, 29);
+			tabPage8.Name = "tabPage8";
+			tabPage8.Padding = new Padding(3);
+			tabPage8.Size = new Size(1163, 658);
+			tabPage8.TabIndex = 7;
+			tabPage8.Text = "Xem audit";
+			tabPage8.UseVisualStyleBackColor = true;
+			// 
+			// button19
+			// 
+			button19.BackColor = SystemColors.ButtonFace;
+			button19.FlatAppearance.BorderColor = Color.Blue;
+			button19.FlatAppearance.MouseDownBackColor = Color.LightSkyBlue;
+			button19.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+			button19.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+			button19.ForeColor = SystemColors.MenuHighlight;
+			button19.Location = new Point(942, 35);
+			button19.Margin = new Padding(3, 4, 3, 4);
+			button19.Name = "button19";
+			button19.Size = new Size(188, 43);
+			button19.TabIndex = 8;
+			button19.Text = "Nhật ký hệ thống";
+			button19.TextImageRelation = TextImageRelation.TextBeforeImage;
+			button19.UseVisualStyleBackColor = false;
+			button19.Click += button19_Click;
+			// 
+			// button18
+			// 
+			button18.BackColor = SystemColors.ButtonFace;
+			button18.FlatAppearance.BorderColor = Color.Blue;
+			button18.FlatAppearance.MouseDownBackColor = Color.LightSkyBlue;
+			button18.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+			button18.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+			button18.ForeColor = SystemColors.MenuHighlight;
+			button18.Location = new Point(589, 35);
+			button18.Margin = new Padding(3, 4, 3, 4);
+			button18.Name = "button18";
+			button18.Size = new Size(316, 43);
+			button18.TabIndex = 7;
+			button18.Text = "Cập nhật lương và phụ cấp (Tài chính)";
+			button18.TextImageRelation = TextImageRelation.TextBeforeImage;
+			button18.UseVisualStyleBackColor = false;
+			button18.Click += button18_Click;
+			// 
+			// button17
+			// 
+			button17.BackColor = SystemColors.ButtonFace;
+			button17.FlatAppearance.BorderColor = Color.Blue;
+			button17.FlatAppearance.MouseDownBackColor = Color.LightSkyBlue;
+			button17.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+			button17.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+			button17.ForeColor = SystemColors.MenuHighlight;
+			button17.Location = new Point(292, 35);
+			button17.Margin = new Padding(3, 4, 3, 4);
+			button17.Name = "button17";
+			button17.Size = new Size(246, 43);
+			button17.TabIndex = 6;
+			button17.Text = "Lương  và Phụ cấp (Nhân viên)";
+			button17.TextImageRelation = TextImageRelation.TextBeforeImage;
+			button17.UseVisualStyleBackColor = false;
+			button17.Click += button17_Click;
+			// 
+			// button16
+			// 
+			button16.BackColor = SystemColors.ButtonFace;
+			button16.FlatAppearance.BorderColor = Color.Blue;
+			button16.FlatAppearance.MouseDownBackColor = Color.LightSkyBlue;
+			button16.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+			button16.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+			button16.ForeColor = SystemColors.MenuHighlight;
+			button16.Location = new Point(46, 35);
+			button16.Margin = new Padding(3, 4, 3, 4);
+			button16.Name = "button16";
+			button16.Size = new Size(188, 43);
+			button16.TabIndex = 5;
+			button16.Text = "Thời gian (Phân công)";
+			button16.TextImageRelation = TextImageRelation.TextBeforeImage;
+			button16.UseVisualStyleBackColor = false;
+			button16.Click += button16_Click;
+			// 
+			// dataGridView17
+			// 
+			dataGridView17.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridView17.Location = new Point(3, 127);
+			dataGridView17.Margin = new Padding(3, 4, 3, 4);
+			dataGridView17.Name = "dataGridView17";
+			dataGridView17.RowHeadersWidth = 51;
+			dataGridView17.RowTemplate.Height = 25;
+			dataGridView17.Size = new Size(1160, 531);
+			dataGridView17.TabIndex = 1;
+			// 
 			// button1
 			// 
 			button1.BackColor = SystemColors.ButtonFace;
@@ -1067,6 +1174,8 @@
 			((System.ComponentModel.ISupportInitialize)dataGridView15).EndInit();
 			tabView.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)dataGridView16).EndInit();
+			tabPage8.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)dataGridView17).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -1135,5 +1244,11 @@
 		private Button button1;
 		private Button button14;
 		private Button button15;
+		private TabPage tabPage8;
+		private Button button19;
+		private Button button18;
+		private Button button17;
+		private Button button16;
+		private DataGridView dataGridView17;
 	}
 }

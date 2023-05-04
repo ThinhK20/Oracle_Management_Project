@@ -264,5 +264,24 @@ namespace Oracle_Management_UI
 				MessageBox.Show(ex.Message);
 			}
 		}
+
+		private void button16_Click(object sender, EventArgs e)
+		{
+			dataGridView17.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT OBJECT_SCHEMA, OBJECT_NAME, ACTION_NAME, SQL_TEXT, CURRENT_USER, EVENT_TIMESTAMP FROM UNIFIED_AUDIT_TRAIL  WHERE OBJECT_NAME = 'PHANCONG' AND ACTION_NAME = 'UPDATE' ORDER BY(EVENT_TIMESTAMP) DESC");
+		}
+		private void button17_Click(object sender, EventArgs e)
+		{
+			dataGridView17.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT OBJECT_SCHEMA, OBJECT_NAME, ACTION_NAME, SQL_TEXT, CURRENT_USER, EVENT_TIMESTAMP FROM UNIFIED_AUDIT_TRAIL  WHERE OBJECT_NAME = 'NHANVIEN' AND ACTION_NAME = 'SELECT' ORDER BY(EVENT_TIMESTAMP) DESC");
+		}
+		private void button18_Click(object sender, EventArgs e)
+		{
+			dataGridView17.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT OBJECT_SCHEMA, OBJECT_NAME, ACTION_NAME, SQL_TEXT, CURRENT_USER, EVENT_TIMESTAMP FROM UNIFIED_AUDIT_TRAIL  WHERE OBJECT_NAME = 'NHANVIEN' AND ACTION_NAME = 'UPDATE' ORDER BY(EVENT_TIMESTAMP) DESC");
+		}
+
+		private void button19_Click(object sender, EventArgs e)
+		{
+			dataGridView17.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT OBJECT_SCHEMA, OBJECT_NAME, ACTION_NAME, SQL_TEXT, CURRENT_USER, EVENT_TIMESTAMP FROM UNIFIED_AUDIT_TRAIL ORDER BY(EVENT_TIMESTAMP) DESC");
+
+		}
 	}
 }

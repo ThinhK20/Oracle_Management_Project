@@ -47,7 +47,6 @@
             this.loginLabel.TabIndex = 0;
             this.loginLabel.Text = "Login";
             this.loginLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.loginLabel.Click += new System.EventHandler(this.loginLabel_Click);
             // 
             // usernameLabel
             // 
@@ -58,7 +57,6 @@
             this.usernameLabel.Size = new System.Drawing.Size(170, 46);
             this.usernameLabel.TabIndex = 1;
             this.usernameLabel.Text = "Username";
-            this.usernameLabel.Click += new System.EventHandler(this.usernameLabel_Click);
             // 
             // usernameTextBox
             // 
@@ -67,7 +65,6 @@
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(335, 51);
             this.usernameTextBox.TabIndex = 2;
-            this.usernameTextBox.TextChanged += new System.EventHandler(this.usernameTextBox_TextChanged_1);
             // 
             // passwordTextBox
             // 
@@ -77,7 +74,6 @@
             this.passwordTextBox.Size = new System.Drawing.Size(335, 51);
             this.passwordTextBox.TabIndex = 4;
             this.passwordTextBox.UseSystemPasswordChar = true;
-            this.passwordTextBox.TextChanged += new System.EventHandler(this.passwordTextBox_TextChanged);
             // 
             // passwordLabel
             // 
@@ -88,7 +84,6 @@
             this.passwordLabel.Size = new System.Drawing.Size(160, 46);
             this.passwordLabel.TabIndex = 6;
             this.passwordLabel.Text = "Password";
-            this.passwordLabel.Click += new System.EventHandler(this.passwordLabel_Click_1);
             // 
             // loginBtn
             // 
@@ -105,7 +100,6 @@
             this.loginBtn.TabIndex = 7;
             this.loginBtn.Text = "Login";
             this.loginBtn.UseVisualStyleBackColor = false;
-            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click_1);
             // 
             // Login
             // 
