@@ -29,19 +29,14 @@
 
 		private void NhanSuForm_Load(object sender, EventArgs e)
 		{
-			NhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from MY_PROJECT_PLUG_USER.NHANVIEN");
-			PhongBanTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from MY_PROJECT_PLUG_USER.PHONGBAN");
-			ThemNhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from MY_PROJECT_PLUG_USER.NHANVIEN");
-			ThemPhongBanTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from MY_PROJECT_PLUG_USER.PHONGBAN");
-			ThemMaTruongPhongBanTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from MY_PROJECT_PLUG_USER.NHANVIEN");
-			CapNhatPBTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from MY_PROJECT_PLUG_USER.PHONGBAN");
-			CapNhatPBMaTPTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from MY_PROJECT_PLUG_USER.NHANVIEN");
-			CapNhatNhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from MY_PROJECT_PLUG_USER.NHANVIEN");
-		}
-
-		private void ThemNhanVienBtn_Click(object sender, EventArgs e)
-		{
-
+			NhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.NHANVIEN");
+			PhongBanTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.PHONGBAN");
+			ThemNhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.NHANVIEN");
+			ThemPhongBanTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.PHONGBAN");
+			ThemMaTruongPhongBanTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.NHANVIEN");
+			CapNhatPBTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.PHONGBAN");
+			CapNhatPBMaTPTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.NHANVIEN");
+			CapNhatNhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.NHANVIEN");
 		}
 
 		private void label1_Click(object sender, EventArgs e)
@@ -71,7 +66,7 @@
 				string maNQL = MaNQLTextBox.Text;
 				string phg = PHGTextBox.Text;
 
-				var allNhanVien = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from MY_PROJECT_PLUG_USER.NHANVIEN");
+				var allNhanVien = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.NHANVIEN");
 				if (allNhanVien != null)
 				{
 					int maxId = allNhanVien.Rows.Count + 1;
@@ -88,11 +83,11 @@
 					{
 						newId += maxId.ToString();
 					}
-					string query = "INSERT INTO MY_PROJECT_PLUG_USER.NHANVIEN(MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, VAITRO, MANQL, PHG) " +
+					string query = "INSERT INTO ADMIN_DBMS.NHANVIEN(MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, VAITRO, MANQL, PHG) " +
 						$"VALUES ('{newId}', '{tenNV}', '{phai}', TO_DATE('{ngaySinh}', 'MM/DD/YYYY'), '{diaChi}', '{SDT}', N'{vaiTro}', '{maNQL}', '{phg}' )";
 					Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(query);
 					Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery("COMMIT WORK");
-					ThemNhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from MY_PROJECT_PLUG_USER.NHANVIEN");
+					ThemNhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.NHANVIEN");
 
 				}
 
@@ -150,7 +145,7 @@
 				string tenPB = TenPhongBanTextBox.Text;
 
 
-				var allPB = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from MY_PROJECT_PLUG_USER.PHONGBAN");
+				var allPB = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.PHONGBAN");
 				if (allPB != null)
 				{
 					int maxId = allPB.Rows.Count + 1;
@@ -167,11 +162,11 @@
 					{
 						newId += maxId.ToString();
 					}
-					string query = $"insert into MY_PROJECT_PLUG_USER.PHONGBAN values('{newId}', '{tenPB}', '{_selectMaTruongPB}')";
+					string query = $"insert into ADMIN_DBMS.PHONGBAN values('{newId}', '{tenPB}', '{_selectMaTruongPB}')";
 					Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(query);
 					Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery("COMMIT WORK");
-					ThemPhongBanTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from MY_PROJECT_PLUG_USER.PHONGBAN");
-					PhongBanTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from MY_PROJECT_PLUG_USER.PHONGBAN");
+					ThemPhongBanTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.PHONGBAN");
+					PhongBanTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.PHONGBAN");
 				}
 
 			}
@@ -209,11 +204,11 @@
 				MessageBox.Show("Vui lòng chọn đầy đủ thông tin");
 				return;
 			}
-			string query = $"UPDATE MY_PROJECT_PLUG_USER.PHONGBAN SET TENPB = '{_selectCapNhatTenPB}', MANV = '{_selectCapNhatMaTruongPB}' WHERE MAPB = '{_selectCapNhatMaPB}'";
+			string query = $"UPDATE ADMIN_DBMS.PHONGBAN SET TENPB = '{_selectCapNhatTenPB}', MANV = '{_selectCapNhatMaTruongPB}' WHERE MAPB = '{_selectCapNhatMaPB}'";
 			Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(query);
 			Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery("COMMIT WORK");
-			CapNhatPBTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from MY_PROJECT_PLUG_USER.PHONGBAN");
-			PhongBanTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from MY_PROJECT_PLUG_USER.PHONGBAN");
+			CapNhatPBTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.PHONGBAN");
+			PhongBanTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.PHONGBAN");
 		}
 
 		private void CapNhatPBTextBox_TextChanged(object sender, EventArgs e)
@@ -249,14 +244,14 @@
 			try
 			{
 				string ngaySinh = CapNhatNgaySinhDP.Text.ToString().Split(' ')[0];
-				string query = $"UPDATE MY_PROJECT_PLUG_USER.NHANVIEN " +
+				string query = $"UPDATE ADMIN_DBMS.NHANVIEN " +
 					$"SET TENNV = '{CapNhatTenNhanVienTB.Text}', PHAI='{CapNhatPhaiCB.Text}', NGAYSINH = TO_DATE('{ngaySinh}', 'MM/DD/YYYY'), " +
 					$"DIACHI= '{CapNhatDiaChiTB.Text}', SODT = '{CapNhatSDTTB.Text}', VAITRO = '{CapNhatVaiTroCB.Text}', MANQL = '{CapNhatMaNQLTB.Text}', PHG = '{CapNhatPHGTextBox.Text}' " +
 					$"WHERE MANV = '{_selectCapNhatMaNV}'";
 				Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(query);
 				Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery("COMMIT WORK");
-				CapNhatNhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from MY_PROJECT_PLUG_USER.NHANVIEN");
-				NhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from MY_PROJECT_PLUG_USER.NHANVIEN");
+				CapNhatNhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.NHANVIEN");
+				NhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.NHANVIEN");
 			}
 			catch (Exception ex)
 			{

@@ -1,4 +1,6 @@
-﻿namespace Oracle_Company
+﻿using Oracle_Management_Library;
+
+namespace Oracle_Company
 {
     public partial class NhanVien : Form
     {
@@ -19,10 +21,21 @@
 
         private void NhanVien_Load(object sender, EventArgs e)
         {
+            qlda.Hide();
+            qlnv.Hide();
+            NS.Hide();
+            TC.Hide();
+            QLP.Hide();
+            var vt =  Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT vaitro FROM  ADMIN_DBMS.NHANVIEN_VIEW_PROFILE").Rows[0]["vaitro"].ToString();
+            if (vt == "QL trực tiếp") qlnv.Show();
+            if (vt == "Trưởng phòng") QLP.Show();
+            if (vt == "Tài chính") TC.Show();
+            if (vt == "Nhân sự") NS.Show();
+            if (vt == "Trưởng đề án") qlda.Show();
             dataGridView3.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  ADMIN_DBMS.PHONGBAN");
             dataGridView4.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  ADMIN_DBMS.DEAN");
-            dataGridView1.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  ADMIN_DBMS.NHANVIEN");
-            dataGridView2.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  ADMIN_DBMS.PHANCONG");
+            dataGridView1.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  ADMIN_DBMS.NHANVIEN_VIEW_PROFILE");
+            dataGridView2.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  ADMIN_DBMS.NHANVIEN_VIEW_PC");
             dataGridView5.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  ADMIN_DBMS.VIEW_FOR_UPDATE");
 
         }
@@ -150,6 +163,36 @@
             textBox4.Text = "";
             textBox3.Text = "";
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            TruongPhongcs truongPhongcs = new TruongPhongcs();
+            truongPhongcs.Show();
+        }
+
+        private void qlnv_Click(object sender, EventArgs e)
+        {
+            QLTT qLTT = new QLTT();
+            qLTT.Show();
+        }
+
+        private void NS_Click(object sender, EventArgs e)
+        {
+            NhanSuForm nhanSuForm = new NhanSuForm();
+            nhanSuForm.Show();
+        }
+
+        private void qlda_Click(object sender, EventArgs e)
+        {
+            TruongDeAn truongDeAn = new TruongDeAn();
+            truongDeAn.Show();
+        }
+
+        private void TC_Click(object sender, EventArgs e)
+        {
+            TaiChinhForm taiChinhForm = new TaiChinhForm();
+            taiChinhForm.Show();
         }
     }
 }
