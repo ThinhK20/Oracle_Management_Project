@@ -19,11 +19,11 @@
 
 		private void NhanVien_Load(object sender, EventArgs e)
 		{
-			dataGridView3.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  MY_PROJECT_PLUG_USER.PHONGBAN");
-			dataGridView4.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  MY_PROJECT_PLUG_USER.DEAN");
-			dataGridView1.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  MY_PROJECT_PLUG_USER.NHANVIEN");
-			dataGridView2.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  MY_PROJECT_PLUG_USER.PHANCONG");
-			dataGridView5.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  MY_PROJECT_PLUG_USER.VIEW_FOR_UPDATE");
+			dataGridView3.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  ADMIN_DBMS.PHONGBAN");
+			dataGridView4.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  ADMIN_DBMS.DEAN");
+			dataGridView1.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  ADMIN_DBMS.NHANVIEN");
+			dataGridView2.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  ADMIN_DBMS.PHANCONG");
+			dataGridView5.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  ADMIN_DBMS.VIEW_FOR_UPDATE");
 
 		}
 
@@ -121,7 +121,7 @@
 			string query;
 			if (textBox3.Text.Trim() == "NGAYSINH")
 			{
-				query = "UPDATE MY_PROJECT_PLUG_USER.NHANVIEN SET " + column + " = " + " TO_DATE('" + content + "','DD/MM/YYYY" + "')" +
+				query = "UPDATE ADMIN_DBMS.NHANVIEN SET " + column + " = " + " TO_DATE('" + content + "','DD/MM/YYYY" + "')" +
 					" WHERE trim(MANV) = trim(sys_context('userenv', 'session_user'))";
 
 			}
