@@ -50,16 +50,40 @@ namespace Oracle_Management_Library.DataAccess
 					command.Connection = oracleConnection;
 					command.CommandType = CommandType.Text;
 					oracleConnection.Open();
-					command.ExecuteNonQueryAsync();
+					command.ExecuteNonQuery();
 				}
 				catch
 				{
 
 				}
-
 			}
 		}
 
+		public void ExecuteStoredProcedure(string queryString, string paramsStr)
+		{
+			string connectionString = GlobalConfig.CnnString("OracleConnection");
+			using (OracleConnection oracleConnection = new OracleConnection(connectionString))
+			{
+				try
+				{
+					oracleConnection.Open();
+					OracleCommand command = new OracleCommand(queryString);
+					command.Connection = oracleConnection;
+					command.CommandType = CommandType.StoredProcedure;
+					if (paramsStr != null && paramsStr != "")
+					{
+						command.Parameters.Add("Key", OracleDbType.Varchar2).Value = paramsStr;
+
+					}
+					command.ExecuteNonQuery();
+					OracleDataAdapter da = new OracleDataAdapter();
+				}
+				catch (Exception ex)
+				{
+					Console.WriteLine(ex.Message);
+				}
+			}
+		}
 
 
 

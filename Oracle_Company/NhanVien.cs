@@ -67,28 +67,6 @@
 
 		}
 
-<<<<<<< HEAD
-        private void dataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dataGridView5.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
-            {
-                dataGridView5.CurrentCell.Selected = true;
-                int columnIndex = dataGridView5.CurrentCell.ColumnIndex;
-                string columnName = dataGridView5.Columns[columnIndex].Name;
-                textBox3.Text = columnName;
-                if (columnName.Trim() == "NGAYSINH")
-                {
-                    textBox6.Text = "Hãy nhập theo định dạng DD/MM/YYYY";
-                }
-                else
-                {
-                    textBox6.Text = "";
-                }
-                textBox4.Text = dataGridView5.Rows[e.RowIndex].Cells[e.ColumnIndex].FormattedValue.ToString();
-                textBox1.Text = "";
-            }
-        }
-=======
 		private void dataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)
 		{
 			if (dataGridView5.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
@@ -106,9 +84,10 @@
 					textBox6.Text = "";
 				}
 				textBox4.Text = dataGridView5.Rows[e.RowIndex].Cells[e.ColumnIndex].FormattedValue.ToString();
+				textBox1.Text = "";
 			}
 		}
->>>>>>> 303208ced7b62b44b15680e5be8f6f149767e2aa
+
 
 		private void label3_Click(object sender, EventArgs e)
 		{
@@ -145,28 +124,14 @@
 				query = "UPDATE MY_PROJECT_PLUG_USER.NHANVIEN SET " + column + " = " + " TO_DATE('" + content + "','DD/MM/YYYY" + "')" +
 					" WHERE trim(MANV) = trim(sys_context('userenv', 'session_user'))";
 
-<<<<<<< HEAD
-            }
-            else
-            {
-                query = "UPDATE ADMIN_DBMS.NHANVIEN SET " + column + " = " + " N'" + content + "' WHERE trim(MANV) = trim(sys_context('userenv', 'session_user'))";
-            }
-
-            Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(query);
-            Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery("COMMIT WORK");
-            dataGridView5.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM ADMIN_DBMS.VIEW_FOR_UPDATE");
-=======
 			}
 			else
 			{
 				query = "UPDATE ADMIN_DBMS.NHANVIEN SET " + column + " = " + " N'" + content + "' WHERE trim(MANV) = trim(sys_context('userenv', 'session_user'))";
 			}
-			textBox5.Text = query;
+
 			Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(query);
-
 			Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery("COMMIT WORK");
->>>>>>> 303208ced7b62b44b15680e5be8f6f149767e2aa
-
 			dataGridView5.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM ADMIN_DBMS.VIEW_FOR_UPDATE");
 
 		}
@@ -179,23 +144,29 @@
 		private void textBox5_TextChanged(object sender, EventArgs e)
 		{
 
+
 		}
 
-<<<<<<< HEAD
-        }
+		private void button2_Click_1(object sender, EventArgs e)
+		{
+			textBox4.Text = "";
+			textBox3.Text = "";
 
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            textBox4.Text = "";
-            textBox3.Text = "";
-
-        }
-    }
-=======
+		}
 		private void textBox6_TextChanged(object sender, EventArgs e)
 		{
 
 		}
+
+		private void button5_Click(object sender, EventArgs e)
+		{
+			dataGridView1.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  MY_PROJECT_PLUG_USER.info_nhanvien_decrypt");
+		}
+
+		private void button4_Click(object sender, EventArgs e)
+		{
+			dataGridView1.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  MY_PROJECT_PLUG_USER.NHANVIEN");
+
+		}
 	}
->>>>>>> 303208ced7b62b44b15680e5be8f6f149767e2aa
 }
