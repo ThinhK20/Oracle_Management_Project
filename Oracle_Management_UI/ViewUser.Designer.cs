@@ -93,6 +93,7 @@
 			dataGridView16 = new DataGridView();
 			button1 = new Button();
 			button14 = new Button();
+			button15 = new Button();
 			tabControl1.SuspendLayout();
 			tabPage2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -1000,12 +1001,31 @@
 			button14.UseVisualStyleBackColor = false;
 			button14.Click += button14_Click_1;
 			// 
+			// button15
+			// 
+			button15.BackColor = SystemColors.ButtonFace;
+			button15.FlatAppearance.BorderColor = Color.Blue;
+			button15.FlatAppearance.MouseDownBackColor = Color.LightSkyBlue;
+			button15.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+			button15.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+			button15.ForeColor = SystemColors.MenuHighlight;
+			button15.Location = new Point(701, 40);
+			button15.Margin = new Padding(3, 4, 3, 4);
+			button15.Name = "button15";
+			button15.Size = new Size(188, 43);
+			button15.TabIndex = 4;
+			button15.Text = "Thay khóa";
+			button15.TextImageRelation = TextImageRelation.TextBeforeImage;
+			button15.UseVisualStyleBackColor = false;
+			button15.Click += button15_Click;
+			// 
 			// ViewUser
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = SystemColors.InactiveCaption;
 			ClientSize = new Size(1924, 1055);
+			Controls.Add(button15);
 			Controls.Add(button14);
 			Controls.Add(tabControl1);
 			Controls.Add(button1);
@@ -1114,5 +1134,6 @@
 		private DataGridView dataGridView16;
 		private Button button1;
 		private Button button14;
+		private Button button15;
 	}
 }

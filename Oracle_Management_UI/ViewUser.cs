@@ -1,4 +1,4 @@
-﻿using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+﻿using Oracle_Management_UI.Components;
 
 namespace Oracle_Management_UI
 {
@@ -237,6 +237,32 @@ namespace Oracle_Management_UI
 		{
 			ManageRole nav = new ManageRole();
 			nav.ShowDialog();
+		}
+
+		private void button15_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				PromptDialog promptValue = new PromptDialog();
+				promptValue.ShowDialog("Nhập key mới", "Thay đổi key");
+				if (promptValue.Value1 == "")
+				{
+					MessageBox.Show("Vui lòng nhập đầy đủ thông tin.");
+					return;
+				}
+				string query = "MY_PROJECT_PLUG_USER.GENERATE_KEY";
+
+				Oracle_Management_Library.GlobalConfig.Connection.ExecuteStoredProcedure(query, promptValue.Value1);
+				Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery($"COMMIT WORK");
+				Oracle_Management_Library.GlobalConfig.Connection.ExecuteStoredProcedure($"MY_PROJECT_PLUG_USER.change_data_newkey", "");
+				Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery($"COMMIT WORK");
+				MessageBox.Show("Đổi key thành công.");
+
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
 		}
 	}
 }
