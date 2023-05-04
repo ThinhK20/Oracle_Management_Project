@@ -103,8 +103,8 @@ namespace Oracle_Company
 
         private void QLTT_Load(object sender, EventArgs e)
         {
-            this.nhanvienGridView.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("select * from ADMIN_DBMS.TEST_NV");
-            this.phanCongGridView.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("select * from ADMIN_DBMS.TEST_PC");
+            this.nhanvienGridView.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("select * from ADMIN_DBMS.QLTT_VIEW_NHANVIEN");
+            this.phanCongGridView.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("select * from ADMIN_DBMS.QLTT_VIEW_PHANCONG");
 
         }
     }

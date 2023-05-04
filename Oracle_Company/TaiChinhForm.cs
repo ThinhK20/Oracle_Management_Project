@@ -12,17 +12,12 @@ namespace Oracle_Company
 			InitializeComponent();
 		}
 
-		private void NhanVienTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-
-		}
-
 		private void TaiChinhForm_Load(object sender, EventArgs e)
 		{
 			try
 			{
-				NhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM MY_PROJECT_PLUG_USER.NHANVIEN");
-				PhanCongTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  MY_PROJECT_PLUG_USER.PHANCONG");
+				NhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM admin_dbms.NHANVIEN");
+				PhanCongTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  admin_dbms.PHANCONG");
 
 			}
 			catch (Exception)
@@ -55,10 +50,10 @@ namespace Oracle_Company
 			PromptDialog promptDialog = new PromptDialog();
 			promptDialog.ShowDialog("Nhập lương mới", "Thay đổi lương của " + _selectedUserId);
 			if (promptDialog.Value1 == "") return;
-			string queryString = "UPDATE MY_PROJECT_PLUG_USER.NHANVIEN SET LUONG= " + promptDialog.Value1 + " where MANV = '" + _selectedUserId + "'";
+			string queryString = "UPDATE admin_dbms.NHANVIEN SET LUONG= " + promptDialog.Value1 + " where MANV = '" + _selectedUserId + "'";
 			Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(queryString);
 			Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery("COMMIT WORK");
-			NhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM MY_PROJECT_PLUG_USER.NHANVIEN");
+			NhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM admin_dbms.NHANVIEN");
 		}
 
 		private void ThayDoiPhuCapBtn_Click(object sender, EventArgs e)
@@ -69,10 +64,10 @@ namespace Oracle_Company
 				PromptDialog promptDialog = new PromptDialog();
 				promptDialog.ShowDialog("Nhập phụ cấp mới", "Thay đổi phụ cấp của " + _selectedUserId);
 				if (promptDialog.Value1 == "") return;
-				string queryString = "UPDATE MY_PROJECT_PLUG_USER.NHANVIEN SET PHUCAP= " + promptDialog.Value1 + " where MANV = '" + _selectedUserId + "'";
+				string queryString = "UPDATE admin_dbms.NHANVIEN SET PHUCAP= " + promptDialog.Value1 + " where MANV = '" + _selectedUserId + "'";
 				Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(queryString);
 				Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery("COMMIT WORK");
-				NhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM MY_PROJECT_PLUG_USER.NHANVIEN");
+				NhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM admin_dbms.NHANVIEN");
 			}
 			catch (Exception)
 			{
