@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Oracle_Company
 {
@@ -24,20 +25,19 @@ namespace Oracle_Company
 
         private void button_Click(object sender, EventArgs e)
         {
-            string selectedItems = string.Empty;
             for (int i = 0; i < checkedListBox1.CheckedItems.Count; i++)
             {
-                if (checkedListBox1.CheckedItems[i].ToString().Equals("NHÂN VIÊN")) role += "NV,";
-                else if (checkedListBox1.CheckedItems[i].ToString().Equals("TRƯỞNG PHÒNG")) role += "TP,";
-                else if (checkedListBox1.CheckedItems[i].ToString().Equals("GIÁM ĐỐC")) role += "GD";
+                if (checkedListBox1.CheckedItems[i].ToString().Equals("NHÂN VIÊN")) role = "NV";
+                else if (checkedListBox1.CheckedItems[i].ToString().Equals("TRƯỞNG PHÒNG")) role+= "TP";
+                else if (checkedListBox1.CheckedItems[i].ToString().Equals("GIÁM ĐỐC")) role = "GD";
                 else
                 {
                     MessageBox.Show("Please Select receiver");
                     return;
                 }
-               
+
             }
-            role = role.Substring(0, role.Length - 1);
+
             for (int i = 0; i < checkedListBox2.CheckedItems.Count; i++)
             {
                 if (checkedListBox2.CheckedItems[i].ToString().Equals("MUA BÁN")) loai += "MB,";
@@ -48,7 +48,7 @@ namespace Oracle_Company
                     MessageBox.Show("Please Select ...");
                     return;
                 }
-      
+
             }
             loai = loai.Substring(0, loai.Length - 1);
             for (int i = 0; i < checkedListBox3.CheckedItems.Count; i++)
@@ -61,14 +61,16 @@ namespace Oracle_Company
                     MessageBox.Show("Please Select ...");
                     return;
                 }
-               
+
             }
             diadiem = diadiem.Substring(0, diadiem.Length - 1);
             string TONG = role + ":" + loai + ":" + diadiem;
-            MessageBox.Show(TONG);
-            string con_text = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("select sys_context('userenv' ,'session_user') from dual").ToString();
-            Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery($"SA_USER_ADMIN.SET_USER_LABELS('region_policy', '{con_text}', '{TONG}'");
+            Random random = new Random();
+            int randomNumber = random.Next(0, 101);
+            string newCode = "TB" + randomNumber.ToString();
+            Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery($" INSERT INTO ADMIN_DBMS.THONGBAO VALUES('{newCode}','{textBox1.Text}',CHAR_TO_LABEL('region_policy','{TONG}'));");
             Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery("COMMIT WORK");
+            MessageBox.Show(TONG + textBox1.Text);
 
         }
 
@@ -77,14 +79,16 @@ namespace Oracle_Company
 
         }
 
-        private void TinNhan_Load(object sender, EventArgs e)
+        
+        private void checkedListBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("select * from admin_dbms.THONGBAO");
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void checkbok1(object sender, ItemCheckEventArgs e)
         {
-            dataGridView1.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("select * from admin_dbms.THONGBAO");
+            for (int ix = 0; ix < checkedListBox1.Items.Count; ++ix)
+                if (ix != e.Index) checkedListBox1.SetItemChecked(ix, false);
         }
     }
 }

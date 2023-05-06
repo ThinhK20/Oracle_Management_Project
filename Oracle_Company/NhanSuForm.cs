@@ -191,7 +191,7 @@
 		private void CapNhatPBTable_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
 			_selectCapNhatMaPB = this.CapNhatPBTable.Rows[e.RowIndex].Cells["MAPB"].Value.ToString();
-			_selectCapNhatMaTruongPB = this.CapNhatPBTable.Rows[e.RowIndex].Cells["MANV"].Value.ToString();
+			_selectCapNhatMaTruongPB = this.CapNhatPBTable.Rows[e.RowIndex].Cells["TRPHG"].Value.ToString();
 			_selectCapNhatTenPB = this.CapNhatPBTable.Rows[e.RowIndex].Cells["TENPB"].Value.ToString();
 			CapNhatPBTextBox.Text = _selectCapNhatTenPB;
 			CapNhatPBLabel.Text = _selectCapNhatMaTruongPB;

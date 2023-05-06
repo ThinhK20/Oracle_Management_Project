@@ -660,6 +660,7 @@ namespace Oracle_Company
             this.CapNhatNhanVienTable.RowTemplate.Height = 29;
             this.CapNhatNhanVienTable.Size = new System.Drawing.Size(435, 592);
             this.CapNhatNhanVienTable.TabIndex = 24;
+            this.CapNhatNhanVienTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CapNhatNhanVienTable_CellClick);
             // 
             // ThemPhongBanTabPage
             // 
@@ -784,6 +785,7 @@ namespace Oracle_Company
             this.CapNhatPBMaTPTable.RowTemplate.Height = 29;
             this.CapNhatPBMaTPTable.Size = new System.Drawing.Size(493, 236);
             this.CapNhatPBMaTPTable.TabIndex = 34;
+            this.CapNhatPBMaTPTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CapNhatPBMaTPTable_CellClick);
             // 
             // CapNhatPBLabel
             // 
@@ -852,6 +854,7 @@ namespace Oracle_Company
             this.CapNhatPBTable.RowTemplate.Height = 29;
             this.CapNhatPBTable.Size = new System.Drawing.Size(435, 592);
             this.CapNhatPBTable.TabIndex = 27;
+            this.CapNhatPBTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CapNhatPBTable_CellClick);
             // 
             // NhanSuForm
             // 
