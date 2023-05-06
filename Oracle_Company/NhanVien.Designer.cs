@@ -162,7 +162,6 @@
             dataGridView2.RowTemplate.Height = 25;
             dataGridView2.Size = new Size(1159, 248);
             dataGridView2.TabIndex = 0;
-            dataGridView2.CellContentClick += dataGridView2_CellContentClick_1;
             // 
             // tabPage5
             // 
@@ -226,7 +225,6 @@
             tabPage2.Size = new Size(1153, 268);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Sửa";
-            tabPage2.Click += tabPage2_Click_1;
             // 
             // label3
             // 
@@ -237,7 +235,6 @@
             label3.Name = "label3";
             label3.Size = new Size(0, 20);
             label3.TabIndex = 14;
-            label3.Click += label3_Click_1;
             // 
             // textBox6
             // 
@@ -275,7 +272,6 @@
             textBox3.Size = new Size(176, 38);
             textBox3.TabIndex = 10;
             textBox3.TextAlign = HorizontalAlignment.Center;
-            textBox3.TextChanged += textBox3_TextChanged_1;
             // 
             // label2
             // 
@@ -323,7 +319,6 @@
             label1.Size = new Size(210, 30);
             label1.TabIndex = 5;
             label1.Text = "Nhập thông tin mới";
-            label1.Click += label1_Click_2;
             // 
             // textBox1
             // 
@@ -333,7 +328,6 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(241, 41);
             textBox1.TabIndex = 4;
-            textBox1.TextChanged += textBox1_TextChanged_1;
             // 
             // button3
             // 
@@ -350,7 +344,7 @@
             button3.Text = "Sửa";
             button3.TextImageRelation = TextImageRelation.TextBeforeImage;
             button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click_1;
+            button3.Click += button3_Click_2;
             // 
             // dataGridView5
             // 
@@ -516,37 +510,38 @@
 
         #endregion
 
-		private TabControl tabControl1;
-		private TabPage tabPage1;
-		private TabPage tabPage2;
-		private TabControl tabControl2;
-		private TabPage tabPage3;
-		private TabPage tabPage4;
-		private TabPage tabPage5;
-		private TabPage tabPage6;
-		private DataGridView dataGridView1;
-		private DataGridView dataGridView2;
-		private DataGridView dataGridView3;
-		private DataGridView dataGridView4;
-		private Button button1;
-		private DataGridView dataGridView5;
-		private Button button3;
-		private Label label1;
-		private TextBox textBox1;
-		private Label label2;
-		private Button button2;
-		private TextBox textBox2;
-		private TextBox textBox3;
-		private TextBox textBox4;
-		private TextBox textBox6;
-		private Button NS;
-		private Button TC;
-		private Button QLP;
-		private Button qlda;
-		private Button qlnv;
-		private Button TB;
+        private TabControl tabControl1;
+        private TabPage tabPage1;
+        private TabPage tabPage2;
+        private TabControl tabControl2;
+        private TabPage tabPage3;
+        private TabPage tabPage4;
+        private TabPage tabPage5;
+        private TabPage tabPage6;
+        private DataGridView dataGridView1;
+        private DataGridView dataGridView2;
+        private DataGridView dataGridView3;
+        private DataGridView dataGridView4;
+        private Button button1;
+        private DataGridView dataGridView5;
+        private Button button3;
+        private Label label1;
+        private TextBox textBox1;
+        private Label label2;
+        private Button button2;
+        private TextBox textBox2;
+        private TextBox textBox3;
+        private TextBox textBox4;
+        private TextBox textBox6;
+        private Button NS;
+        private Button TC;
+        private Button QLP;
+        private Button qlda;
+        private Button qlnv;
+        private Button TB;
         private TabPage tabPage7;
         private DataGridView TBGrid;
         private Button button4;
+        private Label label3;
     }
 }
