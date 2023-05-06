@@ -1,7 +1,4 @@
-﻿
-using System.Data;
-
-namespace Oracle_Company
+﻿namespace Oracle_Company
 {
 	public partial class TruongPhongcs : Form
 	{
