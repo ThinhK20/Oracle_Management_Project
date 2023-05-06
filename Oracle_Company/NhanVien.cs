@@ -35,11 +35,10 @@
 			dataGridView1.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  ADMIN_DBMS.NHANVIEN_VIEW_PROFILE");
 			dataGridView2.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  ADMIN_DBMS.NHANVIEN_VIEW_PC");
 			dataGridView5.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  ADMIN_DBMS.VIEW_FOR_UPDATE");
-            TBGrid.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT MOTA FROM  ADMIN_DBMS.THONGBAO");
-			TBGrid.Columns[0].Width = 1008;
-        }
+			TBGrid.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT MOTA FROM  ADMIN_DBMS.THONGBAO");
+		}
 
-        private void button2_Click(object sender, EventArgs e)
+		private void button2_Click(object sender, EventArgs e)
 		{
 
 		}
@@ -164,7 +163,7 @@
 
 		}
 
-		
+
 
 		private void qlnv_Click(object sender, EventArgs e)
 		{
@@ -198,8 +197,8 @@
 
 		private void QLP_Click(object sender, EventArgs e)
 		{
-            TruongPhongcs truongPhongcs = new TruongPhongcs();
-            truongPhongcs.Show();
-        }
+			TruongPhongcs truongPhongcs = new TruongPhongcs();
+			truongPhongcs.Show();
+		}
 	}
 }
