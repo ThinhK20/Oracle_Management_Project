@@ -13,7 +13,7 @@ namespace Oracle_Company
 			ApplicationConfiguration.Initialize();
 			Oracle_Management_Library.GlobalConfig.InitializeConnections();
 
-			Application.Run(new TinNhan());
+			Application.Run(new Login());
 
 		}
 	}
