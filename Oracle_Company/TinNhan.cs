@@ -77,14 +77,10 @@ namespace Oracle_Company
 
         }
 
-        private void TinNhan_Load(object sender, EventArgs e)
+        
+        private void checkedListBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("select * from admin_dbms.THONGBAO");
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            dataGridView1.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("select * from admin_dbms.THONGBAO");
         }
     }
 }

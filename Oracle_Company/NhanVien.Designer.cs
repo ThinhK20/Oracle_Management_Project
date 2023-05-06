@@ -28,434 +28,484 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			tabControl1 = new TabControl();
-			tabPage1 = new TabPage();
-			tabControl2 = new TabControl();
-			tabPage3 = new TabPage();
-			dataGridView1 = new DataGridView();
-			tabPage4 = new TabPage();
-			dataGridView2 = new DataGridView();
-			tabPage5 = new TabPage();
-			dataGridView3 = new DataGridView();
-			tabPage6 = new TabPage();
-			dataGridView4 = new DataGridView();
-			tabPage2 = new TabPage();
-			textBox6 = new TextBox();
-			textBox4 = new TextBox();
-			textBox3 = new TextBox();
-			label2 = new Label();
-			button2 = new Button();
-			textBox2 = new TextBox();
-			label1 = new Label();
-			textBox1 = new TextBox();
-			button3 = new Button();
-			dataGridView5 = new DataGridView();
-			button1 = new Button();
-			NS = new Button();
-			TC = new Button();
-			QLP = new Button();
-			qlda = new Button();
-			qlnv = new Button();
-			tabControl1.SuspendLayout();
-			tabPage1.SuspendLayout();
-			tabControl2.SuspendLayout();
-			tabPage3.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-			tabPage4.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-			tabPage5.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
-			tabPage6.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)dataGridView4).BeginInit();
-			tabPage2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)dataGridView5).BeginInit();
-			SuspendLayout();
-			// 
-			// tabControl1
-			// 
-			tabControl1.Controls.Add(tabPage1);
-			tabControl1.Controls.Add(tabPage2);
-			tabControl1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-			tabControl1.Location = new Point(26, 100);
-			tabControl1.Margin = new Padding(3, 4, 3, 4);
-			tabControl1.Name = "tabControl1";
-			tabControl1.SelectedIndex = 0;
-			tabControl1.Size = new Size(1327, 394);
-			tabControl1.TabIndex = 1;
-			// 
-			// tabPage1
-			// 
-			tabPage1.BackColor = Color.Silver;
-			tabPage1.BorderStyle = BorderStyle.FixedSingle;
-			tabPage1.Controls.Add(tabControl2);
-			tabPage1.Cursor = Cursors.IBeam;
-			tabPage1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-			tabPage1.ForeColor = Color.Brown;
-			tabPage1.Location = new Point(4, 29);
-			tabPage1.Margin = new Padding(3, 4, 3, 4);
-			tabPage1.Name = "tabPage1";
-			tabPage1.Padding = new Padding(3, 4, 3, 4);
-			tabPage1.Size = new Size(1319, 361);
-			tabPage1.TabIndex = 0;
-			tabPage1.Text = "Xem";
-			// 
-			// tabControl2
-			// 
-			tabControl2.Controls.Add(tabPage3);
-			tabControl2.Controls.Add(tabPage4);
-			tabControl2.Controls.Add(tabPage5);
-			tabControl2.Controls.Add(tabPage6);
-			tabControl2.Cursor = Cursors.AppStarting;
-			tabControl2.Location = new Point(-6, -1);
-			tabControl2.Margin = new Padding(3, 4, 3, 4);
-			tabControl2.Name = "tabControl2";
-			tabControl2.SelectedIndex = 0;
-			tabControl2.Size = new Size(1333, 731);
-			tabControl2.TabIndex = 0;
-			// 
-			// tabPage3
-			// 
-			tabPage3.BackColor = Color.Transparent;
-			tabPage3.BorderStyle = BorderStyle.FixedSingle;
-			tabPage3.Controls.Add(dataGridView1);
-			tabPage3.Location = new Point(4, 29);
-			tabPage3.Margin = new Padding(3, 4, 3, 4);
-			tabPage3.Name = "tabPage3";
-			tabPage3.Padding = new Padding(3, 4, 3, 4);
-			tabPage3.Size = new Size(1325, 698);
-			tabPage3.TabIndex = 0;
-			tabPage3.Text = "Nhân Viên";
-			tabPage3.UseWaitCursor = true;
-			// 
-			// dataGridView1
-			// 
-			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridView1.Location = new Point(-6, -1);
-			dataGridView1.Margin = new Padding(3, 4, 3, 4);
-			dataGridView1.Name = "dataGridView1";
-			dataGridView1.RowHeadersWidth = 51;
-			dataGridView1.RowTemplate.Height = 25;
-			dataGridView1.Size = new Size(1334, 336);
-			dataGridView1.TabIndex = 0;
-			dataGridView1.UseWaitCursor = true;
-			// 
-			// tabPage4
-			// 
-			tabPage4.Controls.Add(dataGridView2);
-			tabPage4.Location = new Point(4, 29);
-			tabPage4.Margin = new Padding(3, 4, 3, 4);
-			tabPage4.Name = "tabPage4";
-			tabPage4.Padding = new Padding(3, 4, 3, 4);
-			tabPage4.Size = new Size(1325, 698);
-			tabPage4.TabIndex = 1;
-			tabPage4.Text = "Phân Công";
-			tabPage4.UseVisualStyleBackColor = true;
-			// 
-			// dataGridView2
-			// 
-			dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridView2.Location = new Point(-5, 0);
-			dataGridView2.Margin = new Padding(3, 4, 3, 4);
-			dataGridView2.Name = "dataGridView2";
-			dataGridView2.RowHeadersWidth = 51;
-			dataGridView2.RowTemplate.Height = 25;
-			dataGridView2.Size = new Size(1325, 695);
-			dataGridView2.TabIndex = 0;
-			// 
-			// tabPage5
-			// 
-			tabPage5.Controls.Add(dataGridView3);
-			tabPage5.Location = new Point(4, 29);
-			tabPage5.Margin = new Padding(3, 4, 3, 4);
-			tabPage5.Name = "tabPage5";
-			tabPage5.Padding = new Padding(3, 4, 3, 4);
-			tabPage5.Size = new Size(1325, 698);
-			tabPage5.TabIndex = 2;
-			tabPage5.Text = "Phòng Ban";
-			tabPage5.UseVisualStyleBackColor = true;
-			// 
-			// dataGridView3
-			// 
-			dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridView3.Location = new Point(-5, 0);
-			dataGridView3.Margin = new Padding(3, 4, 3, 4);
-			dataGridView3.Name = "dataGridView3";
-			dataGridView3.RowHeadersWidth = 51;
-			dataGridView3.RowTemplate.Height = 25;
-			dataGridView3.Size = new Size(1322, 693);
-			dataGridView3.TabIndex = 1;
-			// 
-			// tabPage6
-			// 
-			tabPage6.Controls.Add(dataGridView4);
-			tabPage6.Location = new Point(4, 29);
-			tabPage6.Margin = new Padding(3, 4, 3, 4);
-			tabPage6.Name = "tabPage6";
-			tabPage6.Padding = new Padding(3, 4, 3, 4);
-			tabPage6.Size = new Size(1325, 698);
-			tabPage6.TabIndex = 3;
-			tabPage6.Text = "Đề Án";
-			tabPage6.UseVisualStyleBackColor = true;
-			// 
-			// dataGridView4
-			// 
-			dataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridView4.Location = new Point(-5, 0);
-			dataGridView4.Margin = new Padding(3, 4, 3, 4);
-			dataGridView4.Name = "dataGridView4";
-			dataGridView4.RowHeadersWidth = 51;
-			dataGridView4.RowTemplate.Height = 25;
-			dataGridView4.Size = new Size(1325, 700);
-			dataGridView4.TabIndex = 1;
-			// 
-			// tabPage2
-			// 
-			tabPage2.BackColor = Color.RosyBrown;
-			tabPage2.Controls.Add(textBox6);
-			tabPage2.Controls.Add(textBox4);
-			tabPage2.Controls.Add(textBox3);
-			tabPage2.Controls.Add(label2);
-			tabPage2.Controls.Add(button2);
-			tabPage2.Controls.Add(textBox2);
-			tabPage2.Controls.Add(label1);
-			tabPage2.Controls.Add(textBox1);
-			tabPage2.Controls.Add(button3);
-			tabPage2.Controls.Add(dataGridView5);
-			tabPage2.Location = new Point(4, 29);
-			tabPage2.Margin = new Padding(3, 4, 3, 4);
-			tabPage2.Name = "tabPage2";
-			tabPage2.Padding = new Padding(3, 4, 3, 4);
-			tabPage2.Size = new Size(1319, 361);
-			tabPage2.TabIndex = 1;
-			tabPage2.Text = "Sửa";
-			// 
-			// textBox6
-			// 
-			textBox6.BackColor = Color.RosyBrown;
-			textBox6.BorderStyle = BorderStyle.None;
-			textBox6.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-			textBox6.ForeColor = Color.Navy;
-			textBox6.Location = new Point(706, 473);
-			textBox6.Margin = new Padding(3, 4, 3, 4);
-			textBox6.Multiline = true;
-			textBox6.Name = "textBox6";
-			textBox6.Size = new Size(573, 49);
-			textBox6.TabIndex = 13;
-			textBox6.TextAlign = HorizontalAlignment.Center;
-			// 
-			// textBox4
-			// 
-			textBox4.BackColor = SystemColors.Info;
-			textBox4.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-			textBox4.ForeColor = SystemColors.InfoText;
-			textBox4.Location = new Point(504, 170);
-			textBox4.Margin = new Padding(3, 4, 3, 4);
-			textBox4.Multiline = true;
-			textBox4.Name = "textBox4";
-			textBox4.Size = new Size(492, 72);
-			textBox4.TabIndex = 11;
-			textBox4.TextAlign = HorizontalAlignment.Center;
-			// 
-			// textBox3
-			// 
-			textBox3.BackColor = SystemColors.InactiveCaption;
-			textBox3.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-			textBox3.ForeColor = SystemColors.MenuHighlight;
-			textBox3.Location = new Point(623, 88);
-			textBox3.Margin = new Padding(3, 4, 3, 4);
-			textBox3.Multiline = true;
-			textBox3.Name = "textBox3";
-			textBox3.Size = new Size(201, 49);
-			textBox3.TabIndex = 10;
-			textBox3.TextAlign = HorizontalAlignment.Center;
-			// 
-			// label2
-			// 
-			label2.AutoSize = true;
-			label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-			label2.ForeColor = SystemColors.Info;
-			label2.Location = new Point(596, 31);
-			label2.Name = "label2";
-			label2.Size = new Size(275, 41);
-			label2.TabIndex = 8;
-			label2.Text = "Thông tin đã chọn";
-			// 
-			// button2
-			// 
-			button2.BackColor = SystemColors.ButtonFace;
-			button2.FlatAppearance.BorderColor = Color.Blue;
-			button2.FlatAppearance.MouseDownBackColor = Color.LightSkyBlue;
-			button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
-			button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-			button2.ForeColor = SystemColors.MenuHighlight;
-			button2.Location = new Point(671, 270);
-			button2.Margin = new Padding(3, 4, 3, 4);
-			button2.Name = "button2";
-			button2.Size = new Size(115, 43);
-			button2.TabIndex = 7;
-			button2.Text = "Reset";
-			button2.TextImageRelation = TextImageRelation.TextBeforeImage;
-			button2.UseVisualStyleBackColor = false;
-			// 
-			// textBox2
-			// 
-			textBox2.Location = new Point(448, 0);
-			textBox2.Margin = new Padding(3, 4, 3, 4);
-			textBox2.Multiline = true;
-			textBox2.Name = "textBox2";
-			textBox2.Size = new Size(585, 361);
-			textBox2.TabIndex = 6;
-			// 
-			// label1
-			// 
-			label1.AutoSize = true;
-			label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-			label1.ForeColor = SystemColors.Info;
-			label1.Location = new Point(1078, 31);
-			label1.Name = "label1";
-			label1.Size = new Size(200, 28);
-			label1.TabIndex = 5;
-			label1.Text = "Nhập thông tin mới";
-			// 
-			// textBox1
-			// 
-			textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-			textBox1.Location = new Point(1039, 84);
-			textBox1.Margin = new Padding(3, 4, 3, 4);
-			textBox1.Multiline = true;
-			textBox1.Name = "textBox1";
-			textBox1.Size = new Size(257, 53);
-			textBox1.TabIndex = 4;
-			// 
-			// button3
-			// 
-			button3.BackColor = SystemColors.ButtonFace;
-			button3.FlatAppearance.BorderColor = Color.Blue;
-			button3.FlatAppearance.MouseDownBackColor = Color.LightSkyBlue;
-			button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
-			button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-			button3.ForeColor = SystemColors.MenuHighlight;
-			button3.Location = new Point(1127, 183);
-			button3.Margin = new Padding(3, 4, 3, 4);
-			button3.Name = "button3";
-			button3.Size = new Size(115, 43);
-			button3.TabIndex = 3;
-			button3.Text = "Sửa";
-			button3.TextImageRelation = TextImageRelation.TextBeforeImage;
-			button3.UseVisualStyleBackColor = false;
-			// 
-			// dataGridView5
-			// 
-			dataGridView5.BackgroundColor = Color.DarkSeaGreen;
-			dataGridView5.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridView5.Location = new Point(0, 0);
-			dataGridView5.Margin = new Padding(3, 4, 3, 4);
-			dataGridView5.Name = "dataGridView5";
-			dataGridView5.RowHeadersWidth = 51;
-			dataGridView5.RowTemplate.Height = 25;
-			dataGridView5.Size = new Size(453, 361);
-			dataGridView5.TabIndex = 0;
-			dataGridView5.CellContentClick += dataGridView5_CellContentClick;
-			// 
-			// button1
-			// 
-			button1.BackColor = SystemColors.ButtonFace;
-			button1.FlatAppearance.BorderColor = Color.Blue;
-			button1.FlatAppearance.MouseDownBackColor = Color.LightSkyBlue;
-			button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
-			button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-			button1.ForeColor = SystemColors.MenuHighlight;
-			button1.Location = new Point(1238, 49);
-			button1.Margin = new Padding(3, 4, 3, 4);
-			button1.Name = "button1";
-			button1.Size = new Size(115, 43);
-			button1.TabIndex = 2;
-			button1.Text = "Đăng xuất";
-			button1.TextImageRelation = TextImageRelation.TextBeforeImage;
-			button1.UseVisualStyleBackColor = false;
-			// 
-			// NS
-			// 
-			NS.Location = new Point(1067, 50);
-			NS.Name = "NS";
-			NS.Size = new Size(124, 42);
-			NS.TabIndex = 3;
-			NS.Text = "Nhân sự";
-			NS.UseVisualStyleBackColor = true;
-			NS.Click += NS_Click;
-			// 
-			// TC
-			// 
-			TC.Location = new Point(1067, 51);
-			TC.Name = "TC";
-			TC.Size = new Size(124, 42);
-			TC.TabIndex = 4;
-			TC.Text = "Tài chính";
-			TC.UseVisualStyleBackColor = true;
-			TC.Click += TC_Click;
-			// 
-			// QLP
-			// 
-			QLP.Location = new Point(1067, 50);
-			QLP.Name = "QLP";
-			QLP.Size = new Size(124, 42);
-			QLP.TabIndex = 5;
-			QLP.Text = "Quản lý phòng";
-			QLP.UseVisualStyleBackColor = true;
-			QLP.Click += button6_Click;
-			// 
-			// qlda
-			// 
-			qlda.Location = new Point(1067, 51);
-			qlda.Name = "qlda";
-			qlda.Size = new Size(124, 42);
-			qlda.TabIndex = 6;
-			qlda.Text = "Quản lý đề án";
-			qlda.UseVisualStyleBackColor = true;
-			qlda.Click += qlda_Click;
-			// 
-			// qlnv
-			// 
-			qlnv.Location = new Point(1056, 51);
-			qlnv.Name = "qlnv";
-			qlnv.Size = new Size(135, 42);
-			qlnv.TabIndex = 7;
-			qlnv.Text = "Quản lý nhân viên";
-			qlnv.UseVisualStyleBackColor = true;
-			qlnv.Click += qlnv_Click;
-			// 
-			// NhanVien
-			// 
-			AutoScaleDimensions = new SizeF(8F, 20F);
-			AutoScaleMode = AutoScaleMode.Font;
-			BackColor = SystemColors.InactiveCaption;
-			ClientSize = new Size(1441, 573);
-			Controls.Add(qlnv);
-			Controls.Add(qlda);
-			Controls.Add(QLP);
-			Controls.Add(TC);
-			Controls.Add(NS);
-			Controls.Add(button1);
-			Controls.Add(tabControl1);
-			Margin = new Padding(3, 4, 3, 4);
-			Name = "NhanVien";
-			Text = "NhanVien";
-			Load += NhanVien_Load;
-			tabControl1.ResumeLayout(false);
-			tabPage1.ResumeLayout(false);
-			tabControl2.ResumeLayout(false);
-			tabPage3.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-			tabPage4.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-			tabPage5.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
-			tabPage6.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)dataGridView4).EndInit();
-			tabPage2.ResumeLayout(false);
-			tabPage2.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)dataGridView5).EndInit();
-			ResumeLayout(false);
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
+            this.TBGrid = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.NS = new System.Windows.Forms.Button();
+            this.TC = new System.Windows.Forms.Button();
+            this.QLP = new System.Windows.Forms.Button();
+            this.qlda = new System.Windows.Forms.Button();
+            this.qlnv = new System.Windows.Forms.Button();
+            this.TB = new System.Windows.Forms.Button();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabControl2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TBGrid)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage7);
+            this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tabControl1.Location = new System.Drawing.Point(26, 100);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1327, 394);
+            this.tabControl1.TabIndex = 1;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.Silver;
+            this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage1.Controls.Add(this.tabControl2);
+            this.tabPage1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tabPage1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tabPage1.ForeColor = System.Drawing.Color.Brown;
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage1.Size = new System.Drawing.Size(1319, 361);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Xem";
+            // 
+            // tabControl2
+            // 
+            this.tabControl2.Controls.Add(this.tabPage3);
+            this.tabControl2.Controls.Add(this.tabPage4);
+            this.tabControl2.Controls.Add(this.tabPage5);
+            this.tabControl2.Controls.Add(this.tabPage6);
+            this.tabControl2.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.tabControl2.Location = new System.Drawing.Point(-6, -1);
+            this.tabControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(1333, 731);
+            this.tabControl2.TabIndex = 0;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage3.Controls.Add(this.dataGridView1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage3.Size = new System.Drawing.Size(1325, 698);
+            this.tabPage3.TabIndex = 0;
+            this.tabPage3.Text = "Nhân Viên";
+            this.tabPage3.UseWaitCursor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(-6, -1);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(1334, 336);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.UseWaitCursor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.dataGridView2);
+            this.tabPage4.Location = new System.Drawing.Point(4, 29);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage4.Size = new System.Drawing.Size(1325, 698);
+            this.tabPage4.TabIndex = 1;
+            this.tabPage4.Text = "Phân Công";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(-5, 0);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 25;
+            this.dataGridView2.Size = new System.Drawing.Size(1325, 695);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.dataGridView3);
+            this.tabPage5.Location = new System.Drawing.Point(4, 29);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage5.Size = new System.Drawing.Size(1325, 698);
+            this.tabPage5.TabIndex = 2;
+            this.tabPage5.Text = "Phòng Ban";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(-5, 0);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.RowTemplate.Height = 25;
+            this.dataGridView3.Size = new System.Drawing.Size(1322, 693);
+            this.dataGridView3.TabIndex = 1;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.dataGridView4);
+            this.tabPage6.Location = new System.Drawing.Point(4, 29);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage6.Size = new System.Drawing.Size(1325, 698);
+            this.tabPage6.TabIndex = 3;
+            this.tabPage6.Text = "Đề Án";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(-5, 0);
+            this.dataGridView4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.RowHeadersWidth = 51;
+            this.dataGridView4.RowTemplate.Height = 25;
+            this.dataGridView4.Size = new System.Drawing.Size(1325, 700);
+            this.dataGridView4.TabIndex = 1;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.RosyBrown;
+            this.tabPage2.Controls.Add(this.textBox6);
+            this.tabPage2.Controls.Add(this.textBox4);
+            this.tabPage2.Controls.Add(this.textBox3);
+            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.button2);
+            this.tabPage2.Controls.Add(this.textBox2);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.button3);
+            this.tabPage2.Controls.Add(this.dataGridView5);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage2.Size = new System.Drawing.Size(1319, 361);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Sửa";
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.RosyBrown;
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox6.ForeColor = System.Drawing.Color.Navy;
+            this.textBox6.Location = new System.Drawing.Point(706, 473);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(573, 49);
+            this.textBox6.TabIndex = 13;
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.SystemColors.Info;
+            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox4.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.textBox4.Location = new System.Drawing.Point(504, 170);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(492, 72);
+            this.textBox4.TabIndex = 11;
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.textBox3.Location = new System.Drawing.Point(623, 88);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(201, 49);
+            this.textBox3.TabIndex = 10;
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.SystemColors.Info;
+            this.label2.Location = new System.Drawing.Point(596, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(275, 41);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Thông tin đã chọn";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button2.Location = new System.Drawing.Point(671, 270);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(115, 43);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Reset";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(448, 0);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(585, 361);
+            this.textBox2.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.Info;
+            this.label1.Location = new System.Drawing.Point(1078, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(200, 28);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Nhập thông tin mới";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.Location = new System.Drawing.Point(1039, 84);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(257, 53);
+            this.textBox1.TabIndex = 4;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button3.Location = new System.Drawing.Point(1127, 183);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(115, 43);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Sửa";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView5
+            // 
+            this.dataGridView5.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.RowHeadersWidth = 51;
+            this.dataGridView5.RowTemplate.Height = 25;
+            this.dataGridView5.Size = new System.Drawing.Size(453, 361);
+            this.dataGridView5.TabIndex = 0;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.button4);
+            this.tabPage7.Controls.Add(this.TBGrid);
+            this.tabPage7.Location = new System.Drawing.Point(4, 29);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(1319, 361);
+            this.tabPage7.TabIndex = 2;
+            this.tabPage7.Text = "Thông báo";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(1039, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(94, 29);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "Tải lại";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // TBGrid
+            // 
+            this.TBGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TBGrid.Location = new System.Drawing.Point(0, 3);
+            this.TBGrid.Name = "TBGrid";
+            this.TBGrid.RowHeadersWidth = 51;
+            this.TBGrid.RowTemplate.Height = 29;
+            this.TBGrid.Size = new System.Drawing.Size(1008, 362);
+            this.TBGrid.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button1.Location = new System.Drawing.Point(1238, 49);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(115, 43);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Đăng xuất";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // NS
+            // 
+            this.NS.Location = new System.Drawing.Point(1069, 51);
+            this.NS.Name = "NS";
+            this.NS.Size = new System.Drawing.Size(124, 42);
+            this.NS.TabIndex = 3;
+            this.NS.Text = "Nhân sự";
+            this.NS.UseVisualStyleBackColor = true;
+            this.NS.Click += new System.EventHandler(this.NS_Click);
+            // 
+            // TC
+            // 
+            this.TC.Location = new System.Drawing.Point(1069, 49);
+            this.TC.Name = "TC";
+            this.TC.Size = new System.Drawing.Size(124, 42);
+            this.TC.TabIndex = 4;
+            this.TC.Text = "Tài chính";
+            this.TC.UseVisualStyleBackColor = true;
+            this.TC.Click += new System.EventHandler(this.TC_Click);
+            // 
+            // QLP
+            // 
+            this.QLP.Location = new System.Drawing.Point(1069, 51);
+            this.QLP.Name = "QLP";
+            this.QLP.Size = new System.Drawing.Size(124, 42);
+            this.QLP.TabIndex = 5;
+            this.QLP.Text = "Quản lý phòng";
+            this.QLP.UseVisualStyleBackColor = true;
+            this.QLP.Click += new System.EventHandler(this.QLP_Click);
+            // 
+            // qlda
+            // 
+            this.qlda.Location = new System.Drawing.Point(1069, 51);
+            this.qlda.Name = "qlda";
+            this.qlda.Size = new System.Drawing.Size(124, 42);
+            this.qlda.TabIndex = 6;
+            this.qlda.Text = "Quản lý đề án";
+            this.qlda.UseVisualStyleBackColor = true;
+            this.qlda.Click += new System.EventHandler(this.qlda_Click);
+            // 
+            // qlnv
+            // 
+            this.qlnv.Location = new System.Drawing.Point(1058, 51);
+            this.qlnv.Name = "qlnv";
+            this.qlnv.Size = new System.Drawing.Size(135, 42);
+            this.qlnv.TabIndex = 7;
+            this.qlnv.Text = "Quản lý nhân viên";
+            this.qlnv.UseVisualStyleBackColor = true;
+            this.qlnv.Click += new System.EventHandler(this.qlnv_Click);
+            // 
+            // TB
+            // 
+            this.TB.Location = new System.Drawing.Point(851, 51);
+            this.TB.Name = "TB";
+            this.TB.Size = new System.Drawing.Size(155, 42);
+            this.TB.TabIndex = 8;
+            this.TB.Text = "Gửi Thông báo";
+            this.TB.UseVisualStyleBackColor = true;
+            this.TB.Click += new System.EventHandler(this.TB_Click);
+            // 
+            // NhanVien
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ClientSize = new System.Drawing.Size(1441, 573);
+            this.Controls.Add(this.TB);
+            this.Controls.Add(this.qlnv);
+            this.Controls.Add(this.qlda);
+            this.Controls.Add(this.QLP);
+            this.Controls.Add(this.TC);
+            this.Controls.Add(this.NS);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.tabControl1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "NhanVien";
+            this.Text = "NhanVien";
+            this.Load += new System.EventHandler(this.NhanVien_Load);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabControl2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.tabPage6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            this.tabPage7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TBGrid)).EndInit();
+            this.ResumeLayout(false);
+
 		}
 
 		#endregion
@@ -488,5 +538,9 @@
 		private Button QLP;
 		private Button qlda;
 		private Button qlnv;
-	}
+		private Button TB;
+        private TabPage tabPage7;
+        private DataGridView TBGrid;
+        private Button button4;
+    }
 }

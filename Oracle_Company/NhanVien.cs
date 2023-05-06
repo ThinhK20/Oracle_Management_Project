@@ -35,10 +35,11 @@
 			dataGridView1.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  ADMIN_DBMS.NHANVIEN_VIEW_PROFILE");
 			dataGridView2.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  ADMIN_DBMS.NHANVIEN_VIEW_PC");
 			dataGridView5.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  ADMIN_DBMS.VIEW_FOR_UPDATE");
+            TBGrid.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT MOTA FROM  ADMIN_DBMS.THONGBAO");
+			TBGrid.Columns[0].Width = 1008;
+        }
 
-		}
-
-		private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
 		{
 
 		}
@@ -163,11 +164,7 @@
 
 		}
 
-		private void button6_Click(object sender, EventArgs e)
-		{
-			TruongPhongcs truongPhongcs = new TruongPhongcs();
-			truongPhongcs.Show();
-		}
+		
 
 		private void qlnv_Click(object sender, EventArgs e)
 		{
@@ -192,5 +189,17 @@
 			TaiChinhForm taiChinhForm = new TaiChinhForm();
 			taiChinhForm.Show();
 		}
+
+		private void TB_Click(object sender, EventArgs e)
+		{
+			TinNhan tn = new TinNhan();
+			tn.Show();
+		}
+
+		private void QLP_Click(object sender, EventArgs e)
+		{
+            TruongPhongcs truongPhongcs = new TruongPhongcs();
+            truongPhongcs.Show();
+        }
 	}
 }
