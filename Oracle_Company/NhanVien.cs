@@ -1,4 +1,8 @@
-﻿namespace Oracle_Company
+﻿using Oracle.ManagedDataAccess.Client;
+using Oracle_Management_Library;
+using System.Configuration;
+
+namespace Oracle_Company
 {
 	public partial class NhanVien : Form
 	{
@@ -200,6 +204,29 @@
 			TruongPhongcs truongPhongcs = new TruongPhongcs();
 			truongPhongcs.Show();
 		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			String oldCnnStr = GlobalConfig.CnnString("OracleConnection");
+			var b = oldCnnStr.Split(new string[] { ";User" }, StringSplitOptions.None);
+			String seperate = ";User ID=;Password=;Persist Security Info=True;";
+			String newCnnStr = b[0] + seperate;
+
+			try
+			{
+				Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+				config.ConnectionStrings.ConnectionStrings.Remove("OracleConnection");
+				config.ConnectionStrings.ConnectionStrings.Add(new ConnectionStringSettings("OracleConnection", newCnnStr));
+				config.Save(ConfigurationSaveMode.Modified);
+				ConfigurationManager.RefreshSection("connectionStrings");
+				var nav = new Login();
+				this.Hide();
+				nav.ShowDialog();
+			}
+			catch (OracleException ex)
+			{
+				MessageBox.Show("Có lỗi xảy ra: " + ex.Message);
+			}
+		}
 	}
->>>>>>> 303208ced7b62b44b15680e5be8f6f149767e2aa
 }
