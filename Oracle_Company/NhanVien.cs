@@ -151,12 +151,10 @@
             textBox3.Text = "";
 
         }
-    }
-=======
+
 		private void textBox6_TextChanged(object sender, EventArgs e)
 		{
 
 		}
 	}
->>>>>>> 303208ced7b62b44b15680e5be8f6f149767e2aa
 }

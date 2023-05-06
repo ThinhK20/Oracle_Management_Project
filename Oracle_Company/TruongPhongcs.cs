@@ -8,7 +8,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+
 
 namespace Oracle_Company
 {
@@ -119,6 +119,11 @@ namespace Oracle_Company
             string query = $"DELETE FROM ADMIN_DBMS.phancong WHERE MADA='{da}' AND MANV='{nv}'";
             Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(query);
             Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery("COMMIT WORK");
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
