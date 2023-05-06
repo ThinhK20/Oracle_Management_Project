@@ -120,17 +120,14 @@
             // 
             // checkedListBox1
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "NHÂN VIÊN",
-            "TRƯỞNG PHÒNG",
-            "GIÁM ĐỐC"});
-            this.checkedListBox1.Location = new System.Drawing.Point(194, 453);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(134, 70);
-            this.checkedListBox1.TabIndex = 6;
-            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged_1);
+            checkedListBox1.FormattingEnabled = true;
+            checkedListBox1.Items.AddRange(new object[] { "NHÂN VIÊN", "TRƯỞNG PHÒNG", "GIÁM ĐỐC" });
+            checkedListBox1.Location = new Point(170, 340);
+            checkedListBox1.Name = "checkedListBox1";
+            checkedListBox1.Size = new Size(118, 58);
+            checkedListBox1.TabIndex = 6;
+            checkedListBox1.ItemCheck += checkbok1;
+            checkedListBox1.SelectedIndexChanged += checkedListBox1_SelectedIndexChanged;
             // 
             // textBox1
             // 
