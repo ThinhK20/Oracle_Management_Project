@@ -28,107 +28,96 @@
         /// </summary>
         private void InitializeComponent()
         {
-            loginLabel = new Label();
-            usernameLabel = new Label();
-            usernameTextBox = new TextBox();
-            passwordTextBox = new TextBox();
-            label2 = new Label();
-            passwordLabel = new Label();
-            loginBtn = new Button();
-            SuspendLayout();
+            this.loginLabel = new System.Windows.Forms.Label();
+            this.usernameLabel = new System.Windows.Forms.Label();
+            this.usernameTextBox = new System.Windows.Forms.TextBox();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.passwordLabel = new System.Windows.Forms.Label();
+            this.loginBtn = new System.Windows.Forms.Button();
+            this.SuspendLayout();
             // 
             // loginLabel
             // 
-            loginLabel.AutoSize = true;
-            loginLabel.Font = new Font("Segoe UI", 28.2F, FontStyle.Regular, GraphicsUnit.Point);
-            loginLabel.ForeColor = SystemColors.MenuHighlight;
-            loginLabel.Location = new Point(416, 33);
-            loginLabel.Name = "loginLabel";
-            loginLabel.Size = new Size(143, 62);
-            loginLabel.TabIndex = 0;
-            loginLabel.Text = "Login";
-            loginLabel.TextAlign = ContentAlignment.MiddleCenter;
+            this.loginLabel.AutoSize = true;
+            this.loginLabel.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.loginLabel.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.loginLabel.Location = new System.Drawing.Point(399, 40);
+            this.loginLabel.Name = "loginLabel";
+            this.loginLabel.Size = new System.Drawing.Size(143, 62);
+            this.loginLabel.TabIndex = 0;
+            this.loginLabel.Text = "Login";
+            this.loginLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // usernameLabel
             // 
-            usernameLabel.AutoSize = true;
-            usernameLabel.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
-            usernameLabel.Location = new Point(183, 176);
-            usernameLabel.Name = "usernameLabel";
-            usernameLabel.Size = new Size(170, 46);
-            usernameLabel.TabIndex = 1;
-            usernameLabel.Text = "Username";
+            this.usernameLabel.AutoSize = true;
+            this.usernameLabel.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.usernameLabel.Location = new System.Drawing.Point(166, 183);
+            this.usernameLabel.Name = "usernameLabel";
+            this.usernameLabel.Size = new System.Drawing.Size(170, 46);
+            this.usernameLabel.TabIndex = 1;
+            this.usernameLabel.Text = "Username";
             // 
             // usernameTextBox
             // 
-            usernameTextBox.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
-            usernameTextBox.Location = new Point(416, 176);
-            usernameTextBox.Name = "usernameTextBox";
-            usernameTextBox.Size = new Size(335, 51);
-            usernameTextBox.TabIndex = 2;
-            usernameTextBox.TextChanged += usernameTextBox_TextChanged;
+            this.usernameTextBox.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.usernameTextBox.Location = new System.Drawing.Point(399, 183);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(335, 51);
+            this.usernameTextBox.TabIndex = 2;
             // 
             // passwordTextBox
             // 
-            passwordTextBox.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
-            passwordTextBox.Location = new Point(416, 309);
-            passwordTextBox.Name = "passwordTextBox";
-            passwordTextBox.Size = new Size(335, 51);
-            passwordTextBox.TabIndex = 4;
-            passwordTextBox.UseSystemPasswordChar = true;
-            // 
-            // label2
-            // 
-            label2.Location = new Point(0, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(101, 23);
-            label2.TabIndex = 5;
+            this.passwordTextBox.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.passwordTextBox.Location = new System.Drawing.Point(399, 316);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Size = new System.Drawing.Size(335, 51);
+            this.passwordTextBox.TabIndex = 4;
+            this.passwordTextBox.UseSystemPasswordChar = true;
             // 
             // passwordLabel
             // 
-            passwordLabel.AutoSize = true;
-            passwordLabel.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
-            passwordLabel.Location = new Point(183, 309);
-            passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new Size(160, 46);
-            passwordLabel.TabIndex = 6;
-            passwordLabel.Text = "Password";
-            passwordLabel.Click += passwordLabel_Click;
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.passwordLabel.Location = new System.Drawing.Point(166, 316);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(160, 46);
+            this.passwordLabel.TabIndex = 6;
+            this.passwordLabel.Text = "Password";
             // 
             // loginBtn
             // 
-            loginBtn.BackColor = SystemColors.MenuHighlight;
-            loginBtn.FlatAppearance.BorderColor = SystemColors.MenuHighlight;
-            loginBtn.FlatAppearance.BorderSize = 0;
-            loginBtn.FlatAppearance.MouseDownBackColor = SystemColors.MenuHighlight;
-            loginBtn.FlatAppearance.MouseOverBackColor = SystemColors.MenuHighlight;
-            loginBtn.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            loginBtn.ForeColor = SystemColors.ButtonHighlight;
-            loginBtn.Location = new Point(369, 461);
-            loginBtn.Name = "loginBtn";
-            loginBtn.Size = new Size(203, 67);
-            loginBtn.TabIndex = 7;
-            loginBtn.Text = "Login";
-            loginBtn.UseVisualStyleBackColor = false;
-            loginBtn.Click += loginBtn_Click;
+            this.loginBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.loginBtn.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.loginBtn.FlatAppearance.BorderSize = 0;
+            this.loginBtn.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.loginBtn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.loginBtn.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.loginBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.loginBtn.Location = new System.Drawing.Point(352, 468);
+            this.loginBtn.Name = "loginBtn";
+            this.loginBtn.Size = new System.Drawing.Size(203, 67);
+            this.loginBtn.TabIndex = 7;
+            this.loginBtn.Text = "Login";
+            this.loginBtn.UseVisualStyleBackColor = false;
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.InactiveCaption;
-            ClientSize = new Size(931, 561);
-            Controls.Add(loginBtn);
-            Controls.Add(passwordLabel);
-            Controls.Add(passwordTextBox);
-            Controls.Add(label2);
-            Controls.Add(usernameTextBox);
-            Controls.Add(usernameLabel);
-            Controls.Add(loginLabel);
-            Name = "Login";
-            Text = "Login";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ClientSize = new System.Drawing.Size(931, 561);
+            this.Controls.Add(this.loginBtn);
+            this.Controls.Add(this.passwordLabel);
+            this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.usernameTextBox);
+            this.Controls.Add(this.usernameLabel);
+            this.Controls.Add(this.loginLabel);
+            this.Name = "Login";
+            this.Text = "Login";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -137,7 +126,6 @@
         private Label usernameLabel;
         private TextBox usernameTextBox;
         private TextBox passwordTextBox;
-        private Label label2;
         private Label passwordLabel;
         private Button loginBtn;
     }

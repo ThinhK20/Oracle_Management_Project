@@ -73,9 +73,8 @@ namespace Oracle_Company
         {
             string content = textBox1.Text;
             string column = textBox3.Text;
-            string mada = "abc";
+            string mada = textBox7.Text;
             string query;
-
             if (column.Trim() == "MADA")
             {
                 return;
@@ -90,6 +89,7 @@ namespace Oracle_Company
             {
                 query = "UPDATE ADMIN_DBMS.DEAN SET " + column + " = " + " N'" + content + "' WHERE trim(MADA) = '" + mada.Trim() + "'";
             }
+            MessageBox.Show(query);
 
             Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(query);
             Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery("COMMIT WORK");

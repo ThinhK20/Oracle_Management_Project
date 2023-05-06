@@ -1,26 +1,23 @@
 ﻿using Oracle.ManagedDataAccess.Client;
 using Oracle_Management_Library;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Configuration;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace Oracle_Management_UI
+namespace Oracle_Company
 {
     public partial class Login : Form
     {
         public Login()
         {
             InitializeComponent();
-        }
-
-
-
-        private void passwordLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void usernameTextBox_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
@@ -42,9 +39,9 @@ namespace Oracle_Management_UI
                     config.ConnectionStrings.ConnectionStrings.Add(new ConnectionStringSettings("OracleConnection", newCnnStr));
                     config.Save(ConfigurationSaveMode.Modified);
                     ConfigurationManager.RefreshSection("connectionStrings");
-                    ViewUser nav = new ViewUser();
+                    var nav = new NhanVien();
                     nav.ShowDialog();
-                    Hide();
+                    //Hide();
                     MessageBox.Show("Đăng nhập thành công");
                 }
                 catch (OracleException ex)
@@ -52,39 +49,6 @@ namespace Oracle_Management_UI
                     MessageBox.Show("Sai tài khoản đăng nhập hoặc tài khoản đăng nhập không tồn tại.");
                 }
             }
-
-          
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void usernameLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void usernameTextBox_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void passwordTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void loginLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void passwordLabel_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

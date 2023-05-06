@@ -101,6 +101,7 @@ namespace Oracle_Company
             string query = $"UPDATE ADMIN_DBMS.PHANCONG SET THOIGIAN = TO_DATE('{new_time}', 'DD/MM/YYYY hh:mi:ss AM'),MANV='{manv}',MADA='{mada}' WHERE MANV = '{old_manv_value}' AND MADA = '{old_mada_value}'";
             Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(query);
             Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery("COMMIT WORK");
+            dataGridView3.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * from admin_dbms.TRUONGPHONG_PHANCONG_VIEW");
             MessageBox.Show(query);
 
         }
@@ -119,6 +120,8 @@ namespace Oracle_Company
             string query = $"DELETE FROM ADMIN_DBMS.phancong WHERE MADA='{da}' AND MANV='{nv}'";
             Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(query);
             Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery("COMMIT WORK");
+            dataGridView3.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * from admin_dbms.TRUONGPHONG_PHANCONG_VIEW");
+            MessageBox.Show("Xóa thành công");
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
