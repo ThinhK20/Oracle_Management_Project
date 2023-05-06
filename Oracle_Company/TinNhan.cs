@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Oracle_Company
 {
@@ -65,10 +66,12 @@ namespace Oracle_Company
             }
             diadiem = diadiem.Substring(0, diadiem.Length - 1);
             string TONG = role + ":" + loai + ":" + diadiem;
-            MessageBox.Show(TONG);
-            string con_text = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("select sys_context('userenv' ,'session_user') from dual").ToString();
-            Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery($"SA_USER_ADMIN.SET_USER_LABELS('region_policy', '{con_text}', '{TONG}'");
+            Random random = new Random();
+            int randomNumber = random.Next(0, 101);
+            string newCode = "TB" + randomNumber.ToString();
+            Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery($" INSERT INTO ADMIN_DBMS.THONGBAO VALUES('{newCode}','{textBox1.Text}',CHAR_TO_LABEL('region_policy','{TONG}'));");
             Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery("COMMIT WORK");
+            MessageBox.Show(TONG + textBox1.Text);
 
         }
 
