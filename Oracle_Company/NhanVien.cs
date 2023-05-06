@@ -1,4 +1,8 @@
-﻿namespace Oracle_Company
+﻿using Oracle.ManagedDataAccess.Client;
+using Oracle_Management_Library;
+using System.Configuration;
+
+namespace Oracle_Company
 {
     public partial class NhanVien : Form
     {
@@ -40,7 +44,7 @@
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
+		{
 
         }
 
@@ -196,84 +200,7 @@
             tn.Show();
         }
 
-        private void dataGridView5_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dataGridView5.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
-            {
-                dataGridView5.CurrentCell.Selected = true;
-                int columnIndex = dataGridView5.CurrentCell.ColumnIndex;
-                string columnName = dataGridView5.Columns[columnIndex].Name;
-                textBox3.Text = columnName;
-                if (columnName.Trim() == "NGAYSINH")
-                {
-                    label3.Text = "Hãy nhập theo định dạng DD/MM/YYYY";
-                }
-                else
-                {
-                    label3.Text = "";
-                }
-                textBox4.Text = dataGridView5.Rows[e.RowIndex].Cells[e.ColumnIndex].FormattedValue.ToString();
-                textBox1.Text = "";
-            }
-        }
-
-        private void label1_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-            string content = textBox1.Text;
-            string column = textBox3.Text;
-            string query;
-            if (textBox3.Text.Trim() == "NGAYSINH")
-            {
-                query = "UPDATE ADMIN_DBMS.NHANVIEN SET " + column + " = " + " TO_DATE('" + content + "','DD/MM/YYYY" + "')" +
-                    " WHERE trim(MANV) = trim(sys_context('userenv', 'session_user'))";
-
-            }
-            else
-            {
-                query = "UPDATE ADMIN_DBMS.NHANVIEN SET " + column + " = " + " N'" + content + "' WHERE trim(MANV) = trim(sys_context('userenv', 'session_user'))";
-            }
-
-            Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(query);
-            Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery("COMMIT WORK");
-            dataGridView5.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM ADMIN_DBMS.VIEW_FOR_UPDATE");
-
-        }
-
-        private void button2_Click_2(object sender, EventArgs e)
-        {
-            textBox4.Text = "";
-            textBox3.Text = "";
-        }
-
-        private void tabPage2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView2_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-    }
-
+		}
+	}
+>>>>>>> 303208ced7b62b44b15680e5be8f6f149767e2aa
 }

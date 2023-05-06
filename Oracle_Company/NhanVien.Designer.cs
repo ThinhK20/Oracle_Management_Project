@@ -516,38 +516,37 @@
 
         #endregion
 
-        private TabControl tabControl1;
-        private TabPage tabPage1;
-        private TabPage tabPage2;
-        private TabControl tabControl2;
-        private TabPage tabPage3;
-        private TabPage tabPage4;
-        private TabPage tabPage5;
-        private TabPage tabPage6;
-        private DataGridView dataGridView1;
-        private DataGridView dataGridView2;
-        private DataGridView dataGridView3;
-        private DataGridView dataGridView4;
-        private Button button1;
-        private DataGridView dataGridView5;
-        private Button button3;
-        private Label label1;
-        private TextBox textBox1;
-        private Label label2;
-        private Button button2;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox6;
-        private Button NS;
-        private Button TC;
-        private Button QLP;
-        private Button qlda;
-        private Button qlnv;
-        private Button TB;
+		private TabControl tabControl1;
+		private TabPage tabPage1;
+		private TabPage tabPage2;
+		private TabControl tabControl2;
+		private TabPage tabPage3;
+		private TabPage tabPage4;
+		private TabPage tabPage5;
+		private TabPage tabPage6;
+		private DataGridView dataGridView1;
+		private DataGridView dataGridView2;
+		private DataGridView dataGridView3;
+		private DataGridView dataGridView4;
+		private Button button1;
+		private DataGridView dataGridView5;
+		private Button button3;
+		private Label label1;
+		private TextBox textBox1;
+		private Label label2;
+		private Button button2;
+		private TextBox textBox2;
+		private TextBox textBox3;
+		private TextBox textBox4;
+		private TextBox textBox6;
+		private Button NS;
+		private Button TC;
+		private Button QLP;
+		private Button qlda;
+		private Button qlnv;
+		private Button TB;
         private TabPage tabPage7;
         private DataGridView TBGrid;
         private Button button4;
-        private Label label3;
     }
 }
