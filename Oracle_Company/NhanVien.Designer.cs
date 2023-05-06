@@ -1,33 +1,33 @@
 ﻿namespace Oracle_Company
 {
-	partial class NhanVien
-	{
-		/// <summary>
-		/// Required designer variable.
-		/// </summary>
-		private System.ComponentModel.IContainer components = null;
+    partial class NhanVien
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-		protected override void Dispose(bool disposing)
-		{
-			if (disposing && (components != null))
-			{
-				components.Dispose();
-			}
-			base.Dispose(disposing);
-		}
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
-		#region Windows Form Designer generated code
+        #region Windows Form Designer generated code
 
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             tabControl2 = new TabControl();
@@ -512,39 +512,39 @@
             tabPage7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)TBGrid).EndInit();
             ResumeLayout(false);
-		}
+        }
 
-		#endregion
+        #endregion
 
-		private TabControl tabControl1;
-		private TabPage tabPage1;
-		private TabPage tabPage2;
-		private TabControl tabControl2;
-		private TabPage tabPage3;
-		private TabPage tabPage4;
-		private TabPage tabPage5;
-		private TabPage tabPage6;
-		private DataGridView dataGridView1;
-		private DataGridView dataGridView2;
-		private DataGridView dataGridView3;
-		private DataGridView dataGridView4;
-		private Button button1;
-		private DataGridView dataGridView5;
-		private Button button3;
-		private Label label1;
-		private TextBox textBox1;
-		private Label label2;
-		private Button button2;
-		private TextBox textBox2;
-		private TextBox textBox3;
-		private TextBox textBox4;
-		private TextBox textBox6;
-		private Button NS;
-		private Button TC;
-		private Button QLP;
-		private Button qlda;
-		private Button qlnv;
-		private Button TB;
+        private TabControl tabControl1;
+        private TabPage tabPage1;
+        private TabPage tabPage2;
+        private TabControl tabControl2;
+        private TabPage tabPage3;
+        private TabPage tabPage4;
+        private TabPage tabPage5;
+        private TabPage tabPage6;
+        private DataGridView dataGridView1;
+        private DataGridView dataGridView2;
+        private DataGridView dataGridView3;
+        private DataGridView dataGridView4;
+        private Button button1;
+        private DataGridView dataGridView5;
+        private Button button3;
+        private Label label1;
+        private TextBox textBox1;
+        private Label label2;
+        private Button button2;
+        private TextBox textBox2;
+        private TextBox textBox3;
+        private TextBox textBox4;
+        private TextBox textBox6;
+        private Button NS;
+        private Button TC;
+        private Button QLP;
+        private Button qlda;
+        private Button qlnv;
+        private Button TB;
         private TabPage tabPage7;
         private DataGridView TBGrid;
         private Button button4;
