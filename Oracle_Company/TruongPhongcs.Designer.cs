@@ -130,7 +130,7 @@
             tabPage3.Name = "tabPage3";
             tabPage3.Size = new Size(852, 403);
             tabPage3.TabIndex = 2;
-            tabPage3.Text = "Xem Phân Công";
+            tabPage3.Text = "Xem và chỉnh sửa Phân Công";
             tabPage3.UseVisualStyleBackColor = true;
             // 
             // label8
