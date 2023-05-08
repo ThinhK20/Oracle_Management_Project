@@ -1,4 +1,7 @@
-﻿namespace Oracle_Company
+﻿using Oracle.ManagedDataAccess.Client;
+using Oracle_Management_Library;
+
+namespace Oracle_Company
 {
 	public partial class NhanSuForm : Form
 	{
@@ -29,14 +32,14 @@
 
 		private void NhanSuForm_Load(object sender, EventArgs e)
 		{
-			NhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.NHANVIEN");
+			NhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.INFO_NHANSU_DECRYPT");
 			PhongBanTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.PHONGBAN");
-			ThemNhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.NHANVIEN");
+			ThemNhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.INFO_NHANSU_DECRYPT");
 			ThemPhongBanTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.PHONGBAN");
-			ThemMaTruongPhongBanTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.NHANVIEN");
+			ThemMaTruongPhongBanTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.INFO_NHANSU_DECRYPT");
 			CapNhatPBTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.PHONGBAN");
-			CapNhatPBMaTPTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.NHANVIEN");
-			CapNhatNhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.NHANVIEN");
+			CapNhatPBMaTPTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.INFO_NHANSU_DECRYPT");
+			CapNhatNhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.INFO_NHANSU_DECRYPT");
 		}
 
 		private void label1_Click(object sender, EventArgs e)
@@ -199,16 +202,36 @@
 
 		private void CapNhatPBBtn_Click(object sender, EventArgs e)
 		{
-			if (_selectCapNhatTenPB == null || _selectCapNhatMaTruongPB == null || _selectCapNhatMaPB == null)
+			try
 			{
-				MessageBox.Show("Vui lòng chọn đầy đủ thông tin");
-				return;
+				if (_selectCapNhatTenPB == null || _selectCapNhatMaTruongPB == null || _selectCapNhatMaPB == null)
+				{
+					MessageBox.Show("Vui lòng chọn đầy đủ thông tin");
+					return;
+				}
+
+				string query = "UPDATE ADMIN_DBMS.PHONGBAN SET TENPB = :tenPB, TRPHG = :trphg WHERE MAPB = :maPB";
+
+				string connectionString = GlobalConfig.CnnString("OracleConnection");
+				OracleConnection connection = new OracleConnection(connectionString);
+				connection.Open();
+				OracleCommand command = new OracleCommand(query, connection);
+				command.Parameters.Add(":tenPB", _selectCapNhatTenPB);
+				command.Parameters.Add(":trphg", _selectCapNhatMaTruongPB);
+				command.Parameters.Add(":maPB", _selectCapNhatMaPB);
+				command.ExecuteNonQuery();
+				OracleCommand command2 = new OracleCommand("COMMIT WORK", connection);
+				command2.ExecuteNonQuery();
+				connection.Close();
+
+
+				CapNhatPBTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.PHONGBAN");
+				PhongBanTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.PHONGBAN");
 			}
-			string query = $"UPDATE ADMIN_DBMS.PHONGBAN SET TENPB = '{_selectCapNhatTenPB}', MANV = '{_selectCapNhatMaTruongPB}' WHERE MAPB = '{_selectCapNhatMaPB}'";
-			Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(query);
-			Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery("COMMIT WORK");
-			CapNhatPBTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.PHONGBAN");
-			PhongBanTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("Select * from ADMIN_DBMS.PHONGBAN");
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
 		}
 
 		private void CapNhatPBTextBox_TextChanged(object sender, EventArgs e)

@@ -16,7 +16,7 @@ namespace Oracle_Company
 		{
 			try
 			{
-				NhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM admin_dbms.NHANVIEN");
+				NhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM admin_dbms.INFO_TAICHINH_DECRYPT");
 				PhanCongTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM  admin_dbms.PHANCONG");
 
 			}
@@ -50,10 +50,10 @@ namespace Oracle_Company
 			PromptDialog promptDialog = new PromptDialog();
 			promptDialog.ShowDialog("Nhập lương mới", "Thay đổi lương của " + _selectedUserId);
 			if (promptDialog.Value1 == "") return;
-			string queryString = "UPDATE admin_dbms.NHANVIEN SET LUONG= " + promptDialog.Value1 + " where MANV = '" + _selectedUserId + "'";
-			Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(queryString);
+			string queryString = "ADMIN_DBMS.LUONG_ENCRYPTION";
+			Oracle_Management_Library.GlobalConfig.Connection.ExecuteStoredProcedureLuong(queryString, _selectedUserId, promptDialog.Value1);
 			Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery("COMMIT WORK");
-			NhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM admin_dbms.NHANVIEN");
+			NhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM admin_dbms.INFO_TAICHINH_DECRYPT");
 		}
 
 		private void ThayDoiPhuCapBtn_Click(object sender, EventArgs e)
@@ -64,10 +64,10 @@ namespace Oracle_Company
 				PromptDialog promptDialog = new PromptDialog();
 				promptDialog.ShowDialog("Nhập phụ cấp mới", "Thay đổi phụ cấp của " + _selectedUserId);
 				if (promptDialog.Value1 == "") return;
-				string queryString = "UPDATE admin_dbms.NHANVIEN SET PHUCAP= " + promptDialog.Value1 + " where MANV = '" + _selectedUserId + "'";
-				Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery(queryString);
+				string queryString = "ADMIN_DBMS.PHUCAP_ENCRYPTION";
+				Oracle_Management_Library.GlobalConfig.Connection.ExecuteStoredProcedurePhuCap(queryString, _selectedUserId, promptDialog.Value1);
 				Oracle_Management_Library.GlobalConfig.Connection.ExecuteSQLTextQuery("COMMIT WORK");
-				NhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM admin_dbms.NHANVIEN");
+				NhanVienTable.DataSource = Oracle_Management_Library.GlobalConfig.Connection.GetSQLQuery("SELECT * FROM admin_dbms.INFO_TAICHINH_DECRYPT");
 			}
 			catch (Exception)
 			{

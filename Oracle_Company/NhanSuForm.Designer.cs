@@ -747,6 +747,7 @@ namespace Oracle_Company
 			CapNhatPBTextBox.Name = "CapNhatPBTextBox";
 			CapNhatPBTextBox.Size = new Size(493, 34);
 			CapNhatPBTextBox.TabIndex = 30;
+			CapNhatPBTextBox.TextChanged += CapNhatPBTextBox_TextChanged;
 			// 
 			// label15
 			// 

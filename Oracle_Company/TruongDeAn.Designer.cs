@@ -1,555 +1,554 @@
 ﻿namespace Oracle_Company
 {
-    partial class TruongDeAn
-    {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+	partial class TruongDeAn
+	{
+		/// <summary>
+		/// Required designer variable.
+		/// </summary>
+		private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+		/// <summary>
+		/// Clean up any resources being used.
+		/// </summary>
+		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+		protected override void Dispose(bool disposing)
+		{
+			if (disposing && (components != null))
+			{
+				components.Dispose();
+			}
+			base.Dispose(disposing);
+		}
 
-        #region Windows Form Designer generated code
+		#region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label10 = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.tabControl1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tabControl1.Location = new System.Drawing.Point(30, 97);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1327, 764);
-            this.tabControl1.TabIndex = 2;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.RosyBrown;
-            this.tabPage2.Controls.Add(this.textBox7);
-            this.tabPage2.Controls.Add(this.textBox6);
-            this.tabPage2.Controls.Add(this.textBox4);
-            this.tabPage2.Controls.Add(this.textBox3);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.button2);
-            this.tabPage2.Controls.Add(this.textBox2);
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.textBox1);
-            this.tabPage2.Controls.Add(this.button3);
-            this.tabPage2.Controls.Add(this.dataGridView5);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage2.Size = new System.Drawing.Size(1319, 731);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Sửa Đề Án";
-            // 
-            // textBox7
-            // 
-            this.textBox7.BackColor = System.Drawing.Color.RosyBrown;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox7.ForeColor = System.Drawing.Color.Crimson;
-            this.textBox7.Location = new System.Drawing.Point(1068, 45);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(114, 43);
-            this.textBox7.TabIndex = 15;
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.RosyBrown;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox6.ForeColor = System.Drawing.Color.Navy;
-            this.textBox6.Location = new System.Drawing.Point(706, 473);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(573, 49);
-            this.textBox6.TabIndex = 13;
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox4.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox4.Location = new System.Drawing.Point(743, 189);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(517, 109);
-            this.textBox4.TabIndex = 11;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.textBox3.Location = new System.Drawing.Point(896, 113);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(201, 49);
-            this.textBox3.TabIndex = 10;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.SystemColors.Info;
-            this.label2.Location = new System.Drawing.Point(846, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(241, 41);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Thông tin đề án";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button2.Location = new System.Drawing.Point(943, 329);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 43);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Reset";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(706, 25);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(585, 357);
-            this.textBox2.TabIndex = 6;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.Info;
-            this.label1.Location = new System.Drawing.Point(674, 580);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 28);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Nhập thông tin mới";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(872, 564);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(257, 53);
-            this.textBox1.TabIndex = 4;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button3.Location = new System.Drawing.Point(1163, 571);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(115, 43);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Sửa";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // dataGridView5
-            // 
-            this.dataGridView5.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.RowHeadersWidth = 51;
-            this.dataGridView5.RowTemplate.Height = 25;
-            this.dataGridView5.Size = new System.Drawing.Size(664, 727);
-            this.dataGridView5.TabIndex = 0;
-            this.dataGridView5.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView5_CellContentClick);
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.RosyBrown;
-            this.tabPage1.Controls.Add(this.label10);
-            this.tabPage1.Controls.Add(this.dataGridView3);
-            this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.textBox10);
-            this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.textBox9);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.textBox8);
-            this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.textBox5);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.ForeColor = System.Drawing.Color.Black;
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage1.Size = new System.Drawing.Size(1319, 731);
-            this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "Thêm Đề Án";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.ForeColor = System.Drawing.SystemColors.Info;
-            this.label10.Location = new System.Drawing.Point(69, 387);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(573, 41);
-            this.label10.TabIndex = 22;
-            this.label10.Text = "Thông tin MÃ PHÒNG BAN có thể chọn";
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(0, 445);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 25;
-            this.dataGridView3.Size = new System.Drawing.Size(664, 281);
-            this.dataGridView3.TabIndex = 21;
-            this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label8.Location = new System.Drawing.Point(735, 469);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(160, 28);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "(DD/MM/YYYY)";
-            // 
-            // button1
-            // 
-            this.button1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.button1.Location = new System.Drawing.Point(929, 660);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 41);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox10
-            // 
-            this.textBox10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox10.Location = new System.Drawing.Point(968, 547);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(319, 34);
-            this.textBox10.TabIndex = 18;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.SystemColors.Info;
-            this.label7.Location = new System.Drawing.Point(678, 557);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(323, 28);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Nhập thông tin MÃ PHÒNG BAN";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox9.Location = new System.Drawing.Point(968, 416);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(319, 34);
-            this.textBox9.TabIndex = 16;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.SystemColors.Info;
-            this.label5.Location = new System.Drawing.Point(678, 427);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(311, 28);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Nhập thông tin NGÀY BẮT ĐẦU";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox8.Location = new System.Drawing.Point(968, 283);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(319, 34);
-            this.textBox8.TabIndex = 14;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.SystemColors.Info;
-            this.label6.Location = new System.Drawing.Point(678, 293);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(270, 28);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Nhập thông tin TÊN ĐỀ ÁN";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox5.Location = new System.Drawing.Point(968, 157);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(319, 34);
-            this.textBox5.TabIndex = 11;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.SystemColors.Info;
-            this.label4.Location = new System.Drawing.Point(678, 168);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(264, 28);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Nhập thông tin MÃ ĐỀ ÁN";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.SystemColors.Info;
-            this.label3.Location = new System.Drawing.Point(861, 59);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(304, 41);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Thông tin đề án mới";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(664, 365);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.RosyBrown;
-            this.tabPage3.Controls.Add(this.button4);
-            this.tabPage3.Controls.Add(this.textBox11);
-            this.tabPage3.Controls.Add(this.label9);
-            this.tabPage3.Controls.Add(this.dataGridView2);
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage3.Size = new System.Drawing.Size(1319, 731);
-            this.tabPage3.TabIndex = 3;
-            this.tabPage3.Text = "Xoá Đề Án";
-            // 
-            // button4
-            // 
-            this.button4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.button4.Location = new System.Drawing.Point(935, 501);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(111, 41);
-            this.button4.TabIndex = 20;
-            this.button4.Text = "Xoá";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // textBox11
-            // 
-            this.textBox11.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox11.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox11.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.textBox11.Location = new System.Drawing.Point(793, 319);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(417, 49);
-            this.textBox11.TabIndex = 11;
-            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.ForeColor = System.Drawing.SystemColors.Info;
-            this.label9.Location = new System.Drawing.Point(887, 163);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(226, 41);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Đề Án Cần Xoá";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 25;
-            this.dataGridView2.Size = new System.Drawing.Size(664, 727);
-            this.dataGridView2.TabIndex = 2;
-            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
-            // TruongDeAn
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1529, 991);
-            this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "TruongDeAn";
-            this.Text = "TruongDeAn";
-            this.Load += new System.EventHandler(this.TruongDeAn_Load);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.ResumeLayout(false);
+		/// <summary>
+		/// Required method for Designer support - do not modify
+		/// the contents of this method with the code editor.
+		/// </summary>
+		private void InitializeComponent()
+		{
+			tabControl1 = new TabControl();
+			tabPage2 = new TabPage();
+			textBox7 = new TextBox();
+			textBox6 = new TextBox();
+			textBox4 = new TextBox();
+			textBox3 = new TextBox();
+			label2 = new Label();
+			button2 = new Button();
+			textBox2 = new TextBox();
+			label1 = new Label();
+			textBox1 = new TextBox();
+			button3 = new Button();
+			dataGridView5 = new DataGridView();
+			tabPage1 = new TabPage();
+			label10 = new Label();
+			dataGridView3 = new DataGridView();
+			label8 = new Label();
+			button1 = new Button();
+			textBox10 = new TextBox();
+			label7 = new Label();
+			textBox9 = new TextBox();
+			label5 = new Label();
+			textBox8 = new TextBox();
+			label6 = new Label();
+			textBox5 = new TextBox();
+			label4 = new Label();
+			label3 = new Label();
+			dataGridView1 = new DataGridView();
+			tabPage3 = new TabPage();
+			button4 = new Button();
+			textBox11 = new TextBox();
+			label9 = new Label();
+			dataGridView2 = new DataGridView();
+			tabControl1.SuspendLayout();
+			tabPage2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)dataGridView5).BeginInit();
+			tabPage1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
+			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+			tabPage3.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+			SuspendLayout();
+			// 
+			// tabControl1
+			// 
+			tabControl1.Controls.Add(tabPage2);
+			tabControl1.Controls.Add(tabPage1);
+			tabControl1.Controls.Add(tabPage3);
+			tabControl1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+			tabControl1.Location = new Point(30, 97);
+			tabControl1.Margin = new Padding(3, 4, 3, 4);
+			tabControl1.Name = "tabControl1";
+			tabControl1.SelectedIndex = 0;
+			tabControl1.Size = new Size(1440, 764);
+			tabControl1.TabIndex = 2;
+			// 
+			// tabPage2
+			// 
+			tabPage2.BackColor = Color.RosyBrown;
+			tabPage2.Controls.Add(textBox7);
+			tabPage2.Controls.Add(textBox6);
+			tabPage2.Controls.Add(textBox4);
+			tabPage2.Controls.Add(textBox3);
+			tabPage2.Controls.Add(label2);
+			tabPage2.Controls.Add(button2);
+			tabPage2.Controls.Add(textBox2);
+			tabPage2.Controls.Add(label1);
+			tabPage2.Controls.Add(textBox1);
+			tabPage2.Controls.Add(button3);
+			tabPage2.Controls.Add(dataGridView5);
+			tabPage2.Location = new Point(4, 29);
+			tabPage2.Margin = new Padding(3, 4, 3, 4);
+			tabPage2.Name = "tabPage2";
+			tabPage2.Padding = new Padding(3, 4, 3, 4);
+			tabPage2.Size = new Size(1432, 731);
+			tabPage2.TabIndex = 1;
+			tabPage2.Text = "Sửa Đề Án";
+			// 
+			// textBox7
+			// 
+			textBox7.BackColor = Color.RosyBrown;
+			textBox7.BorderStyle = BorderStyle.None;
+			textBox7.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+			textBox7.ForeColor = Color.Crimson;
+			textBox7.Location = new Point(1068, 46);
+			textBox7.Margin = new Padding(3, 4, 3, 4);
+			textBox7.Multiline = true;
+			textBox7.Name = "textBox7";
+			textBox7.Size = new Size(114, 41);
+			textBox7.TabIndex = 15;
+			// 
+			// textBox6
+			// 
+			textBox6.BackColor = Color.RosyBrown;
+			textBox6.BorderStyle = BorderStyle.None;
+			textBox6.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+			textBox6.ForeColor = Color.Navy;
+			textBox6.Location = new Point(706, 473);
+			textBox6.Margin = new Padding(3, 4, 3, 4);
+			textBox6.Multiline = true;
+			textBox6.Name = "textBox6";
+			textBox6.Size = new Size(573, 49);
+			textBox6.TabIndex = 13;
+			textBox6.TextAlign = HorizontalAlignment.Center;
+			// 
+			// textBox4
+			// 
+			textBox4.BackColor = SystemColors.Info;
+			textBox4.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+			textBox4.ForeColor = SystemColors.InfoText;
+			textBox4.Location = new Point(743, 189);
+			textBox4.Margin = new Padding(3, 4, 3, 4);
+			textBox4.Multiline = true;
+			textBox4.Name = "textBox4";
+			textBox4.Size = new Size(517, 109);
+			textBox4.TabIndex = 11;
+			textBox4.TextAlign = HorizontalAlignment.Center;
+			// 
+			// textBox3
+			// 
+			textBox3.BackColor = SystemColors.InactiveCaption;
+			textBox3.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+			textBox3.ForeColor = SystemColors.MenuHighlight;
+			textBox3.Location = new Point(896, 113);
+			textBox3.Margin = new Padding(3, 4, 3, 4);
+			textBox3.Multiline = true;
+			textBox3.Name = "textBox3";
+			textBox3.Size = new Size(201, 49);
+			textBox3.TabIndex = 10;
+			textBox3.TextAlign = HorizontalAlignment.Center;
+			// 
+			// label2
+			// 
+			label2.AutoSize = true;
+			label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+			label2.ForeColor = SystemColors.Info;
+			label2.Location = new Point(827, 46);
+			label2.Name = "label2";
+			label2.Size = new Size(241, 41);
+			label2.TabIndex = 8;
+			label2.Text = "Thông tin đề án";
+			// 
+			// button2
+			// 
+			button2.BackColor = SystemColors.ButtonFace;
+			button2.FlatAppearance.BorderColor = Color.Blue;
+			button2.FlatAppearance.MouseDownBackColor = Color.LightSkyBlue;
+			button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+			button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+			button2.ForeColor = SystemColors.MenuHighlight;
+			button2.Location = new Point(943, 329);
+			button2.Margin = new Padding(3, 4, 3, 4);
+			button2.Name = "button2";
+			button2.Size = new Size(115, 43);
+			button2.TabIndex = 7;
+			button2.Text = "Reset";
+			button2.TextImageRelation = TextImageRelation.TextBeforeImage;
+			button2.UseVisualStyleBackColor = false;
+			button2.Click += button2_Click;
+			// 
+			// textBox2
+			// 
+			textBox2.Location = new Point(706, 25);
+			textBox2.Margin = new Padding(3, 4, 3, 4);
+			textBox2.Multiline = true;
+			textBox2.Name = "textBox2";
+			textBox2.Size = new Size(585, 357);
+			textBox2.TabIndex = 6;
+			// 
+			// label1
+			// 
+			label1.AutoSize = true;
+			label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+			label1.ForeColor = SystemColors.Info;
+			label1.Location = new Point(674, 580);
+			label1.Name = "label1";
+			label1.Size = new Size(200, 28);
+			label1.TabIndex = 5;
+			label1.Text = "Nhập thông tin mới";
+			// 
+			// textBox1
+			// 
+			textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+			textBox1.Location = new Point(872, 564);
+			textBox1.Margin = new Padding(3, 4, 3, 4);
+			textBox1.Multiline = true;
+			textBox1.Name = "textBox1";
+			textBox1.Size = new Size(257, 53);
+			textBox1.TabIndex = 4;
+			// 
+			// button3
+			// 
+			button3.BackColor = SystemColors.ButtonFace;
+			button3.FlatAppearance.BorderColor = Color.Blue;
+			button3.FlatAppearance.MouseDownBackColor = Color.LightSkyBlue;
+			button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+			button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+			button3.ForeColor = SystemColors.MenuHighlight;
+			button3.Location = new Point(1163, 571);
+			button3.Margin = new Padding(3, 4, 3, 4);
+			button3.Name = "button3";
+			button3.Size = new Size(115, 43);
+			button3.TabIndex = 3;
+			button3.Text = "Sửa";
+			button3.TextImageRelation = TextImageRelation.TextBeforeImage;
+			button3.UseVisualStyleBackColor = false;
+			button3.Click += button3_Click;
+			// 
+			// dataGridView5
+			// 
+			dataGridView5.BackgroundColor = Color.DarkSeaGreen;
+			dataGridView5.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridView5.Location = new Point(0, 0);
+			dataGridView5.Margin = new Padding(3, 4, 3, 4);
+			dataGridView5.Name = "dataGridView5";
+			dataGridView5.RowHeadersWidth = 51;
+			dataGridView5.RowTemplate.Height = 25;
+			dataGridView5.Size = new Size(664, 727);
+			dataGridView5.TabIndex = 0;
+			dataGridView5.CellClick += dataGridView5_CellContentClick;
+			// 
+			// tabPage1
+			// 
+			tabPage1.BackColor = Color.RosyBrown;
+			tabPage1.Controls.Add(label10);
+			tabPage1.Controls.Add(dataGridView3);
+			tabPage1.Controls.Add(label8);
+			tabPage1.Controls.Add(button1);
+			tabPage1.Controls.Add(textBox10);
+			tabPage1.Controls.Add(label7);
+			tabPage1.Controls.Add(textBox9);
+			tabPage1.Controls.Add(label5);
+			tabPage1.Controls.Add(textBox8);
+			tabPage1.Controls.Add(label6);
+			tabPage1.Controls.Add(textBox5);
+			tabPage1.Controls.Add(label4);
+			tabPage1.Controls.Add(label3);
+			tabPage1.Controls.Add(dataGridView1);
+			tabPage1.ForeColor = Color.Black;
+			tabPage1.Location = new Point(4, 29);
+			tabPage1.Margin = new Padding(3, 4, 3, 4);
+			tabPage1.Name = "tabPage1";
+			tabPage1.Padding = new Padding(3, 4, 3, 4);
+			tabPage1.Size = new Size(1432, 731);
+			tabPage1.TabIndex = 2;
+			tabPage1.Text = "Thêm Đề Án";
+			// 
+			// label10
+			// 
+			label10.AutoSize = true;
+			label10.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+			label10.ForeColor = SystemColors.Info;
+			label10.Location = new Point(69, 387);
+			label10.Name = "label10";
+			label10.Size = new Size(573, 41);
+			label10.TabIndex = 22;
+			label10.Text = "Thông tin MÃ PHÒNG BAN có thể chọn";
+			// 
+			// dataGridView3
+			// 
+			dataGridView3.BackgroundColor = Color.DarkSeaGreen;
+			dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridView3.Location = new Point(0, 445);
+			dataGridView3.Margin = new Padding(3, 4, 3, 4);
+			dataGridView3.Name = "dataGridView3";
+			dataGridView3.RowHeadersWidth = 51;
+			dataGridView3.RowTemplate.Height = 25;
+			dataGridView3.Size = new Size(664, 281);
+			dataGridView3.TabIndex = 21;
+			dataGridView3.CellClick += dataGridView3_CellContentClick;
+			// 
+			// label8
+			// 
+			label8.AutoSize = true;
+			label8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+			label8.ForeColor = Color.RoyalBlue;
+			label8.Location = new Point(735, 469);
+			label8.Name = "label8";
+			label8.Size = new Size(160, 28);
+			label8.TabIndex = 20;
+			label8.Text = "(DD/MM/YYYY)";
+			// 
+			// button1
+			// 
+			button1.ForeColor = Color.DodgerBlue;
+			button1.Location = new Point(929, 660);
+			button1.Margin = new Padding(3, 4, 3, 4);
+			button1.Name = "button1";
+			button1.Size = new Size(111, 41);
+			button1.TabIndex = 19;
+			button1.Text = "Thêm";
+			button1.UseVisualStyleBackColor = true;
+			button1.Click += button1_Click;
+			// 
+			// textBox10
+			// 
+			textBox10.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+			textBox10.Location = new Point(1056, 551);
+			textBox10.Margin = new Padding(3, 4, 3, 4);
+			textBox10.Name = "textBox10";
+			textBox10.Size = new Size(319, 34);
+			textBox10.TabIndex = 18;
+			// 
+			// label7
+			// 
+			label7.AutoSize = true;
+			label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+			label7.ForeColor = SystemColors.Info;
+			label7.Location = new Point(678, 557);
+			label7.Name = "label7";
+			label7.Size = new Size(323, 28);
+			label7.TabIndex = 17;
+			label7.Text = "Nhập thông tin MÃ PHÒNG BAN";
+			// 
+			// textBox9
+			// 
+			textBox9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+			textBox9.Location = new Point(1056, 421);
+			textBox9.Margin = new Padding(3, 4, 3, 4);
+			textBox9.Name = "textBox9";
+			textBox9.Size = new Size(319, 34);
+			textBox9.TabIndex = 16;
+			// 
+			// label5
+			// 
+			label5.AutoSize = true;
+			label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+			label5.ForeColor = SystemColors.Info;
+			label5.Location = new Point(678, 427);
+			label5.Name = "label5";
+			label5.Size = new Size(311, 28);
+			label5.TabIndex = 15;
+			label5.Text = "Nhập thông tin NGÀY BẮT ĐẦU";
+			// 
+			// textBox8
+			// 
+			textBox8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+			textBox8.Location = new Point(1056, 287);
+			textBox8.Margin = new Padding(3, 4, 3, 4);
+			textBox8.Name = "textBox8";
+			textBox8.Size = new Size(319, 34);
+			textBox8.TabIndex = 14;
+			// 
+			// label6
+			// 
+			label6.AutoSize = true;
+			label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+			label6.ForeColor = SystemColors.Info;
+			label6.Location = new Point(678, 293);
+			label6.Name = "label6";
+			label6.Size = new Size(270, 28);
+			label6.TabIndex = 13;
+			label6.Text = "Nhập thông tin TÊN ĐỀ ÁN";
+			// 
+			// textBox5
+			// 
+			textBox5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+			textBox5.Location = new Point(1056, 162);
+			textBox5.Margin = new Padding(3, 4, 3, 4);
+			textBox5.Name = "textBox5";
+			textBox5.Size = new Size(319, 34);
+			textBox5.TabIndex = 11;
+			// 
+			// label4
+			// 
+			label4.AutoSize = true;
+			label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+			label4.ForeColor = SystemColors.Info;
+			label4.Location = new Point(678, 168);
+			label4.Name = "label4";
+			label4.Size = new Size(264, 28);
+			label4.TabIndex = 10;
+			label4.Text = "Nhập thông tin MÃ ĐỀ ÁN";
+			// 
+			// label3
+			// 
+			label3.AutoSize = true;
+			label3.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+			label3.ForeColor = SystemColors.Info;
+			label3.Location = new Point(861, 59);
+			label3.Name = "label3";
+			label3.Size = new Size(304, 41);
+			label3.TabIndex = 9;
+			label3.Text = "Thông tin đề án mới";
+			// 
+			// dataGridView1
+			// 
+			dataGridView1.BackgroundColor = Color.DarkSeaGreen;
+			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridView1.Location = new Point(0, 0);
+			dataGridView1.Margin = new Padding(3, 4, 3, 4);
+			dataGridView1.Name = "dataGridView1";
+			dataGridView1.RowHeadersWidth = 51;
+			dataGridView1.RowTemplate.Height = 25;
+			dataGridView1.Size = new Size(664, 365);
+			dataGridView1.TabIndex = 1;
+			dataGridView1.CellClick += dataGridView1_CellContentClick;
+			// 
+			// tabPage3
+			// 
+			tabPage3.BackColor = Color.RosyBrown;
+			tabPage3.Controls.Add(button4);
+			tabPage3.Controls.Add(textBox11);
+			tabPage3.Controls.Add(label9);
+			tabPage3.Controls.Add(dataGridView2);
+			tabPage3.Location = new Point(4, 29);
+			tabPage3.Margin = new Padding(3, 4, 3, 4);
+			tabPage3.Name = "tabPage3";
+			tabPage3.Padding = new Padding(3, 4, 3, 4);
+			tabPage3.Size = new Size(1432, 731);
+			tabPage3.TabIndex = 3;
+			tabPage3.Text = "Xoá Đề Án";
+			// 
+			// button4
+			// 
+			button4.ForeColor = Color.DodgerBlue;
+			button4.Location = new Point(935, 501);
+			button4.Margin = new Padding(3, 4, 3, 4);
+			button4.Name = "button4";
+			button4.Size = new Size(111, 41);
+			button4.TabIndex = 20;
+			button4.Text = "Xoá";
+			button4.UseVisualStyleBackColor = true;
+			button4.Click += button4_Click;
+			// 
+			// textBox11
+			// 
+			textBox11.BackColor = SystemColors.InactiveCaption;
+			textBox11.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+			textBox11.ForeColor = SystemColors.MenuHighlight;
+			textBox11.Location = new Point(793, 319);
+			textBox11.Margin = new Padding(3, 4, 3, 4);
+			textBox11.Multiline = true;
+			textBox11.Name = "textBox11";
+			textBox11.Size = new Size(417, 49);
+			textBox11.TabIndex = 11;
+			textBox11.TextAlign = HorizontalAlignment.Center;
+			// 
+			// label9
+			// 
+			label9.AutoSize = true;
+			label9.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+			label9.ForeColor = SystemColors.Info;
+			label9.Location = new Point(887, 163);
+			label9.Name = "label9";
+			label9.Size = new Size(226, 41);
+			label9.TabIndex = 10;
+			label9.Text = "Đề Án Cần Xoá";
+			// 
+			// dataGridView2
+			// 
+			dataGridView2.BackgroundColor = Color.DarkSeaGreen;
+			dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridView2.Location = new Point(0, 0);
+			dataGridView2.Margin = new Padding(3, 4, 3, 4);
+			dataGridView2.Name = "dataGridView2";
+			dataGridView2.RowHeadersWidth = 51;
+			dataGridView2.RowTemplate.Height = 25;
+			dataGridView2.Size = new Size(664, 727);
+			dataGridView2.TabIndex = 2;
+			dataGridView2.CellClick += dataGridView2_CellContentClick;
+			// 
+			// TruongDeAn
+			// 
+			AutoScaleDimensions = new SizeF(8F, 20F);
+			AutoScaleMode = AutoScaleMode.Font;
+			BackColor = SystemColors.GradientActiveCaption;
+			ClientSize = new Size(1529, 991);
+			Controls.Add(tabControl1);
+			Margin = new Padding(3, 4, 3, 4);
+			Name = "TruongDeAn";
+			Text = "TruongDeAn";
+			Load += TruongDeAn_Load;
+			tabControl1.ResumeLayout(false);
+			tabPage2.ResumeLayout(false);
+			tabPage2.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)dataGridView5).EndInit();
+			tabPage1.ResumeLayout(false);
+			tabPage1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
+			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+			tabPage3.ResumeLayout(false);
+			tabPage3.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+			ResumeLayout(false);
+		}
 
-        }
+		#endregion
 
-        #endregion
-
-        private TabControl tabControl1;
-        private TabPage tabPage2;
-        private TextBox textBox6;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private Label label2;
-        private Button button2;
-        private TextBox textBox2;
-        private Label label1;
-        private TextBox textBox1;
-        private Button button3;
-        private DataGridView dataGridView5;
-        private TabPage tabPage1;
-        private TabPage tabPage3;
-        private TextBox textBox7;
-        private DataGridView dataGridView1;
-        private Label label3;
-        private TextBox textBox8;
-        private Label label6;
-        private TextBox textBox5;
-        private Label label4;
-        private Button button1;
-        private TextBox textBox10;
-        private Label label7;
-        private TextBox textBox9;
-        private Label label5;
-        private Label label8;
-        private DataGridView dataGridView2;
-        private Button button4;
-        private TextBox textBox11;
-        private Label label9;
-        private DataGridView dataGridView3;
-        private Label label10;
-    }
+		private TabControl tabControl1;
+		private TabPage tabPage2;
+		private TextBox textBox6;
+		private TextBox textBox4;
+		private TextBox textBox3;
+		private Label label2;
+		private Button button2;
+		private TextBox textBox2;
+		private Label label1;
+		private TextBox textBox1;
+		private Button button3;
+		private DataGridView dataGridView5;
+		private TabPage tabPage1;
+		private TabPage tabPage3;
+		private TextBox textBox7;
+		private DataGridView dataGridView1;
+		private Label label3;
+		private TextBox textBox8;
+		private Label label6;
+		private TextBox textBox5;
+		private Label label4;
+		private Button button1;
+		private TextBox textBox10;
+		private Label label7;
+		private TextBox textBox9;
+		private Label label5;
+		private Label label8;
+		private DataGridView dataGridView2;
+		private Button button4;
+		private TextBox textBox11;
+		private Label label9;
+		private DataGridView dataGridView3;
+		private Label label10;
+	}
 }

@@ -85,6 +85,52 @@ namespace Oracle_Management_Library.DataAccess
 			}
 		}
 
+		public void ExecuteStoredProcedureLuong(string queryString, string paramsStr1, string paramsStr2)
+		{
+			string connectionString = GlobalConfig.CnnString("OracleConnection");
+			using (OracleConnection oracleConnection = new OracleConnection(connectionString))
+			{
+				try
+				{
+					oracleConnection.Open();
+					OracleCommand command = new OracleCommand(queryString);
+					command.Connection = oracleConnection;
+					command.CommandType = CommandType.StoredProcedure;
+					command.Parameters.Add("MANV1", OracleDbType.Varchar2).Value = paramsStr1;
+					command.Parameters.Add("LUONG", OracleDbType.Int32).Value = Int32.Parse(paramsStr2);
+					command.ExecuteNonQuery();
+					OracleDataAdapter da = new OracleDataAdapter();
+				}
+				catch (Exception ex)
+				{
+					Console.WriteLine(ex.Message);
+				}
+			}
+		}
+
+		public void ExecuteStoredProcedurePhuCap(string queryString, string paramsStr1, string paramsStr2)
+		{
+			string connectionString = GlobalConfig.CnnString("OracleConnection");
+			using (OracleConnection oracleConnection = new OracleConnection(connectionString))
+			{
+				try
+				{
+					oracleConnection.Open();
+					OracleCommand command = new OracleCommand(queryString);
+					command.Connection = oracleConnection;
+					command.CommandType = CommandType.StoredProcedure;
+					command.Parameters.Add("MANV1", OracleDbType.Varchar2).Value = paramsStr1;
+					command.Parameters.Add("PHUCAP", OracleDbType.Int32).Value = Int32.Parse(paramsStr2);
+					command.ExecuteNonQuery();
+					OracleDataAdapter da = new OracleDataAdapter();
+				}
+				catch (Exception ex)
+				{
+					Console.WriteLine(ex.Message);
+				}
+			}
+		}
+
 
 
 		/// <summary>
